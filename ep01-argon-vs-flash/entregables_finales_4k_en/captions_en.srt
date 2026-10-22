@@ -1,0 +1,709 @@
+1
+00:00:00,033 --> 00:00:06,917
+Gemini 3.8 Flash took 17 minutes to code
+this world, and half a pixel broke it.
+
+2
+00:00:06,950 --> 00:00:10,467
+But Gemini 4 Argon took 4,
+and it's actually playable.
+
+3
+00:00:10,500 --> 00:00:15,283
+Ten challenges, one attempt, and the one
+called Flash took 39 minutes longer.
+
+4
+00:00:18,917 --> 00:00:23,217
+I'm Kevin, this is Mixiuh Labs,
+and the lab opens with a tournament.
+
+5
+00:00:23,250 --> 00:00:28,233
+Gemini 4 Argon versus Gemini 3.8 Flash,
+both on High, inside Antigravity.
+
+6
+00:00:28,267 --> 00:00:31,800
+Same prompt for both,
+one single attempt, no corrections.
+
+7
+00:00:31,833 --> 00:00:36,533
+And both shipped each challenge
+as a single HTML file, no images.
+
+8
+00:00:36,567 --> 00:00:39,950
+And I timed every generation,
+rounded to the minute.
+
+9
+00:00:39,983 --> 00:00:43,350
+And from now on, house rule:
+here, we don't guess, we test.
+
+10
+00:00:43,383 --> 00:00:48,283
+Five worlds, ten levels, and I keep score,
+judging quality and functionality.
+
+11
+00:00:48,317 --> 00:00:53,033
+Coming up in level 6: the exact line
+where half a pixel breaks a world.
+
+12
+00:00:53,417 --> 00:00:55,250
+World 1, 3D graphics:
+
+13
+00:00:55,250 --> 00:00:58,900
+a solar system where the Moon
+inherits the Earth's motion.
+
+14
+00:00:58,933 --> 00:01:03,017
+And the first surprise: Flash finishes
+sooner, seven minutes versus eleven.
+
+15
+00:01:03,050 --> 00:01:07,467
+Its Earth looks good, with clouds
+and city lights on the night side.
+
+16
+00:01:07,500 --> 00:01:12,383
+But up close, its Sun is a white disc,
+as bright as a bathroom bulb.
+
+17
+00:01:12,417 --> 00:01:17,450
+In Argon, I dim the glow, and the Sun's
+surface appears, with cells and spots.
+
+18
+00:01:17,483 --> 00:01:22,283
+Both have eclipses, but in my recording,
+the Flash one is just text.
+
+19
+00:01:22,317 --> 00:01:26,533
+In Argon, Earth's shadow paints
+the Moon red: a blood moon.
+
+20
+00:01:26,567 --> 00:01:30,883
+And it draws its family tree on screen:
+Sun, then Earth, then Moon.
+
+21
+00:01:30,917 --> 00:01:33,850
+Flash won the race,
+but Argon won the level,
+
+22
+00:01:33,850 --> 00:01:37,433
+with better graphics and a better-designed
+background: one to zero.
+
+23
+00:01:37,817 --> 00:01:43,000
+Level 2: a DNA helix made of particles,
+and Flash boasts 18,480.
+
+24
+00:01:43,033 --> 00:01:46,000
+That number is hardcoded
+and never changes,
+
+25
+00:01:46,000 --> 00:01:49,283
+and its code actually generates 17,840.
+
+26
+00:01:49,317 --> 00:01:53,467
+That said, its top-down view looks
+like a galaxy, and it's gorgeous.
+
+27
+00:01:53,500 --> 00:01:58,483
+Argon starts so bright the helix
+looks blown out, until I dim it.
+
+28
+00:01:58,517 --> 00:02:03,750
+Here are its 24,500 particles,
+with a counter that's actually real.
+
+29
+00:02:03,783 --> 00:02:06,633
+In Flash, the shockwave
+barely moves the helix.
+
+30
+00:02:06,667 --> 00:02:11,200
+Argon's helix explodes into a white cloud
+and rebuilds itself, like a spring.
+
+31
+00:02:11,233 --> 00:02:15,850
+And Flash doesn't have the density
+and shape controls the prompt asked for.
+
+32
+00:02:15,883 --> 00:02:21,250
+Argon wins on quality and on time,
+5 minutes versus 7: two to zero.
+
+33
+00:02:22,200 --> 00:02:26,150
+So far it's a style fight,
+but in level 4, one ships in 2 minutes,
+
+34
+00:02:26,150 --> 00:02:27,433
+and look what it shipped.
+
+35
+00:02:28,067 --> 00:02:33,200
+World 2, procedural and physics:
+a flock where your mouse is the predator.
+
+36
+00:02:33,233 --> 00:02:36,167
+And here, honestly, it was dead even.
+
+37
+00:02:36,200 --> 00:02:40,150
+Flash finished in 3 minutes,
+added sound I never asked for,
+
+38
+00:02:40,150 --> 00:02:42,200
+and its flock is incredible.
+
+39
+00:02:42,233 --> 00:02:44,467
+Argon took 5 and went
+the scientific route,
+
+40
+00:02:44,467 --> 00:02:46,517
+with a shortcut for every debug layer.
+
+41
+00:02:46,550 --> 00:02:51,033
+Both split space into a grid,
+but I only turned that view on in Argon.
+
+42
+00:02:51,067 --> 00:02:54,067
+And another key releases
+up to three predators with their own
+
+43
+00:02:54,067 --> 00:02:55,633
+AI: the leviathans.
+
+44
+00:02:55,667 --> 00:02:57,183
+My note: both deliver,
+
+45
+00:02:57,183 --> 00:03:00,567
+but the customization
+and shortcuts give Argon the win.
+
+46
+00:03:00,600 --> 00:03:02,300
+A win on points, not a knockout:
+
+47
+00:03:02,300 --> 00:03:05,267
+three to zero, though Flash
+still leads the overall clock.
+
+48
+00:03:05,650 --> 00:03:08,517
+Level 4, dungeons, and here
+Flash worked for two minutes,
+
+49
+00:03:08,517 --> 00:03:10,783
+decided it was done, and handed me this.
+
+50
+00:03:10,817 --> 00:03:13,633
+At first it looks fine,
+but in step-by-step mode,
+
+51
+00:03:13,633 --> 00:03:15,550
+the path appears before the rooms.
+
+52
+00:03:15,583 --> 00:03:18,700
+Then a tangle of purple lines
+cuts across the whole map.
+
+53
+00:03:18,733 --> 00:03:21,983
+In explorer mode, there
+are no enemies, no traps, no life.
+
+54
+00:03:21,983 --> 00:03:25,750
+Argon took 12 minutes, its slowest
+delivery, and built a little RPG.
+
+55
+00:03:25,783 --> 00:03:29,133
+A trap takes 12 HP, a chest heals 10,
+
+56
+00:03:29,133 --> 00:03:32,333
+and finally I beat
+the Guardian of the Abyss.
+
+57
+00:03:32,367 --> 00:03:37,567
+I reach the stairs and get a new level,
+but in Flash, the exit does nothing.
+
+58
+00:03:37,600 --> 00:03:42,617
+Flash was six times faster, sure,
+but only at calling it done.
+
+59
+00:03:44,217 --> 00:03:47,917
+Four to zero, but Flash leads
+the clock by 14 minutes,
+
+60
+00:03:47,917 --> 00:03:51,250
+a cushion that lasts until level 6.
+
+61
+00:03:51,633 --> 00:03:55,200
+Here's what happens when lava
+hits a garden in Argon's sandbox.
+
+62
+00:03:55,233 --> 00:04:00,600
+Level 5, a pixel sandbox, and the basic
+test is that water settles flat.
+
+63
+00:04:00,633 --> 00:04:04,500
+In Flash, water pushed
+by sand stays stuck in a dome.
+
+64
+00:04:04,533 --> 00:04:08,033
+In Argon, the wave spreads out
+and levels like real water.
+
+65
+00:04:08,067 --> 00:04:12,450
+Before you say it: both have 12 elements,
+and Flash's gunpowder looks great.
+
+66
+00:04:12,483 --> 00:04:16,167
+But only Argon's plant
+drinks the water to grow.
+
+67
+00:04:16,200 --> 00:04:21,183
+If I burn it, the shelf gives way,
+and the hourglass runs again.
+
+68
+00:04:24,617 --> 00:04:29,233
+For me, Argon lapped it twice,
+and its chemistry is ten times better.
+
+69
+00:04:29,267 --> 00:04:31,350
+In under half the time, five to zero,
+
+70
+00:04:31,350 --> 00:04:34,767
+and Flash's cushion drops
+to 9 minutes before level 6.
+
+71
+00:04:35,150 --> 00:04:38,283
+World 3, pixel art and retro,
+and here comes the boss:
+
+72
+00:04:38,283 --> 00:04:41,233
+a Wolfenstein-style engine from 1992.
+
+73
+00:04:41,267 --> 00:04:44,750
+One ray per screen column fakes
+walls in three dimensions.
+
+74
+00:04:44,783 --> 00:04:48,717
+Flash took 17 minutes,
+and its first frame looks perfect.
+
+75
+00:04:48,750 --> 00:04:51,567
+One step, and the world breaks.
+
+76
+00:04:51,600 --> 00:04:54,200
+The walls break into strips,
+and in places,
+
+77
+00:04:54,200 --> 00:04:55,933
+the world almost disappears.
+
+78
+00:04:55,967 --> 00:05:00,050
+And its counter happily
+reads 120 frames per second.
+
+79
+00:05:00,083 --> 00:05:01,700
+The culprit is half a pixel:
+
+80
+00:05:01,700 --> 00:05:04,533
+Flash divides each wall's
+height by two and doesn't round.
+
+81
+00:05:04,567 --> 00:05:06,983
+With odd heights you get a point five,
+
+82
+00:05:06,983 --> 00:05:10,067
+and JavaScript silently
+skips that whole column.
+
+83
+00:05:10,100 --> 00:05:14,100
+Half a pixel, 17 minutes, and game over.
+
+84
+00:05:14,133 --> 00:05:19,800
+Argon used a bit shift that always gives
+an integer, and solved it in 4 minutes.
+
+85
+00:05:21,600 --> 00:05:26,150
+And look: sliding doors, orbs,
+drones, and a plasma cannon.
+
+86
+00:05:26,183 --> 00:05:27,800
+There's no defending Flash here:
+
+87
+00:05:27,800 --> 00:05:32,617
+six to zero, and Argon pulls ahead
+on the clock too, 41 minutes versus 45.
+
+88
+00:05:33,467 --> 00:05:36,550
+Twelve different ships in twelve seconds,
+and none drawn by hand.
+
+89
+00:05:36,583 --> 00:05:40,783
+Level 7: 8-bit pixel art
+ships that you can also fly.
+
+90
+00:05:40,817 --> 00:05:44,283
+In Flash, I hit mutate about 55 times,
+
+91
+00:05:44,283 --> 00:05:47,900
+and nearly all spit out
+the same red-and-gold totem.
+
+92
+00:05:47,933 --> 00:05:51,033
+To be fair, partly my fault:
+I never changed the palette.
+
+93
+00:05:51,067 --> 00:05:55,317
+Something I liked in Flash: it shows
+each ship being built, layer by layer.
+
+94
+00:05:55,350 --> 00:05:59,250
+In the test flight, Flash's targets
+die in an almost invisible puff.
+
+95
+00:05:59,283 --> 00:06:03,267
+In Argon, rocks and drones burst
+into pixels and give points,
+
+96
+00:06:03,267 --> 00:06:04,317
+like an arcade.
+
+97
+00:06:04,350 --> 00:06:08,667
+Flash took 13 minutes and Argon
+only 4, and though nothing broke,
+
+98
+00:06:08,667 --> 00:06:11,367
+Argon wins again: seven to zero.
+
+99
+00:06:11,750 --> 00:06:15,433
+Three levels left,
+and in one of them Flash takes 22 minutes.
+
+100
+00:06:15,467 --> 00:06:17,317
+World 4, CSS magic:
+
+101
+00:06:17,317 --> 00:06:22,067
+a luxury watch where JavaScript only sets
+the time and never moves the hands.
+
+102
+00:06:22,100 --> 00:06:24,250
+Both did it by the book:
+
+103
+00:06:24,250 --> 00:06:27,950
+three themes, three second-hand
+rhythms, and a tourbillon.
+
+104
+00:06:28,550 --> 00:06:32,283
+That said, Flash's transitions
+are smoother: point to Flash.
+
+105
+00:06:32,317 --> 00:06:35,083
+But Flash's watch looks like an app icon,
+
+106
+00:06:35,083 --> 00:06:37,383
+and Argon's looks like
+a display-case watch.
+
+107
+00:06:37,417 --> 00:06:40,683
+And its Night Luxury mode,
+honestly, lives up to the name.
+
+108
+00:06:40,717 --> 00:06:42,350
+And in only 2 minutes,
+
+109
+00:06:42,350 --> 00:06:45,717
+the fastest delivery
+that actually worked: eight to zero.
+
+110
+00:06:46,667 --> 00:06:48,583
+World 5, pure math:
+
+111
+00:06:48,583 --> 00:06:52,283
+a fractal tree that sways
+in a wind of mathematical noise.
+
+112
+00:06:52,317 --> 00:06:55,883
+Argon delivered it in 4 minutes,
+and Flash in 22.
+
+113
+00:06:57,917 --> 00:07:01,783
+That's 18 minutes apart,
+the biggest gap in the experiment.
+
+114
+00:07:01,817 --> 00:07:07,133
+And Flash's cherry tree looks pretty,
+bending in the wind and shedding petals.
+
+115
+00:07:07,167 --> 00:07:11,717
+But its weeping willow is the same tree
+painted green, and it doesn't weep at all.
+
+116
+00:07:11,750 --> 00:07:16,050
+In Argon, the tree rebuilds itself and
+the branches really hang like curtains.
+
+117
+00:07:19,083 --> 00:07:22,217
+So nobody calls me a fanboy:
+with over 20,000 flower clusters,
+
+118
+00:07:22,217 --> 00:07:25,867
+even Argon drops
+to about 45 frames per second.
+
+119
+00:07:25,900 --> 00:07:30,367
+Still, like I wrote in my notes, Argon
+is an efficiency and quality machine.
+
+120
+00:07:30,400 --> 00:07:35,167
+Better graphics and more control in under
+a fifth of the time: nine to zero.
+
+121
+00:07:36,450 --> 00:07:38,483
+Final level, a digital spirograph,
+
+122
+00:07:38,483 --> 00:07:40,617
+and here Flash botches
+some middle-school math.
+
+123
+00:07:40,650 --> 00:07:43,350
+Both draw the same mandala from scratch.
+
+124
+00:07:43,383 --> 00:07:46,067
+Flash traces a smaller,
+thin-lined golden rose,
+
+125
+00:07:46,067 --> 00:07:49,400
+and Argon traces a huge
+mandala with acrylic gears.
+
+126
+00:07:49,433 --> 00:07:52,300
+The trick is knowing
+when the figure closes:
+
+127
+00:07:52,300 --> 00:07:55,433
+the greatest common divisor,
+finally good for something.
+
+128
+00:07:55,467 --> 00:07:59,950
+But with a third gear, Flash does the math
+as if that gear didn't exist.
+
+129
+00:07:59,983 --> 00:08:03,433
+Its pen speed meter reads
+zero for the entire recording.
+
+130
+00:08:03,433 --> 00:08:07,950
+Argon does the exact math, and its final
+rosette looks like banknote engraving.
+
+131
+00:08:07,983 --> 00:08:12,967
+In my recording, it even calculated
+a closure at 17,310 radians.
+
+132
+00:08:13,000 --> 00:08:18,967
+Both delivered, but Argon let me customize
+far more, and did it 2.5 times faster.
+
+133
+00:08:19,000 --> 00:08:22,217
+Final level, test passed,
+and the scoreboard is perfect.
+
+134
+00:08:23,650 --> 00:08:28,150
+And it's ten to zero: Gemini 4 Argon
+wins on quality and functionality.
+
+135
+00:08:30,917 --> 00:08:34,083
+Argon worked in all ten,
+and Flash broke in two of them.
+
+136
+00:08:34,117 --> 00:08:38,617
+On time, Argon totaled
+55 minutes versus 94,
+
+137
+00:08:38,617 --> 00:08:41,967
+and 8 of its 10 deliveries
+took 5 minutes or less.
+
+138
+00:08:42,000 --> 00:08:47,533
+That said, that score is about quality,
+not speed: Flash won three races.
+
+139
+00:08:47,917 --> 00:08:50,433
+To me, the fast model
+isn't the first to answer,
+
+140
+00:08:50,433 --> 00:08:52,517
+it's the one that works on the first try.
+
+141
+00:08:52,550 --> 00:08:57,000
+Because every bug it leaves behind
+is your time spent fixing it,
+
+142
+00:08:57,000 --> 00:08:59,050
+and no stopwatch counts that.
+
+143
+00:08:59,083 --> 00:09:01,250
+Mind you, Flash isn't bad at all:
+
+144
+00:09:01,250 --> 00:09:04,067
+its flock, clock,
+and spirograph turned out well.
+
+145
+00:09:04,100 --> 00:09:08,950
+In my opinion, Argon is a real
+upgrade over previous Gemini models.
+
+146
+00:09:08,983 --> 00:09:10,583
+The code's in the description,
+
+147
+00:09:10,583 --> 00:09:13,433
+so don't take my word for it:
+test it yourself.
+
+148
+00:09:13,467 --> 00:09:17,267
+Subscribe, and tell me which models
+should go into the lab next.
+
+149
+00:09:17,650 --> 00:09:21,483
+Experiment complete: see you
+in the next one, here on Mixiuh Labs.

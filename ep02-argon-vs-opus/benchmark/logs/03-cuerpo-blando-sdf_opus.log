@@ -1,0 +1,34 @@
+El laboratorio está terminado en `claude-opus-5.5/03-cuerpo-blando-sdf/index.html`: un solo archivo, que solo importa `three` y `OrbitControls` (three@0.170.0 desde unpkg). Lo probé en Chrome headless y funciona sin errores de consola: con 7 cuerpos va a 60 FPS (física ~6.6 ms) y con el máximo de 12, a ~50 FPS (física ~12 ms). Lo dejé en un commit local, sin push.
+
+**Física (todo escrito desde cero)**
+- **Esqueleto de cada cuerpo:** una retícula 3D de nodos de masa, generada a partir de la forma matemática (SDF) de la figura. Tiene resortes estructurales en las aristas y de cizalla en las diagonales de cara y de cuerpo, resueltos con XPBD.
+- **Conservación de volumen:** cada celda se divide en 6 tetraedros con volumen fijo, lo que conserva el volumen localmente e impide que el cuerpo se invierta. Además hay una presión de gas global sobre el volumen total y una memoria de forma que lo devuelve a su figura original.
+- **Volumen medido:** en reposo se mantiene en ~99.98%.
+- **Efecto Poisson (pisotón):** con la prensa a 0.55, la cápsula pasa de 1.72 a ~1.94 de ancho y los cubos de 1.0 a ~1.5. El volumen baja hasta ~80% en el peor caso durante la compresión y vuelve al 100% al soltar.
+- **Piel:** una malla suave generada desde la SDF, deformada por la retícula con interpolación suave (B-splines), así que no salen pliegues en las uniones de celdas.
+- **Colisiones:** se detectan con esferas pequeñas colocadas justo bajo la piel, con un hash espacial entre cada par de cuerpos cercanos. Hay fricción y un rebote ajustable.
+
+**Visual**
+- Material de gomita translúcida: transmisión física con dispersión, absorción de color, brillo húmedo, borde Fresnel luminoso, un brillo interior que simula la luz bajo la superficie y un destello al impactar.
+- Plataforma con reflejo real (una cámara espejo), sombras suaves, entorno HDR generado por código, bloom propio y partículas y ondas en cada impacto.
+- 6 figuras generadas por código: osito de goma con ojos hundidos, cubo biselado, toroide, cápsula ondulada, flan con estrías y esfera, en colores neón.
+
+**Interacción**
+- **Agarrar y lanzar:** arrastras cualquier cuerpo con una banda elástica visible y al soltarlo sale disparado como tirachinas. La rueda del ratón cambia la profundidad mientras lo sujetas.
+- **Invocar:** botones 1–6 por figura, aleatorio con Espacio y "Lluvia ×6".
+- **Pisotón masivo (S):** una prensa de acrílico translúcido, así se ve el aplastamiento.
+- **Onda radial:** con E o doble clic en el suelo.
+- **Gravedad cero (G), bullet time ×0.12 (B) y sonda de empuje (P o Shift):** la sonda es una esfera que sigue al cursor y empuja los cuerpos.
+- **Esqueleto (K):** muestra los resortes y nodos encima de la piel translúcida.
+
+**Panel de telemetría:** deslizadores de rigidez, presión, amortiguamiento, rebote y fricción, más FPS, tiempo de física, conteo de nodos, resortes y tetraedros, energía cinética y elástica en J, V/V₀ con su desviación, y una gráfica en vivo.
+
+**Ajustes tras las pruebas**
+- La prensa ahora es translúcida, porque la opaca tapaba el aplastamiento.
+- Bajé la intensidad del esqueleto, que se veía blanco por el bloom.
+- Quité unos destellos en forma de "X" que aparecían en el bloom y en los reflejos.
+- Optimicé las colisiones entre cuerpos: con 12 cuerpos la física bajó de 27 ms a 12 ms.
+
+En la prueba con el ratón simulado, el agarre y el lanzamiento funcionan, pero la fuerza del tirachinas solo la vi con un movimiento sintético. Conviene que la pruebes a mano con un tirón real para ver si se siente bien.
+
+El CLAUDE.md pide actualizar el roadmap vivo, pero la memoria `mixiuh-roadmap-vivo` no existe como archivo: es un artefacto web que tu propia nota del 27-sep marca como poco fiable. En su lugar anoté el avance del EP02 en la memoria de Mixiuh Labs Studio.

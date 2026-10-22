@@ -1,0 +1,82 @@
+{
+ "A": {
+  "hash": "645f6971ee3c2402d7f685abeec0728ada5892e1",
+  "info": {
+   "id": "A",
+   "text": "0 | 10",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash-en/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash-en/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 466398,
+   "bytes_720": 250575,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 34.0,
+   "contrast": 10.72,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "motor_raycasting_comparativa.mov t=14.3",
+    "right": "motor_raycasting_comparativa.mov t=63"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "B": {
+  "hash": "2fc399ef2a6f3f733cf4319037a7082aac36c5ed",
+  "info": {
+   "id": "B",
+   "text": "22 MIN | 4 MIN",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash-en/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash-en/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 808235,
+   "bytes_720": 440872,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 20.0,
+   "contrast": 7.36,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "arbol_fractal_comparativa.mov t=55",
+    "right": "arbol_fractal_comparativa.mov t=174"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "C": {
+  "hash": "4e0335cbff8c86fc0f814db49fac6d5727a79fef",
+  "info": {
+   "id": "C",
+   "text": "FLASH BROKEN?",
+   "sub": "",
+   "layout": "hero",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash-en/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash-en/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 410983,
+   "bytes_720": 231455,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 30.0,
+   "contrast": 9.08,
+   "free_corner": false,
+   "symmetry": "ok",
+   "sources": {
+    "left": "motor_raycasting_comparativa.mov t=4.8"
+   },
+   "origin": "episode.yaml"
+  }
+ }
+}

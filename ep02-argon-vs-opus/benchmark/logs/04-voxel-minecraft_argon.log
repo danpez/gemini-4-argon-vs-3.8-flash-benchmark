@@ -1,0 +1,16 @@
+El motor de mundo voxel 3D procedural e interactivo ha sido escrito en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html).
+
+### Arquitectura Implementada
+
+1. **Atlas de Texturas Pixel-Art 16×16 100% Procedural ([`createProceduralTextureAtlas`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html#L510-L686))**:
+   - Generación en memoria mediante `<canvas>` con `THREE.NearestFilter`, sin mipmaps y con margen de seguridad por *tile* (*clamp-to-edge* de 8 px) para evitar sangrado de UVs en ángulos rasantes.
+   - Incluye texturas diferenciadas por cara (superior, lateral con corona de césped y base) y previsualizaciones isométricas 3D dibujadas en canvas para los 8 bloques de la Hotbar (`Pasto`, `Tierra`, `Piedra`, `Madera`, `Hojas`, `Arena`, `Cristal` y `Lava / Luminoso`) más `Agua` animada.
+
+2. **Terreno Multi-Bioma con Ruido Fractal 2D/3D ([`FractalNoise`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html#L406-L505) y [`VoxelWorld.generate`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html#L868-L1002))**:
+   - Generador determinista con semilla configurable (`FBM` + `Ridge Noise` + ruido 3D) que produce cumbres rocosas, valles templados, playas de arena, lagos de agua translúcida animada al nivel del mar, árboles voxelizados y vetas de mineral/cristal luminoso.
+
+3. **Optimización por Chunks con Face Culling, Voxel Ambient Occlusion e Iluminación Emisiva ([`VoxelWorld.buildChunk`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html#L1064-L1178))**:
+   - Fusión geométrica en chunks de `16×44×16` descartando todas las caras internas ocultas (*Face Culling*), calculando oclusión ambiental por vértice (*Voxel Vertex AO*) y propagando luz cálida por vértice (`aEmissive`) junto con un pool dinámico de `THREE.PointLight` para los bloques luminosos.
+
+4. **Raycasting Preciso y Físicas de Mini-Voxels ([`updateRaycast`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html#L1486-L1546) y [`MiniVoxelParticleSystem`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html#L1239-L1372))**:
+   - Selección cúbica wireframe con indicador de cara normal (`face.normal`), destrucción con clic izquierdo disparando partículas físicas renderizadas con `THREE.InstancedMesh` (gravedad y colisión/rebote contra el terreno) y colocación adosada con clic derecho o `Shift/Alt + Clic`.

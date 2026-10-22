@@ -1,0 +1,454 @@
+{
+ "01_sistema-solar": {
+  "path": "01_sistema-solar.mp4",
+  "scene": "reto01",
+  "name": "01_sistema-solar",
+  "duration": 47.05,
+  "beats_kept": [
+   "reto01-01",
+   "reto01-02",
+   "reto01-03",
+   "reto01-04",
+   "reto01-05",
+   "reto01-06",
+   "reto01-07",
+   "reto01-08",
+   "reto01-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 7,
+   "argon": 11
+  },
+  "title": "RELATIVE SOLAR SYSTEM",
+  "n": 1,
+  "slug": "sistema_solar",
+  "meta": {
+   "titles": [
+    "Relative Solar System: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 11 min, Flash in 7 min (Relative Solar System)",
+    "Challenge 1: Relative Solar System in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Relative Solar System.\nPoint to Argon. Delivery time: Flash 7 min, Argon 11 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "02_visualizador-adn": {
+  "path": "02_visualizador-adn.mp4",
+  "scene": "reto02",
+  "name": "02_visualizador-adn",
+  "duration": 50.033333,
+  "beats_kept": [
+   "reto02-01",
+   "reto02-02",
+   "reto02-03",
+   "reto02-04",
+   "reto02-05",
+   "reto02-06",
+   "reto02-07",
+   "reto02-08",
+   "reto02-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 7,
+   "argon": 5
+  },
+  "title": "3D DNA VISUALIZER",
+  "n": 2,
+  "slug": "visualizador_adn",
+  "meta": {
+   "titles": [
+    "3D DNA Visualizer: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 5 min, Flash in 7 min (3D DNA Visualizer)",
+    "Challenge 2: 3D DNA Visualizer in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: 3D DNA Visualizer.\nPoint to Argon. Delivery time: Flash 7 min, Argon 5 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.03
+ },
+ "03_vida-artificial": {
+  "path": "03_vida-artificial.mp4",
+  "scene": "reto03",
+  "name": "03_vida-artificial",
+  "duration": 46.1,
+  "beats_kept": [
+   "reto03-01",
+   "reto03-02",
+   "reto03-03",
+   "reto03-04",
+   "reto03-05",
+   "reto03-06",
+   "reto03-07",
+   "reto03-08",
+   "reto03-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 3,
+   "argon": 5
+  },
+  "title": "ARTIFICIAL LIFE",
+  "n": 3,
+  "slug": "vida_artificial",
+  "meta": {
+   "titles": [
+    "Artificial Life: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 5 min, Flash in 3 min (Artificial Life)",
+    "Challenge 3: Artificial Life in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Artificial Life.\nPoint to Argon. Delivery time: Flash 3 min, Argon 5 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.01
+ },
+ "04_generador-mazmorras": {
+  "path": "04_generador-mazmorras.mp4",
+  "scene": "reto04",
+  "name": "04_generador-mazmorras",
+  "duration": 51.633333,
+  "beats_kept": [
+   "reto04-01",
+   "reto04-02",
+   "reto04-03",
+   "reto04-04",
+   "reto04-05",
+   "reto04-06",
+   "reto04-07",
+   "reto04-08",
+   "reto04-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 2,
+   "argon": 12
+  },
+  "title": "DUNGEON GENERATOR",
+  "n": 4,
+  "slug": "generador_mazmorras",
+  "meta": {
+   "titles": [
+    "Dungeon Generator: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 12 min, Flash in 2 min (Dungeon Generator)",
+    "Challenge 4: Dungeon Generator in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Dungeon Generator.\nPoint to Argon. Delivery time: Flash 2 min, Argon 12 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.04
+ },
+ "05_falling-sand": {
+  "path": "05_falling-sand.mp4",
+  "scene": "reto05",
+  "name": "05_falling-sand",
+  "duration": 48.766667,
+  "beats_kept": [
+   "reto05-01",
+   "reto05-02",
+   "reto05-03",
+   "reto05-04",
+   "reto05-05",
+   "reto05-06",
+   "reto05-07",
+   "reto05-08",
+   "reto05-09",
+   "reto05-10"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 9,
+   "argon": 4
+  },
+  "title": "FALLING SAND SIMULATOR",
+  "n": 5,
+  "slug": "falling_sand",
+  "meta": {
+   "titles": [
+    "Falling Sand Simulator: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 4 min, Flash in 9 min (Falling Sand Simulator)",
+    "Challenge 5: Falling Sand Simulator in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Falling Sand Simulator.\nPoint to Argon. Delivery time: Flash 9 min, Argon 4 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.03
+ },
+ "06_motor-raycasting": {
+  "path": "06_motor-raycasting.mp4",
+  "scene": "reto06",
+  "name": "06_motor-raycasting",
+  "duration": 56.383333,
+  "beats_kept": [
+   "reto06-01",
+   "reto06-02",
+   "reto06-03",
+   "reto06-04",
+   "reto06-05",
+   "reto06-06",
+   "reto06-07",
+   "reto06-08",
+   "reto06-09",
+   "reto06-10",
+   "reto06-13"
+  ],
+  "beats_dropped": [
+   {
+    "id": "reto06-11",
+    "dur": 4.583,
+    "flags": [
+     "voice"
+    ],
+    "reason": "el Short pasaba de 58 s"
+   }
+  ],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 17,
+   "argon": 4
+  },
+  "title": "3D RAYCASTING ENGINE",
+  "n": 6,
+  "slug": "motor_raycasting",
+  "meta": {
+   "titles": [
+    "3D Raycasting Engine: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 4 min, Flash in 17 min (3D Raycasting Engine)",
+    "Challenge 6: 3D Raycasting Engine in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: 3D Raycasting Engine.\nPoint to Argon. Delivery time: Flash 17 min, Argon 4 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.03
+ },
+ "07_generador-sprites": {
+  "path": "07_generador-sprites.mp4",
+  "scene": "reto07",
+  "name": "07_generador-sprites",
+  "duration": 43.933333,
+  "beats_kept": [
+   "reto07-01",
+   "reto07-02",
+   "reto07-03",
+   "reto07-04",
+   "reto07-05",
+   "reto07-06",
+   "reto07-07",
+   "reto07-08"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 13,
+   "argon": 4
+  },
+  "title": "8-BIT SPACE SPRITES",
+  "n": 7,
+  "slug": "generador_sprites",
+  "meta": {
+   "titles": [
+    "8-bit Space Sprites: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 4 min, Flash in 13 min (8-bit Space Sprites)",
+    "Challenge 7: 8-bit Space Sprites in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: 8-bit Space Sprites.\nPoint to Argon. Delivery time: Flash 13 min, Argon 4 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.04
+ },
+ "08_reloj-analogico": {
+  "path": "08_reloj-analogico.mp4",
+  "scene": "reto08",
+  "name": "08_reloj-analogico",
+  "duration": 40.566667,
+  "beats_kept": [
+   "reto08-01",
+   "reto08-02",
+   "reto08-03",
+   "reto08-04",
+   "reto08-05",
+   "reto08-06",
+   "reto08-07"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 4,
+   "argon": 2
+  },
+  "title": "CSS ANALOG CLOCK",
+  "n": 8,
+  "slug": "reloj_analogico",
+  "meta": {
+   "titles": [
+    "CSS Analog Clock: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 2 min, Flash in 4 min (CSS Analog Clock)",
+    "Challenge 8: CSS Analog Clock in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: CSS Analog Clock.\nPoint to Argon. Delivery time: Flash 4 min, Argon 2 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.03
+ },
+ "09_arbol-fractal": {
+  "path": "09_arbol-fractal.mp4",
+  "scene": "reto09",
+  "name": "09_arbol-fractal",
+  "duration": 55.433333,
+  "beats_kept": [
+   "reto09-01",
+   "reto09-02",
+   "reto09-03",
+   "reto09-04",
+   "reto09-05",
+   "reto09-06",
+   "reto09-07",
+   "reto09-08",
+   "reto09-09",
+   "reto09-10",
+   "reto09-11"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 22,
+   "argon": 4
+  },
+  "title": "FRACTAL TREE WITH WIND",
+  "n": 9,
+  "slug": "arbol_fractal",
+  "meta": {
+   "titles": [
+    "Fractal Tree with Wind: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 4 min, Flash in 22 min (Fractal Tree with Wind)",
+    "Challenge 9: Fractal Tree with Wind in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Fractal Tree with Wind.\nPoint to Argon. Delivery time: Flash 22 min, Argon 4 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.04
+ },
+ "10_spirograph-parametrico": {
+  "path": "10_spirograph-parametrico.mp4",
+  "scene": "reto10",
+  "name": "10_spirograph-parametrico",
+  "duration": 49.85,
+  "beats_kept": [
+   "reto10-01",
+   "reto10-02",
+   "reto10-03",
+   "reto10-04",
+   "reto10-05",
+   "reto10-06",
+   "reto10-07",
+   "reto10-08",
+   "reto10-09",
+   "reto10-10"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 10,
+   "argon": 4
+  },
+  "title": "PARAMETRIC SPIROGRAPH",
+  "n": 10,
+  "slug": "spirograph_parametrico",
+  "meta": {
+   "titles": [
+    "Parametric Spirograph: Gemini 4 Argon vs 3.8 Flash",
+    "Same prompt: Argon in 4 min, Flash in 10 min (Parametric Spirograph)",
+    "Challenge 10: Parametric Spirograph in a single attempt (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Parametric Spirograph.\nPoint to Argon. Delivery time: Flash 10 min, Argon 4 min.\nFull video with all 10 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.03
+ }
+}

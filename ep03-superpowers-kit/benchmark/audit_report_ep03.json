@@ -1,0 +1,136 @@
+{
+  "01-galaxia-nbody": {
+    "raw": {
+      "fps": 60,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "title": "ASTRAL-IX // Simulador N-Body de Colisión Galáctica y Lente Gravitacional Relativista",
+      "canvases": 2,
+      "buttons": 15,
+      "inputs": 5,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/01_galaxia_nbody_raw.png"
+    },
+    "superkit": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "MIXIUH LABS // ASTRO-OBS 01: Colision N-Body 3D & Lente Gravitacional Relativista",
+      "canvases": 2,
+      "buttons": 15,
+      "inputs": 5,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/01_galaxia_nbody_superkit.png"
+    }
+  },
+  "02-terminal-trading": {
+    "raw": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "QUANTUM-HFT // Terminal Institucional de Microestructura y Trading Cuantitativo",
+      "canvases": 4,
+      "buttons": 43,
+      "inputs": 3,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/02_terminal_trading_raw.png"
+    },
+    "superkit": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "QUANTUM-HFT // Terminal Institucional de Microestructura y Trading Cuantitativo",
+      "canvases": 4,
+      "buttons": 25,
+      "inputs": 3,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/02_terminal_trading_superkit.png"
+    }
+  },
+  "03-arcade-boss-rush": {
+    "raw": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "CYBER//CORE: OVERLORD — Tactical Bullet-Hell Benchmark",
+      "canvases": 1,
+      "buttons": 9,
+      "inputs": 0,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/03_arcade_boss_rush_raw.png"
+    },
+    "superkit": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "CYBER//CORE: OVERLORD — Bullet-Hell Boss Rush & WebAudio DSP",
+      "canvases": 2,
+      "buttons": 9,
+      "inputs": 0,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/03_arcade_boss_rush_superkit.png"
+    }
+  },
+  "04-red-zero-trust": {
+    "raw": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "AEGIS // ZERO-TRUST SOC 3D — Global Cyber Defense Command",
+      "canvases": 2,
+      "buttons": 7,
+      "inputs": 0,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/04_red_zero_trust_raw.png"
+    },
+    "superkit": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "AEGIS // ZERO-TRUST SOC 3D — Global Cyber Defense Command",
+      "canvases": 2,
+      "buttons": 7,
+      "inputs": 0,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/04_red_zero_trust_superkit.png"
+    }
+  },
+  "05-motor-nodos-ia": {
+    "raw": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "NEXUS // NODE SHADER & DSP STUDIO",
+      "canvases": 10,
+      "buttons": 25,
+      "inputs": 27,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/05_motor_nodos_ia_raw.png"
+    },
+    "superkit": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "NEXUS // NODE SHADER & DSP STUDIO",
+      "canvases": 9,
+      "buttons": 21,
+      "inputs": 28,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/05_motor_nodos_ia_superkit.png"
+    }
+  },
+  "06-mixiuh-os-desktop": {
+    "raw": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "MIXIUH OS v4.0 // CYBER-KERNEL DESKTOP",
+      "canvases": 4,
+      "buttons": 37,
+      "inputs": 5,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/06_mixiuh_os_desktop_raw.png"
+    },
+    "superkit": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "MIXIUH OS v4.0 // CYBER-KERNEL DESKTOP",
+      "canvases": 5,
+      "buttons": 39,
+      "inputs": 3,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/benchmark/screenshots/06_mixiuh_os_desktop_superkit.png"
+    }
+  }
+}

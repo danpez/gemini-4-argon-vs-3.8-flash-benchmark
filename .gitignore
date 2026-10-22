@@ -1,3 +1,9 @@
-# Excluir grabaciones crudas ProRes/macOS (.mov de +400MB a 2.8GB)
+# Excluir videos pesados, caches de voz y entornos virtuales (todos los videos 4K60 viven en iCloud Drive)
 *.mov
+*.mp4
+*.wav
 .DS_Store
+.pytest_cache/
+claude-mixiuh-labs/
+youtube-mixiuh-labs/build_work/
+youtube-mixiuh-labs/*.mp4

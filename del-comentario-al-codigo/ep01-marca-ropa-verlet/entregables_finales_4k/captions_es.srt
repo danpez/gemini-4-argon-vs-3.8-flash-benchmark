@@ -1,0 +1,363 @@
+1
+00:00:00,000 --> 00:00:03,700
+Hace unas horas subí el primer Reel
+del Episodio dos mostrando la tela física
+
+2
+00:00:03,700 --> 00:00:08,983
+de Verlet que programó Gemini 4 Argon
+a 120 cuadros por segundo.
+
+3
+00:00:09,017 --> 00:00:13,050
+Y a los pocos minutos, Tenito
+cero tres dejó esta joya de comentario:
+
+4
+00:00:13,050 --> 00:00:16,900
+si ahora con esa textura le pides hacer
+una playera y también un mockup en blanco
+
+5
+00:00:16,900 --> 00:00:19,483
+para editarlo, ¿puedes
+crear una marca de ropa?
+
+6
+00:00:19,517 --> 00:00:22,583
+La propuesta estuvo tan buena
+que hoy estrenamos sección en el canal:
+
+7
+00:00:22,583 --> 00:00:24,033
+Del Comentario al Código.
+
+8
+00:00:24,033 --> 00:00:27,867
+Y no solo programamos el estudio
+3D de mockups en blanco:
+
+9
+00:00:27,867 --> 00:00:32,450
+lanzamos una colección completa
+de diez prendas llamada Overfit.
+
+10
+00:00:35,750 --> 00:00:38,150
+Soy Kevin, esto es Mixiuh Labs,
+
+11
+00:00:38,150 --> 00:00:42,250
+y en Del Comentario al Código la dinámica
+es directa: tú propones una idea
+
+12
+00:00:42,250 --> 00:00:45,350
+en los comentarios y nosotros
+la convertimos en software real.
+
+13
+00:00:45,383 --> 00:00:49,733
+Para llevar la idea de Tenito al máximo
+nivel, creamos Overfit by Mixiuh Labs:
+
+14
+00:00:49,733 --> 00:00:53,467
+una marca de streetwear satírico sobre
+inteligencia artificial y programación,
+
+15
+00:00:53,467 --> 00:00:58,017
+bajo el lema cien por ciento alucinado,
+cero por ciento revisado por pares.
+
+16
+00:00:58,050 --> 00:01:01,267
+Construimos el sistema
+en tres etapas: primero,
+
+17
+00:01:01,267 --> 00:01:05,317
+mockups 3D en blanco de 300 gramos
+para hombre, mujer y mesa de estudio;
+
+18
+00:01:05,317 --> 00:01:09,283
+segundo, la colección Guerra de Pesos
+con diez estampados originales;
+
+19
+00:01:09,283 --> 00:01:13,483
+y tercero, personalización en vivo
+y exportación para redes y tienda.
+
+20
+00:01:13,700 --> 00:01:16,717
+Etapa uno: el mockup en blanco
+editable que pidió Tenito.
+
+21
+00:01:16,717 --> 00:01:19,617
+En lugar de usar una plantilla plana,
+
+22
+00:01:19,617 --> 00:01:25,233
+esculpimos en Blender Cycles tres siluetas
+reales en algodón peinado de 300 gramos.
+
+23
+00:01:25,267 --> 00:01:29,233
+Con un clic alternas entre el maniquí
+masculino de corte Boxy Oversize,
+
+24
+00:01:29,233 --> 00:01:34,433
+el maniquí femenino Street Fit y la prenda
+sola extendida sobre la mesa de estudio
+
+25
+00:01:34,433 --> 00:01:37,433
+en blanco puro, crema
+vintage o negro obsidiana.
+
+26
+00:01:37,467 --> 00:01:41,833
+Cada prenda conserva su mapa
+real de sombras y pliegues en 3D,
+
+27
+00:01:41,833 --> 00:01:46,183
+y además puedes subir tu propio archivo
+PNG transparente o activar la onda física
+
+28
+00:01:46,183 --> 00:01:47,933
+de Verlet en cualquier momento.
+
+29
+00:01:48,150 --> 00:01:51,733
+Etapa dos: una marca
+real necesita identidad.
+
+30
+00:01:51,733 --> 00:01:55,600
+Por eso diseñamos los diez estampados
+de la colección Guerra de Pesos,
+
+31
+00:01:55,600 --> 00:01:59,567
+inspirados en las batallas diarias de todo
+programador con los modelos de lenguaje.
+
+32
+00:01:59,600 --> 00:02:01,983
+Arrancamos con el diseño
+uno, Contador de Fresas:
+
+33
+00:02:01,983 --> 00:02:05,867
+noventa y nueve punto ocho por ciento
+en olimpiadas de matemáticas,
+
+34
+00:02:05,867 --> 00:02:09,017
+pero cero por ciento contando
+las erres de strawberry;
+
+35
+00:02:09,017 --> 00:02:14,050
+seguido del dos, Vibe Coding
+en Producción, y el tres,
+
+36
+00:02:14,050 --> 00:02:17,800
+el Club CUDA Poor intentando correr
+un modelo de cuatrocientos cinco billones
+
+37
+00:02:17,800 --> 00:02:18,967
+en una laptop.
+
+38
+00:02:19,000 --> 00:02:21,133
+El diseño cuatro exhibe
+la Estafa del Benchmark
+
+39
+00:02:21,133 --> 00:02:24,900
+cuando el examen viene en los datos
+de entrenamiento; el cinco reúne
+
+40
+00:02:24,900 --> 00:02:28,617
+a la Mafia Open Source de pesos
+abiertos contra las APIs cerradas;
+
+41
+00:02:28,617 --> 00:02:33,817
+y el seis satiriza la Censura Estética
+cuando el modelo se niega a responder.
+
+42
+00:02:33,850 --> 00:02:36,200
+Completamos los diez artes con el siete,
+
+43
+00:02:36,200 --> 00:02:41,350
+la Tabla Nutricional de un LLM
+con cuarenta gramos de alucinaciones;
+
+44
+00:02:41,350 --> 00:02:44,667
+el ocho, Hoy No Hay AGI
+sobre una GPU derretida;
+
+45
+00:02:44,667 --> 00:02:49,300
+el nueve, la Evolución del Desarrollador
+de C más más a rezarle al prompt;
+
+46
+00:02:49,300 --> 00:02:53,750
+y el diez, el Dilema del Tranvía
+de los Tokens que arregla tu código
+
+47
+00:02:53,750 --> 00:02:56,067
+creando cuarenta y siete errores nuevos.
+
+48
+00:02:56,283 --> 00:02:59,350
+Etapa tres: personalización
+total y casos de uso.
+
+49
+00:02:59,350 --> 00:03:02,767
+Dentro del estudio puedes cambiar
+la ubicación entre bolsillo izquierdo,
+
+50
+00:03:02,767 --> 00:03:05,417
+pecho central, Oversize
+XL o estampado completo,
+
+51
+00:03:05,417 --> 00:03:07,400
+y ajustar con deslizadores la escala,
+
+52
+00:03:07,400 --> 00:03:13,050
+la altura y la profundidad
+del relieve sobre las arrugas.
+
+53
+00:03:13,083 --> 00:03:16,900
+También eliges el acabado
+de serigrafía entre Plastisol HD,
+
+54
+00:03:16,900 --> 00:03:22,433
+lavado Vintage o tinta inflada Puff;
+cambias el nombre y precio de tu marca;
+
+55
+00:03:22,433 --> 00:03:25,717
+y activas la vista doble
+Frente más Espalda,
+
+56
+00:03:25,717 --> 00:03:31,983
+que combina tu arte frontal con la Tabla
+Nutricional LLM en toda la espalda,
+
+57
+00:03:31,983 --> 00:03:35,300
+o la comparativa
+simultánea Hombre y Mujer.
+
+58
+00:03:35,333 --> 00:03:36,900
+¿Y para qué sirve en el mundo real?
+
+59
+00:03:36,900 --> 00:03:41,867
+Con un clic en el panel derecho
+generas al instante el póster vertical
+
+60
+00:03:41,867 --> 00:03:45,100
+nueve dieciséis con precio
+y drop para historias de Instagram,
+
+61
+00:03:45,100 --> 00:03:50,833
+el Lookbook dual para tu tienda en línea
+y el PNG transparente en 4K listo
+
+62
+00:03:50,833 --> 00:03:53,333
+para imprenta o e-commerce.
+
+63
+00:03:53,550 --> 00:03:56,167
+Así que la respuesta para Tenito
+cero tres es un rotundo sí:
+
+64
+00:03:56,167 --> 00:04:00,067
+pasamos de su comentario a un estudio
+3D completo con mockups en blanco,
+
+65
+00:04:00,067 --> 00:04:06,450
+diez diseños de la marca Overfit y
+exportación directa para lanzar tu tienda.
+
+66
+00:04:06,483 --> 00:04:10,083
+Te dejo el enlace en la descripción
+y en el comentario fijado para que abras
+
+67
+00:04:10,083 --> 00:04:13,383
+Overfit Studio 3D en tu navegador,
+
+68
+00:04:13,383 --> 00:04:16,083
+pruebes los diez estampados
+o subas tu propio logo gratis.
+
+69
+00:04:16,117 --> 00:04:21,650
+Y ahora te toca a ti: escribe aquí abajo
+en los comentarios qué herramienta,
+
+70
+00:04:21,650 --> 00:04:24,333
+marca o experimento
+quieres que construyamos.
+
+71
+00:04:24,333 --> 00:04:29,700
+La mejor propuesta de la comunidad será el
+Episodio dos de Del Comentario al Código.
+
+72
+00:04:29,700 --> 00:04:35,083
+Suscríbete a Mixiuh Labs, activa
+la campanita y comparte este episodio
+
+73
+00:04:35,083 --> 00:04:39,417
+con ese amigo programador que hace
+Vibe Coding directo en producción.
+
+74
+00:04:39,633 --> 00:04:42,550
+Del Comentario al Código,
+episodio uno completado.
+
+75
+00:04:42,550 --> 00:04:46,033
+Nos vemos en el siguiente
+nivel, aquí en Mixiuh Labs.

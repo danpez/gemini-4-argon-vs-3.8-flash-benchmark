@@ -1,0 +1,17 @@
+Se ha construido y verificado la **Terminal Institucional Interactiva de Trading Cuantitativo y Microestructura de Mercado en Tiempo Real (`QUANTUM-HFT // L3`)** en un único archivo autocontenido bajo el protocolo **Mixiuh Labs Superpowers Kit**.
+
+### Archivos Entregados y Actualizados
+- [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/02-terminal-trading/index.html) — Aplicación monolítica 100% autocontenida (HTML5 + CSS Grid Institucional + Motor Cuantitativo ES2024 Zero-GC a 60–120 FPS).
+- [MEMORY.md](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/02-terminal-trading/MEMORY.md) — Memoria persistente actualizada con la arquitectura de buffers tipados, decisiones técnicas y verificación sin errores.
+
+### Arquitectura e Implementación Técnica
+1. **Motor Estocástico y Emparejamiento CLOB L3 (`stepMarketSimulation` & `rebuildOrderBook`)**:
+   - Dinámica de precios gobernada por **Volatilidad Estocástica de Heston** ($dv_t = \kappa(\theta - v_t)dt + \xi\sqrt{v_t}dW_t^v$) acoplada con **Saltos de Difusión de Poisson (Merton)** e impacto de desequilibrio del libro de órdenes.
+   - Soporte en vivo para los 4 activos (`BTC-PERP`, `NVDA-AI`, `ETH-PERP`, `SOL-HFT`) y escritorio de ejecución **DMA (Market & Limit)** con apalancamiento configurable (`1x` a `100x`), cálculo de *slippage* real sobre la liquidez L3, PnL realizado/no realizado y liquidación automática por cruce de *Mark Price*.
+2. **Cuatro Visualizaciones Sincronizadas a 60–120 FPS (Zero-GC con `Float32Array`)**:
+   - **Gráfico Principal de Velas + Mapa de Calor L3 (`renderCandlesPanel`)**: Velas japonesas en tiempo real sobre un *Liquidity Heatmap* histórico de 32 bandas, con **Bandas de Bollinger (20, 2)**, **VWAP**, **EMA 9/21**, **Volume Profile (VPVR)** lateral con línea POC y motor de partículas para liquidaciones y ballenas.
+   - **Superficie 3D Interactiva de Volatilidad Implícita y Profundidad DOM (`renderSurface3DPanel`)**: Malla 3D con proyección perspectiva, rotación interactiva con mouse y auto-rotación mostrando *skew*, convexidad y tensión de liquidez Bid/Ask.
+   - **Escalera DOM L2/L3 y Cinta de Transacciones (`renderDOMLadderPanel` & `pushTapeExecution`)**: Profundidad acumulada en tiempo real y flujo *Time & Sales* con detección de bloques institucionales (`WHALE+`/`WHALE-`) y liquidaciones (`LIQ-S`/`LIQ-L`).
+   - **Osciloscopio de Microestructura (`renderMicroOscilloscope`)**: Tres canales sincronizados para **Order Flow Imbalance (OFI)**, **Flujo de Toxicidad VPIN** (con umbral crítico al 75%) y **Latencia del Motor HFT** en microsegundos.
+3. **Simuladores de Eventos Extremos en Vivo**:
+   - Controles interactivos para detonar `Disparar Flash Crash (-25%)`, `Inyectar Ballena ($50M Buy Wall)`, `Short Squeeze Algoritmico`, `Cascada de Liquidaciones` y `Calmar Mercado`.

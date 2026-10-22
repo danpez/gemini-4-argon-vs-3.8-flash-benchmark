@@ -1,0 +1,83 @@
+{
+ "A": {
+  "hash": "416e1c623556a1ffe600262ba89d861a3460159f",
+  "info": {
+   "id": "A",
+   "text": "16 USD | 6 USD",
+   "sub": "",
+   "layout": "split",
+   "path": "episodes/ep02-argon-vs-opus/out/thumbnails/thumb_A.jpg",
+   "path_720": "episodes/ep02-argon-vs-opus/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 454524,
+   "bytes_720": 249074,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 22.0,
+   "contrast": 6.23,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "02_fluidos_navier_stokes_comparativa.mov t=3.5",
+    "right": "02_fluidos_navier_stokes_comparativa.mov t=21.5"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "B": {
+  "hash": "8b5387a0988b4a166a60cf094c9a902b91f84742",
+  "info": {
+   "id": "B",
+   "text": "159 MIN | 90 MIN",
+   "sub": "",
+   "layout": "split",
+   "path": "episodes/ep02-argon-vs-opus/out/thumbnails/thumb_B.jpg",
+   "path_720": "episodes/ep02-argon-vs-opus/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 734996,
+   "bytes_720": 379427,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 18.0,
+   "contrast": 11.15,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "01_tela_verlet_comparativa.mov t=8",
+    "right": "01_tela_verlet_comparativa.mov t=26"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "C": {
+  "hash": "bc9fce4426b79eaa085c8782f81c439e0c06539e",
+  "info": {
+   "id": "C",
+   "text": "2 | 4",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep02-argon-vs-opus/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep02-argon-vs-opus/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 598872,
+   "bytes_720": 309605,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 33.0,
+   "contrast": 9.03,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "04_voxel_minecraft_comparativa.mov t=3.5",
+    "right": "04_voxel_minecraft_comparativa.mov t=21.5"
+   },
+   "origin": "episode.yaml"
+  }
+ }
+}

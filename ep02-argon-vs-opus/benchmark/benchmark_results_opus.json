@@ -1,0 +1,209 @@
+{
+  "started_at": "2026-10-16T15:29:37.587972",
+  "runs": {
+    "01-tela-verlet": {
+      "argon": {
+        "challenge_id": "01-tela-verlet",
+        "model": "argon",
+        "started_at": "2026-10-16T15:29:37.588061",
+        "finished_at": "2026-10-16T15:36:18.332112",
+        "elapsed_seconds": 400.74,
+        "elapsed_minutes": 6.68,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 90128,
+        "size_kb": 88.0,
+        "lines": 2766,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/01-tela-verlet_argon.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/01-tela-verlet/index.html"
+      },
+      "opus": {
+        "challenge_id": "01-tela-verlet",
+        "model": "opus",
+        "started_at": "2026-10-16T15:40:26.320040",
+        "finished_at": "2026-10-16T16:11:18.471285",
+        "elapsed_seconds": 1852.14,
+        "elapsed_minutes": 30.87,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 67479,
+        "size_kb": 65.9,
+        "lines": 1352,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/01-tela-verlet_opus.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/claude-opus-5.5/01-tela-verlet/index.html"
+      }
+    },
+    "02-fluidos-navier-stokes": {
+      "argon": {
+        "challenge_id": "02-fluidos-navier-stokes",
+        "model": "argon",
+        "started_at": "2026-10-16T15:36:18.332840",
+        "finished_at": "2026-10-16T15:46:18.357421",
+        "elapsed_seconds": 600.02,
+        "elapsed_minutes": 10.0,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 85618,
+        "size_kb": 83.6,
+        "lines": 2506,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/02-fluidos-navier-stokes_argon.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/02-fluidos-navier-stokes/index.html"
+      },
+      "opus": {
+        "challenge_id": "02-fluidos-navier-stokes",
+        "model": "opus",
+        "started_at": "2026-10-16T16:11:18.473037",
+        "finished_at": "2026-10-16T16:29:46.486497",
+        "elapsed_seconds": 1108.01,
+        "elapsed_minutes": 18.47,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 64196,
+        "size_kb": 62.7,
+        "lines": 1444,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/02-fluidos-navier-stokes_opus.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/claude-opus-5.5/02-fluidos-navier-stokes/index.html"
+      }
+    },
+    "03-cuerpo-blando-sdf": {
+      "argon": {
+        "challenge_id": "03-cuerpo-blando-sdf",
+        "model": "argon",
+        "started_at": "2026-10-16T15:46:18.358159",
+        "finished_at": "2026-10-16T16:21:02.956644",
+        "elapsed_seconds": 2084.59,
+        "elapsed_minutes": 34.74,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 95978,
+        "size_kb": 93.7,
+        "lines": 2543,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/03-cuerpo-blando-sdf_argon.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/03-cuerpo-blando-sdf/index.html"
+      },
+      "opus": {
+        "challenge_id": "03-cuerpo-blando-sdf",
+        "model": "opus",
+        "started_at": "2026-10-16T16:29:46.487831",
+        "finished_at": "2026-10-16T17:00:38.776934",
+        "elapsed_seconds": 1852.28,
+        "elapsed_minutes": 30.87,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 104101,
+        "size_kb": 101.7,
+        "lines": 1701,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/03-cuerpo-blando-sdf_opus.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/claude-opus-5.5/03-cuerpo-blando-sdf/index.html"
+      }
+    },
+    "04-voxel-minecraft": {
+      "argon": {
+        "challenge_id": "04-voxel-minecraft",
+        "model": "argon",
+        "started_at": "2026-10-16T16:21:02.957301",
+        "finished_at": "2026-10-16T16:28:02.242069",
+        "elapsed_seconds": 419.28,
+        "elapsed_minutes": 6.99,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 91841,
+        "size_kb": 89.7,
+        "lines": 2569,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/04-voxel-minecraft_argon.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/04-voxel-minecraft/index.html"
+      },
+      "opus": {
+        "challenge_id": "04-voxel-minecraft",
+        "model": "opus",
+        "started_at": "2026-10-16T17:00:38.778601",
+        "finished_at": "2026-10-16T17:24:18.056813",
+        "elapsed_seconds": 1419.27,
+        "elapsed_minutes": 23.65,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 93802,
+        "size_kb": 91.6,
+        "lines": 1665,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/04-voxel-minecraft_opus.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/claude-opus-5.5/04-voxel-minecraft/index.html"
+      }
+    },
+    "05-sintetizador-fm": {
+      "argon": {
+        "challenge_id": "05-sintetizador-fm",
+        "model": "argon",
+        "started_at": "2026-10-16T16:28:02.242934",
+        "finished_at": "2026-10-16T16:52:06.401280",
+        "elapsed_seconds": 1444.15,
+        "elapsed_minutes": 24.07,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 82980,
+        "size_kb": 81.0,
+        "lines": 2586,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/05-sintetizador-fm_argon.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/05-sintetizador-fm/index.html"
+      },
+      "opus": {
+        "challenge_id": "05-sintetizador-fm",
+        "model": "opus",
+        "started_at": "2026-10-16T17:24:18.058055",
+        "finished_at": "2026-10-16T17:54:31.658415",
+        "elapsed_seconds": 1813.59,
+        "elapsed_minutes": 30.23,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 108860,
+        "size_kb": 106.3,
+        "lines": 1933,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/05-sintetizador-fm_opus.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/claude-opus-5.5/05-sintetizador-fm/index.html"
+      }
+    },
+    "06-pinball-ccd": {
+      "argon": {
+        "challenge_id": "06-pinball-ccd",
+        "model": "argon",
+        "started_at": "2026-10-16T16:52:06.401929",
+        "finished_at": "2026-10-16T16:59:45.389531",
+        "elapsed_seconds": 458.98,
+        "elapsed_minutes": 7.65,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 97293,
+        "size_kb": 95.0,
+        "lines": 2749,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/06-pinball-ccd_argon.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/06-pinball-ccd/index.html"
+      },
+      "opus": {
+        "challenge_id": "06-pinball-ccd",
+        "model": "opus",
+        "started_at": "2026-10-16T17:54:31.659807",
+        "finished_at": "2026-10-16T18:19:05.739399",
+        "elapsed_seconds": 1474.07,
+        "elapsed_minutes": 24.57,
+        "exit_code": 0,
+        "file_exists": true,
+        "size_bytes": 81275,
+        "size_kb": 79.4,
+        "lines": 1508,
+        "extracted_from_stdout": false,
+        "log_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/logs/06-pinball-ccd_opus.log",
+        "target_file": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/claude-opus-5.5/06-pinball-ccd/index.html"
+      }
+    }
+  }
+}

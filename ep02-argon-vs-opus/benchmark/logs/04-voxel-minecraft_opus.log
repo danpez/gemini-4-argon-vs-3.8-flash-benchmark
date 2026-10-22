@@ -1,0 +1,28 @@
+Terminé: el motor voxel está escrito, probado y commiteado.
+
+**Archivo:** `claude-opus-5.5/04-voxel-minecraft/index.html` (1,665 líneas, un solo HTML con Three.js r170 por importmap). Commit `54fe493`.
+
+## Validación (Playwright con Chrome, 1440×900)
+- Carga en unos 3–5 s.
+- **60 FPS** con unos 1.0 M de triángulos, 274 draw calls y 2.58 M de voxels activos. El frame usa 0.8–2 ms de CPU.
+- Romper un bloque con raycast lo deja en aire. Colocar sobre la normal de la cara (+Y) pone el bloque justo en `y+1`.
+- Con el mouse: clic izquierdo destruye y suelta unas 50 mini-voxels físicas, y clic derecho coloca el bloque activo.
+- En modo exploración el jugador cae y aterriza en el suelo con colisión AABB.
+- Regenerar con la semilla `42` produce otro mundo. Se generan agujas de cristal en superficie.
+- Cero errores de consola.
+- Revisé capturas de día, atardecer, noche y cuevas iluminadas.
+
+## Qué incluye
+- **Mundo infinito por chunks de 16×16×112**, cargados alrededor de la cámara con un límite de tiempo por frame. Solo se dibujan las caras visibles: 2 mallas por chunk (opaca y agua), no un `Mesh` por bloque.
+- **Terreno** con ruido Simplex 2D/3D con semilla y varias octavas. Tiene continentes, crestas de montaña, 8 biomas (océano/lago, playa, praderas, bosque, desierto, taiga nevada, montañas, picos), túneles y cavernas 3D, lava profunda, vetas de carbón y de cristal luminoso, robles, abetos y cactus. Las estructuras cruzan bordes de chunk sin cortarse.
+- **Iluminación tipo Minecraft técnico:** luz de cielo y luz de bloque propagadas por BFS, con iluminación suave por vértice y oclusión ambiental (AO) por esquina. La lava, el bloque luminoso y los cristales alumbran las cuevas.
+- **Atlas de 24 texturas pixel-art de 16×16** hecho con `<canvas>`, con `NearestFilter`, bordes biselados y ruido por píxel. Los iconos isométricos del inventario se generan del mismo atlas.
+- **Agua translúcida animada** con olas, reflejo y brillo del sol. Si rompes un bloque junto al agua, esta fluye al hueco.
+- **Ciclo día/noche:** sol y luna cuadrados, estrellas que giran, niebla del color del horizonte y nubes de bloques. De noche el bloom resalta los bloques emisivos.
+- **Controles:** modo órbita (con WASD para desplazarte) y modo exploración (pointer-lock, física, nado y vuelo con F o doble espacio). Inventario de 10 bloques con teclas 1–0 o rueda del mouse, clic medio para copiar un bloque y bloque en la mano con animación.
+- **HUD:** FPS, posición, bioma, bloque apuntado con su cara, voxels, triángulos, semilla y botón de regenerar, sliders de hora, velocidad y distancia de render.
+
+## Requiere prueba manual
+- El **pointer-lock real del modo Exploración** (mirar con el mouse y clics bloqueados) no se puede probar en Chrome headless. Las pruebas forzaron el modo sin bloquear el cursor; la física y los clics sí se validaron por separado.
+- Los FPS medidos están topados por el vsync a 60. En una pantalla de 120 Hz no está medido.
+- No actualicé el roadmap `mixiuh-roadmap-vivo` porque no existe en la memoria de este proyecto.

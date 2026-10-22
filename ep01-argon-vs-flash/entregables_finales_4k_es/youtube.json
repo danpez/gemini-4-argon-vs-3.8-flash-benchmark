@@ -1,0 +1,505 @@
+{
+ "version": 1,
+ "episode": {
+  "id": "ep01",
+  "slug": "gemini-4-argon-vs-3-8-flash",
+  "title": "Gemini 4 Argon vs 3.8 Flash: 10 retos de código y el medio píxel que rompió un mundo"
+ },
+ "duration": 605.467,
+ "duration_ts": "10:05",
+ "facts_used": true,
+ "titles": [
+  {
+   "text": "Gemini 4 Argon vs 3.8 Flash: el medio píxel que rompió un mundo",
+   "chars": 63,
+   "visible_ok": true,
+   "models_first": true,
+   "trimmed": false
+  },
+  {
+   "text": "Gemini 4 Argon vs 3.8 Flash: 10-0, 55 contra 94 minutos",
+   "chars": 55,
+   "visible_ok": true,
+   "models_first": true,
+   "trimmed": false
+  },
+  {
+   "text": "Gemini 4 Argon vs 3.8 Flash: 10 retos de código, un solo intento",
+   "chars": 64,
+   "visible_ok": true,
+   "models_first": true,
+   "trimmed": false
+  }
+ ],
+ "description": "Gemini 4 Argon vs Gemini 3.8 Flash: 10 retos de código zero-shot, mismo prompt y un solo intento. Argon ganó 10-0 y tardó 39 minutos menos.\n\nProbé Gemini 4 Argon y Gemini 3.8 Flash (variantes High, dentro de Antigravity) con el mismo prompt en 10 retos: 3D con Three.js, simulaciones de física, pixel art, CSS puro y matemáticas. Cada modelo tuvo un solo intento y entregó todo en un index.html, sin imágenes ni modelos externos. Resultado: Argon 10-0 en calidad y 55 contra 94 minutos en total (41.5 % menos), aunque Flash fue más rápido en 3 retos. Los minutos vienen de mis notas (redondeados al minuto); las demos se grabaron después de generar.\n\nDEMOS Y CÓDIGO\nCódigo de los 20 proyectos: https://github.com/danpez/gemini-4-argon-vs-3.8-flash-benchmark\nDemos jugables (Argon y Flash): https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/\n\nCAPÍTULOS\n00:00 El mundo roto\n00:19 Protocolo del experimento\n01:00 Mundo 1, Nivel 1: Sistema Solar Relativo\n01:44 Mundo 1, Nivel 2: Visualizador de ADN 3D\n02:36 Mundo 2, Nivel 3: Vida Artificial\n03:17 Mundo 2, Nivel 4: Generador de Mazmorras\n04:04 Mundo 2, Nivel 5: Simulador Falling Sand\n04:50 Mundo 3, Nivel 6: Motor 3D Raycasting, el jefe\n05:54 Mundo 3, Nivel 7: Sprites Espaciales 8 Bits\n06:40 Mundo 4, Nivel 8: Reloj Analógico CSS\n07:12 Mundo 5, Nivel 9: Árbol Fractal con Viento\n08:04 Mundo 5, Nivel 10: Spirograph Paramétrico\n08:56 Pantalla de resultados\n09:21 Veredicto del Lab\n\nHERRAMIENTAS\n- Voz: Voicefy, mi propia voz clonada, corre local en mi Mac.\n- Edición y subtítulos: Reelfy + Mixiuh Labs Studio (mi pipeline propio).\n- Música: chiptune original generada por código (sin samples ni pistas de terceros).\n- Modelos: Gemini 4 Argon y Gemini 3.8 Flash (variantes High) en Antigravity.\n\nLa narración usa mi propia voz clonada con Voicefy (corre local).\n\n#Gemini4Argon #GeminiFlash #IA\n",
+ "description_bytes": 1876,
+ "hook": "Gemini 4 Argon vs Gemini 3.8 Flash: 10 retos de código zero-shot, mismo prompt y un solo intento. Argon ganó 10-0 y tardó 39 minutos menos.",
+ "chapters": {
+  "valid": true,
+  "in_description": true,
+  "items": [
+   {
+    "t": 0.0,
+    "ts": "00:00",
+    "title": "El mundo roto"
+   },
+   {
+    "t": 19.833,
+    "ts": "00:19",
+    "title": "Protocolo del experimento"
+   },
+   {
+    "t": 60.383,
+    "ts": "01:00",
+    "title": "Mundo 1, Nivel 1: Sistema Solar Relativo"
+   },
+   {
+    "t": 104.717,
+    "ts": "01:44",
+    "title": "Mundo 1, Nivel 2: Visualizador de ADN 3D"
+   },
+   {
+    "t": 156.533,
+    "ts": "02:36",
+    "title": "Mundo 2, Nivel 3: Vida Artificial"
+   },
+   {
+    "t": 197.5,
+    "ts": "03:17",
+    "title": "Mundo 2, Nivel 4: Generador de Mazmorras"
+   },
+   {
+    "t": 244.4,
+    "ts": "04:04",
+    "title": "Mundo 2, Nivel 5: Simulador Falling Sand"
+   },
+   {
+    "t": 290.067,
+    "ts": "04:50",
+    "title": "Mundo 3, Nivel 6: Motor 3D Raycasting, el jefe"
+   },
+   {
+    "t": 354.833,
+    "ts": "05:54",
+    "title": "Mundo 3, Nivel 7: Sprites Espaciales 8 Bits"
+   },
+   {
+    "t": 400.75,
+    "ts": "06:40",
+    "title": "Mundo 4, Nivel 8: Reloj Analógico CSS"
+   },
+   {
+    "t": 432.367,
+    "ts": "07:12",
+    "title": "Mundo 5, Nivel 9: Árbol Fractal con Viento"
+   },
+   {
+    "t": 484.683,
+    "ts": "08:04",
+    "title": "Mundo 5, Nivel 10: Spirograph Paramétrico"
+   },
+   {
+    "t": 536.167,
+    "ts": "08:56",
+    "title": "Pantalla de resultados"
+   },
+   {
+    "t": 561.217,
+    "ts": "09:21",
+    "title": "Veredicto del Lab"
+   }
+  ],
+  "issues": [],
+  "fixes": [],
+  "remaining_issues": []
+ },
+ "links": [
+  {
+   "label": "Código de los 20 proyectos",
+   "url": "https://github.com/danpez/gemini-4-argon-vs-3.8-flash-benchmark",
+   "status": "verificar que respondan"
+  },
+  {
+   "label": "Demos jugables (Argon y Flash)",
+   "url": "https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/",
+   "status": "verificar que respondan"
+  }
+ ],
+ "tags": [
+  "Gemini 4 Argon",
+  "Gemini 3.8 Flash",
+  "Gemini 4 Argon vs Gemini 3.8 Flash",
+  "comparativa de IA para programar",
+  "zero-shot coding",
+  "Antigravity",
+  "raycasting",
+  "Mixiuh Labs"
+ ],
+ "tags_chars": 163,
+ "hashtags": [
+  "#Gemini4Argon",
+  "#GeminiFlash",
+  "#IA"
+ ],
+ "pinned_comment": "Aquí no se opina: se prueba. ¿Qué reto metemos al laboratorio ahora? Dato: los minutos son de mis notas (redondeados al minuto) y Flash fue más rápido en 3 de los 10 retos. Los capítulos están en la descripción.",
+ "midrolls": {
+  "eligible": true,
+  "items": [
+   {
+    "t": 150.8,
+    "ts": "02:30",
+    "ts_exact": "02:30.8",
+    "studio_second_safe": true,
+    "scene": "reto03",
+    "silence": [
+     149.45,
+     150.8
+    ],
+    "reason": "entre 'Mundo 1, Nivel 2: Visualizador de ADN 3D' y 'Mundo 2, Nivel 3: Vida Artificial': cambio de ronda, sin voz durante 1.4 s"
+   },
+   {
+    "t": 354.833,
+    "ts": "05:54",
+    "ts_exact": "05:54.8",
+    "studio_second_safe": true,
+    "scene": "reto07",
+    "silence": [
+     353.583,
+     354.833
+    ],
+    "reason": "entre 'Mundo 3, Nivel 6: Motor 3D Raycasting, el jefe' y 'Mundo 3, Nivel 7: Sprites Espaciales 8 Bits': cambio de ronda, sin voz durante 1.2 s"
+   }
+  ],
+  "notes": [],
+  "min_gap": 150.0
+ },
+ "end_screen": {
+  "present": true,
+  "layer": "L0213",
+  "t0": 590.267,
+  "t1": 605.467,
+  "dur": 15.2,
+  "ts0": "09:50",
+  "ts1": "10:05",
+  "elements": [
+   {
+    "slot": "video_left",
+    "type": "video",
+    "label": "Video: el más reciente (o una lista de Mixiuh Labs)",
+    "rect": [
+     300.0,
+     330.0,
+     640.0,
+     360.0
+    ],
+    "rect_pct": [
+     15.62,
+     30.56,
+     33.33,
+     33.33
+    ],
+    "start": 590.267,
+    "start_ts": "09:50"
+   },
+   {
+    "slot": "video_right",
+    "type": "video",
+    "label": "Video: el mejor para el espectador",
+    "rect": [
+     980.0,
+     330.0,
+     640.0,
+     360.0
+    ],
+    "rect_pct": [
+     51.04,
+     30.56,
+     33.33,
+     33.33
+    ],
+    "start": 590.767,
+    "start_ts": "09:50"
+   },
+   {
+    "slot": "subscribe",
+    "type": "subscribe",
+    "label": "Botón de suscripción (logo del canal)",
+    "rect": [
+     868.0,
+     748.0,
+     184.0,
+     184.0
+    ],
+    "rect_pct": [
+     45.21,
+     69.26,
+     9.58,
+     17.04
+    ],
+    "start": 591.267,
+    "start_ts": "09:51"
+   }
+  ],
+  "issues": []
+ },
+ "video": {
+  "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/gemini-4-argon-vs-3-8-flash_2160p60.mp4",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "h264",
+  "profile": "High",
+  "acodec": "aac",
+  "sample_rate": 48000,
+  "channels": 2,
+  "abitrate": 320009,
+  "duration": 605.482667,
+  "bitrate": 51900431
+ },
+ "loudness": {
+  "lufs": -14.01,
+  "true_peak_db": -1.75,
+  "source": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/build/mix.wav",
+  "duration": 605.467,
+  "sr": 48000
+ },
+ "upload": [
+  {
+   "item": "Archivo final",
+   "value": "gemini-4-argon-vs-3-8-flash_2160p60.mp4: 3840x2160 @60 fps, h264 High",
+   "status": "ok"
+  },
+  {
+   "item": "Audio del archivo",
+   "value": "aac 48000 Hz, 2 canales, 320 kbps (YouTube recomienda AAC-LC 48 kHz estéreo, 384 kbps)",
+   "status": "ok"
+  },
+  {
+   "item": "Loudness medido",
+   "value": "-14.0 LUFS integrados, true peak -1.8 dBTP (objetivo -14 LUFS, <= -1 dBTP; medido en mix.wav)",
+   "status": "ok"
+  },
+  {
+   "item": "Categoría",
+   "value": "Ciencia y tecnología",
+   "status": "manual"
+  },
+  {
+   "item": "Idioma del video y de título/descripción",
+   "value": "Español (México), es-MX",
+   "status": "manual"
+  },
+  {
+   "item": "Contenido alterado o sintético",
+   "value": "No. Motivo: La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+   "status": "manual"
+  },
+  {
+   "item": "Subtítulos a subir",
+   "value": "captions_es.srt (Español (México))",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: miniaturas",
+   "value": "thumb_A.jpg, thumb_B.jpg, thumb_C.jpg (1920x1080 JPG < 2 MB; sube las 3)",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: títulos",
+   "value": "hasta 3 títulos (sección 1)",
+   "status": "manual"
+  },
+  {
+   "item": "Capítulos",
+   "value": "en la descripción",
+   "status": "ok"
+  },
+  {
+   "item": "Público",
+   "value": "No, no es contenido para niños",
+   "status": "manual"
+  },
+  {
+   "item": "Pausas publicitarias",
+   "value": "manuales en las marcas de la sección 7; desactiva la colocación automática o revisa que no corten una frase",
+   "status": "manual"
+  },
+  {
+   "item": "Pantalla final",
+   "value": "plantilla con 2 videos + suscribirse sobre los huecos (sección 8)",
+   "status": "manual"
+  },
+  {
+   "item": "Tarjetas",
+   "value": "máximo 5, cuando se mencione el video, nunca en los últimos 20 s",
+   "status": "manual"
+  },
+  {
+   "item": "Funciones avanzadas del canal",
+   "value": "verificadas (capítulos, links clicables, Probar y comparar)",
+   "status": "manual"
+  },
+  {
+   "item": "Revisión final",
+   "value": "sube como Oculto, revisa 'Estadísticas para nerds' (content loudness) y publica",
+   "status": "manual"
+  }
+ ],
+ "settings": {
+  "category": "Ciencia y tecnología",
+  "language": "es-MX",
+  "altered_content": false,
+  "altered_reason": "La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+  "made_for_kids": false
+ },
+ "captions": {
+  "es": {
+   "srt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/captions_es.srt",
+   "vtt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/captions_es.vtt",
+   "n": 165,
+   "written": false
+  },
+  "en": {
+   "status": "omitido",
+   "note": "LLM no habilitado (usa --llm o MLABS_LLM=1)",
+   "n": 165
+  }
+ },
+ "thumbnails": [
+  {
+   "id": "A",
+   "text": "0 | 10",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 466398,
+   "bytes_720": 250575,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 34.0,
+   "contrast": 10.72,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "motor_raycasting_comparativa.mov t=14.3",
+    "right": "motor_raycasting_comparativa.mov t=63"
+   },
+   "origin": "ep01"
+  },
+  {
+   "id": "B",
+   "text": "22 MIN | 4 MIN",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 808235,
+   "bytes_720": 440872,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 20.0,
+   "contrast": 7.36,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "arbol_fractal_comparativa.mov t=55",
+    "right": "arbol_fractal_comparativa.mov t=174"
+   },
+   "origin": "ep01"
+  },
+  {
+   "id": "C",
+   "text": "¿FLASH ROTO?",
+   "sub": "",
+   "layout": "hero",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 437185,
+   "bytes_720": 238910,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 25.0,
+   "contrast": 9.99,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "motor_raycasting_comparativa.mov t=4.8"
+   },
+   "origin": "ep01"
+  }
+ ],
+ "shorts": [
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/01_sistema-solar.mp4",
+   "scene": "reto01",
+   "title": "SISTEMA SOLAR RELATIVO",
+   "duration": 46.983333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/02_visualizador-adn.mp4",
+   "scene": "reto02",
+   "title": "VISUALIZADOR DE ADN 3D",
+   "duration": 51.733333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/03_vida-artificial.mp4",
+   "scene": "reto03",
+   "title": "VIDA ARTIFICIAL",
+   "duration": 49.35
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/04_generador-mazmorras.mp4",
+   "scene": "reto04",
+   "title": "GENERADOR DE MAZMORRAS",
+   "duration": 52.55
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/05_falling-sand.mp4",
+   "scene": "reto05",
+   "title": "SIMULADOR FALLING SAND",
+   "duration": 50.916667
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/06_motor-raycasting.mp4",
+   "scene": "reto06",
+   "title": "MOTOR 3D RAYCASTING",
+   "duration": 54.733333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/07_generador-sprites.mp4",
+   "scene": "reto07",
+   "title": "SPRITES ESPACIALES 8 BITS",
+   "duration": 47.65
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/08_reloj-analogico.mp4",
+   "scene": "reto08",
+   "title": "RELOJ ANALÓGICO CSS",
+   "duration": 41.183333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/09_arbol-fractal.mp4",
+   "scene": "reto09",
+   "title": "ÁRBOL FRACTAL CON VIENTO",
+   "duration": 57.966667
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/shorts/10_spirograph-parametrico.mp4",
+   "scene": "reto10",
+   "title": "SPIROGRAPH PARAMÉTRICO",
+   "duration": 54.133333
+  }
+ ],
+ "translations": {},
+ "warnings": []
+}

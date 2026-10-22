@@ -1,0 +1,17 @@
+El archivo autocontenido [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/05-motor-nodos-ia/index.html) ha sido creado con la implementación completa de **`NEXUS // NODE SHADER & DSP STUDIO`**.
+
+### Arquitectura Implementada
+
+1. **Motor de Grafo Dirigido Acíclico (DAG) y Lienzo Infinito (`NexusStudio`)**:
+   - **Ordenamiento Topológico y Detección de Ciclos**: Evaluación por capas mediante el algoritmo de Kahn (`computeTopologicalOrder`) y prevención activa de ciclos inválidos por búsqueda en profundidad (`wouldCreateCycle`) con alertas visuales y registro en consola sin bloquear la interfaz.
+   - **Cables Bézier Cúbicos Animados**: Renderizado en Canvas 2D con resplandor neón por tipo de dato (`Float`, `Vec3/Color`, `SDF Geometry`, `Audio FFT`) y partículas luminosas viajando a velocidad proporcional al flujo de señal en tiempo real. Soporta arrastrar desde puertos de salida, reconectar desde puertos de entrada y validación de compatibilidad de tipos.
+   - **Mini-Canvas en Vivo dentro de Cada Nodo**: Cada nodo renderiza a 60–120 FPS su propia señal interna (osciloscopio de fase/onda en `LFO`, analizador de espectro en `Audio FFT`, mapa de calor 4D en `Simplex 4D`, isolíneas de corte transversal en `SDF` y `Operador`, gradiente espectral en `Paleta Coseno` y monitor maestro en `Master Output`).
+
+2. **Viewport Principal WebGL de Raymarching 3D (`RaymarchWebGLEngine`)**:
+   - Compilador dinámico de Shaders GLSL acoplado a la topología del grafo y alimentado por uniformes en tiempo real a 60–120 FPS.
+   - Primitivas y fractales SDF 3D/4D (`Toroide Cuántico`, `Octaedro Ciber-Cristal`, `Mandelbulb Fractal 4D`, `Giroide Metamaterial`), operadores booleanos suaves (`Smooth Union`, `Sustracción Booleana`), torsión (`Twist`), repetición infinita de dominio, plegado caleidoscópico (`KIFS Fold`), desplazamiento fractal 4D, iluminación especular iridiscente, bloom volumétrico y aberración cromática.
+   - Modos de inspección interactivos (`Iridiscente`, `Normales`, `Campo SDF` de isolíneas), cámara orbital 3D interactiva (arrastre y zoom) y vista dividida/ampliable.
+
+3. **Sintetizador DSP WebAudio y Presets de 1 Clic**:
+   - Motor [`SynthAudioEngine`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/05-motor-nodos-ia/index.html#L1063-L1168) con secuenciador ácido/FM en WebAudio API y analizador FFT en tiempo real (con envolvente armónica procedural automática cuando el audio está silenciado).
+   - Presets instantáneos: **`1. Agujero de Gusano Raymarching`**, **`2. Fractal Ciber-Cristal 4D`**, **`3. Pulso Audio-Reactivo Synth`**, **`Auto-Ordenar Grafo (Layout)`** e **`Inyectar Mutación Procedural`**.

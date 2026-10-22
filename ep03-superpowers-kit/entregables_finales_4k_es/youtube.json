@@ -1,0 +1,445 @@
+{
+ "version": 1,
+ "episode": {
+  "id": "ep03",
+  "slug": "ia-sin-kit-vs-mixiuh-superpowers-kit",
+  "title": "Gemini 4 Argon High Sin Kit vs Mixiuh Superpowers Kit: ¿Realmente Necesitas Skills y Memoria Hoy?"
+ },
+ "duration": 451.0,
+ "duration_ts": "07:31",
+ "facts_used": false,
+ "titles": [
+  {
+   "text": "¿Siguen Sirviendo los Kits de Skills y Memoria? Gemini 4 Argon High",
+   "chars": 67,
+   "visible_ok": true,
+   "models_first": false,
+   "trimmed": true
+  },
+  {
+   "text": "Probé Gemini 4 Argon High A Pelo vs Con 5 Skills y Auto-Debugger en 6",
+   "chars": 69,
+   "visible_ok": true,
+   "models_first": false,
+   "trimmed": true
+  },
+  {
+   "text": "IA Sin Kit vs Mixiuh Superpowers Kit: El Veredicto Real en Tiempo",
+   "chars": 65,
+   "visible_ok": true,
+   "models_first": true,
+   "trimmed": true
+  }
+ ],
+ "description": "IA + Superpowers Kit vs IA Sin Kit (Argon Raw): Gemini 4 Argon High Sin Kit vs Mixiuh Superpowers Kit: ¿Realmente Necesitas Skills y Memoria Hoy?.\n\nDEMOS Y CÓDIGO\nDescargar Mixiuh AI Superpowers Kit (Gratis): https://labs.mixiuh.online\nProbar las 12 demos interactivas reales del Episodio 03: https://labs.mixiuh.online\n\nCAPÍTULOS\n00:00 ¿Siguen siendo necesarios los Kits de Skills hoy?\n00:32 Qué incluye el Mixiuh Superpowers Kit\n01:14 Nivel 1: Simulador Galáctico N-Body 3D\n01:56 Nivel 2: Terminal de Trading HFT Zero-GC\n02:39 Nivel 3: Arcade Bullet-Hell Boss Rush\n03:25 Nivel 4: Ciber-Defensa Zero-Trust 3D\n04:12 Nivel 5: Motor de Nodos y Shaders GLSL (DAG)\n04:54 Nivel 6: Sistema Operativo Web MixiuhOS\n05:40 Veredicto real: cuándo usar el Kit y cuándo no\n06:33 Conclusión: ¿Son necesarios los Kits hoy?\n\nHERRAMIENTAS\n- Voz: Voicefy, mi propia voz clonada, corre local en mi Mac.\n- Edición y subtítulos: Reelfy + Mixiuh Labs Studio (mi pipeline propio).\n- Música: chiptune original generada por código (sin samples ni pistas de terceros).\n\nLa narración usa mi propia voz clonada con Voicefy (corre local).\n\n#IASuperpowersKit #IASinKitArgonRaw #IA\n",
+ "description_bytes": 1166,
+ "hook": "IA + Superpowers Kit vs IA Sin Kit (Argon Raw): Gemini 4 Argon High Sin Kit vs Mixiuh Superpowers Kit: ¿Realmente Necesitas Skills y Memoria Hoy?.",
+ "chapters": {
+  "valid": true,
+  "in_description": true,
+  "items": [
+   {
+    "t": 0.0,
+    "ts": "00:00",
+    "title": "¿Siguen siendo necesarios los Kits de Skills hoy?"
+   },
+   {
+    "t": 32.683,
+    "ts": "00:32",
+    "title": "Qué incluye el Mixiuh Superpowers Kit"
+   },
+   {
+    "t": 74.533,
+    "ts": "01:14",
+    "title": "Nivel 1: Simulador Galáctico N-Body 3D"
+   },
+   {
+    "t": 116.7,
+    "ts": "01:56",
+    "title": "Nivel 2: Terminal de Trading HFT Zero-GC"
+   },
+   {
+    "t": 159.867,
+    "ts": "02:39",
+    "title": "Nivel 3: Arcade Bullet-Hell Boss Rush"
+   },
+   {
+    "t": 205.267,
+    "ts": "03:25",
+    "title": "Nivel 4: Ciber-Defensa Zero-Trust 3D"
+   },
+   {
+    "t": 252.4,
+    "ts": "04:12",
+    "title": "Nivel 5: Motor de Nodos y Shaders GLSL (DAG)"
+   },
+   {
+    "t": 294.25,
+    "ts": "04:54",
+    "title": "Nivel 6: Sistema Operativo Web MixiuhOS"
+   },
+   {
+    "t": 340.25,
+    "ts": "05:40",
+    "title": "Veredicto real: cuándo usar el Kit y cuándo no"
+   },
+   {
+    "t": 393.033,
+    "ts": "06:33",
+    "title": "Conclusión: ¿Son necesarios los Kits hoy?"
+   }
+  ],
+  "issues": [],
+  "fixes": [],
+  "remaining_issues": []
+ },
+ "links": [
+  {
+   "label": "Descargar Mixiuh AI Superpowers Kit (Gratis)",
+   "url": "https://labs.mixiuh.online",
+   "status": "verificar que respondan"
+  },
+  {
+   "label": "Probar las 12 demos interactivas reales del Episodio 03",
+   "url": "https://labs.mixiuh.online",
+   "status": "verificar que respondan"
+  }
+ ],
+ "tags": [
+  "Gemini 4 Argon High",
+  "Mixiuh Superpowers Kit",
+  "Antigravity Skills",
+  "Claude Code Skills",
+  "MCP Auto-Debugger",
+  "programar con IA",
+  "Mixiuh Labs",
+  "IA + Superpowers Kit"
+ ],
+ "tags_chars": 164,
+ "hashtags": [
+  "#IASuperpowersKit",
+  "#IASinKitArgonRaw",
+  "#IA"
+ ],
+ "pinned_comment": "Aquí no se opina: se prueba. ¿Qué metemos al laboratorio ahora? Los capítulos están en la descripción.",
+ "midrolls": {
+  "eligible": false,
+  "items": [],
+  "notes": [
+   "el video dura 07:31; los mid-rolls requieren al menos 8 min"
+  ],
+  "min_gap": 150.0
+ },
+ "end_screen": {
+  "present": true,
+  "layer": "L0071",
+  "t0": 431.0,
+  "t1": 451.0,
+  "dur": 20.0,
+  "ts0": "07:11",
+  "ts1": "07:31",
+  "elements": [
+   {
+    "slot": "video_left",
+    "type": "video",
+    "label": "Video: el más reciente (o una lista de Mixiuh Labs)",
+    "rect": [
+     218.0,
+     228.0,
+     512.0,
+     288.0
+    ],
+    "rect_pct": [
+     11.35,
+     21.11,
+     26.67,
+     26.67
+    ],
+    "start": 431.0,
+    "start_ts": "07:11"
+   },
+   {
+    "slot": "video_right",
+    "type": "video",
+    "label": "Video: el mejor para el espectador",
+    "rect": [
+     1190.0,
+     228.0,
+     512.0,
+     288.0
+    ],
+    "rect_pct": [
+     61.98,
+     21.11,
+     26.67,
+     26.67
+    ],
+    "start": 431.5,
+    "start_ts": "07:11"
+   },
+   {
+    "slot": "subscribe",
+    "type": "subscribe",
+    "label": "Botón de suscripción (logo del canal)",
+    "rect": [
+     824.0,
+     612.0,
+     272.0,
+     272.0
+    ],
+    "rect_pct": [
+     42.92,
+     56.67,
+     14.17,
+     25.19
+    ],
+    "start": 432.0,
+    "start_ts": "07:12"
+   }
+  ],
+  "issues": []
+ },
+ "video": {
+  "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/ia-sin-kit-vs-mixiuh-superpowers-kit_2160p60.mp4",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "h264",
+  "profile": "High",
+  "acodec": "aac",
+  "sample_rate": 48000,
+  "channels": 2,
+  "abitrate": 320012,
+  "duration": 451.008,
+  "bitrate": 56770366
+ },
+ "loudness": {
+  "lufs": -14.04,
+  "true_peak_db": -1.75,
+  "source": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/build/mix.wav",
+  "duration": 451.0,
+  "sr": 48000
+ },
+ "upload": [
+  {
+   "item": "Archivo final",
+   "value": "ia-sin-kit-vs-mixiuh-superpowers-kit_2160p60.mp4: 3840x2160 @60 fps, h264 High",
+   "status": "ok"
+  },
+  {
+   "item": "Audio del archivo",
+   "value": "aac 48000 Hz, 2 canales, 320 kbps (YouTube recomienda AAC-LC 48 kHz estéreo, 384 kbps)",
+   "status": "ok"
+  },
+  {
+   "item": "Loudness medido",
+   "value": "-14.0 LUFS integrados, true peak -1.8 dBTP (objetivo -14 LUFS, <= -1 dBTP; medido en mix.wav)",
+   "status": "ok"
+  },
+  {
+   "item": "Categoría",
+   "value": "Ciencia y tecnología",
+   "status": "manual"
+  },
+  {
+   "item": "Idioma del video y de título/descripción",
+   "value": "Español (México), es-MX",
+   "status": "manual"
+  },
+  {
+   "item": "Contenido alterado o sintético",
+   "value": "No. Motivo: La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+   "status": "manual"
+  },
+  {
+   "item": "Subtítulos a subir",
+   "value": "captions_es.srt (Español (México))",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: miniaturas",
+   "value": "thumb_A.jpg, thumb_B.jpg, thumb_C.jpg (1920x1080 JPG < 2 MB; sube las 3)",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: títulos",
+   "value": "hasta 3 títulos (sección 1)",
+   "status": "manual"
+  },
+  {
+   "item": "Capítulos",
+   "value": "en la descripción",
+   "status": "ok"
+  },
+  {
+   "item": "Público",
+   "value": "No, no es contenido para niños",
+   "status": "manual"
+  },
+  {
+   "item": "Pausas publicitarias",
+   "value": "manuales en las marcas de la sección 7; desactiva la colocación automática o revisa que no corten una frase",
+   "status": "manual"
+  },
+  {
+   "item": "Pantalla final",
+   "value": "plantilla con 2 videos + suscribirse sobre los huecos (sección 8)",
+   "status": "manual"
+  },
+  {
+   "item": "Tarjetas",
+   "value": "máximo 5, cuando se mencione el video, nunca en los últimos 20 s",
+   "status": "manual"
+  },
+  {
+   "item": "Funciones avanzadas del canal",
+   "value": "verificadas (capítulos, links clicables, Probar y comparar)",
+   "status": "manual"
+  },
+  {
+   "item": "Revisión final",
+   "value": "sube como Oculto, revisa 'Estadísticas para nerds' (content loudness) y publica",
+   "status": "manual"
+  }
+ ],
+ "settings": {
+  "category": "Ciencia y tecnología",
+  "language": "es-MX",
+  "altered_content": false,
+  "altered_reason": "La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+  "made_for_kids": false
+ },
+ "captions": {
+  "es": {
+   "srt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/captions_es.srt",
+   "vtt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/captions_es.vtt",
+   "n": 114,
+   "written": false
+  },
+  "en": {
+   "status": "omitido",
+   "note": "LLM no habilitado (usa --llm o MLABS_LLM=1)",
+   "n": 114
+  }
+ },
+ "thumbnails": [
+  {
+   "id": "A",
+   "text": "RAW | SUPERKIT",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 690859,
+   "bytes_720": 353719,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 16.0,
+   "contrast": 10.59,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "01_galaxia_nbody_comparativa.mov t=6",
+    "right": "01_galaxia_nbody_comparativa.mov t=24"
+   },
+   "origin": "episode.yaml"
+  },
+  {
+   "id": "B",
+   "text": "$7.69 | $10.85",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 574526,
+   "bytes_720": 309635,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 23.0,
+   "contrast": 8.1,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "04_red_zero_trust_comparativa.mov t=6.5",
+    "right": "04_red_zero_trust_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  },
+  {
+   "id": "C",
+   "text": "2 | 4",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 414062,
+   "bytes_720": 218681,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 33.0,
+   "contrast": 10.95,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "06_mixiuh_os_desktop_comparativa.mov t=6.5",
+    "right": "06_mixiuh_os_desktop_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  }
+ ],
+ "shorts": [
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/shorts/01_01-galaxia-nbody.mp4",
+   "scene": "reto01",
+   "title": "GALAXIA N-BODY 3D",
+   "duration": 45.716667
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/shorts/02_02-terminal-trading.mp4",
+   "scene": "reto02",
+   "title": "TERMINAL TRADING HFT",
+   "duration": 46.716667
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/shorts/03_03-arcade-boss-rush.mp4",
+   "scene": "reto03",
+   "title": "ARCADE BOSS RUSH",
+   "duration": 48.95
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/shorts/04_04-red-zero-trust.mp4",
+   "scene": "reto04",
+   "title": "RED ZERO-TRUST 3D",
+   "duration": 50.683333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/shorts/05_05-motor-nodos-ia.mp4",
+   "scene": "reto05",
+   "title": "MOTOR DE NODOS IA",
+   "duration": 45.4
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit/out/shorts/06_06-mixiuh-os-desktop.mp4",
+   "scene": "reto06",
+   "title": "MIXIUH OS DESKTOP",
+   "duration": 49.55
+  }
+ ],
+ "translations": {},
+ "warnings": [
+  "el título '¿Siguen Sirviendo los Kits de Skills y Memoria? Gemini 4 Argon High' no empieza con los modelos",
+  "un título se recortó a 70 caracteres visibles: '¿Siguen Sirviendo los Kits de Skills y Memoria? Gemini 4 Argon High'",
+  "el título 'Probé Gemini 4 Argon High A Pelo vs Con 5 Skills y Auto-Debugger en 6' no empieza con los modelos",
+  "un título se recortó a 70 caracteres visibles: 'Probé Gemini 4 Argon High A Pelo vs Con 5 Skills y Auto-Debugger en 6'",
+  "un título se recortó a 70 caracteres visibles: 'IA Sin Kit vs Mixiuh Superpowers Kit: El Veredicto Real en Tiempo'"
+ ]
+}

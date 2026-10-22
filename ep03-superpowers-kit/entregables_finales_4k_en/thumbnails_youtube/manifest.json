@@ -1,0 +1,83 @@
+{
+ "A": {
+  "hash": "272130102b0d279a1f9819ad6447b47fde09c4b8",
+  "info": {
+   "id": "A",
+   "text": "RAW | SUPERKIT",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit-en/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit-en/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 686606,
+   "bytes_720": 351185,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 16.0,
+   "contrast": 10.59,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "01_galaxia_nbody_comparativa.mov t=6",
+    "right": "01_galaxia_nbody_comparativa.mov t=24"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "B": {
+  "hash": "cc897aeca095f68467e4e245bac62292509e0995",
+  "info": {
+   "id": "B",
+   "text": "$7.69 | $10.85",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit-en/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit-en/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 572785,
+   "bytes_720": 308595,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 23.0,
+   "contrast": 8.1,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "04_red_zero_trust_comparativa.mov t=6.5",
+    "right": "04_red_zero_trust_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "C": {
+  "hash": "19d79a3eaa4e7541261c64ed94287c140d1e97bb",
+  "info": {
+   "id": "C",
+   "text": "2 | 4",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit-en/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep03-superpowers-kit-en/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 411124,
+   "bytes_720": 216869,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 33.0,
+   "contrast": 10.95,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "06_mixiuh_os_desktop_comparativa.mov t=6.5",
+    "right": "06_mixiuh_os_desktop_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  }
+ }
+}

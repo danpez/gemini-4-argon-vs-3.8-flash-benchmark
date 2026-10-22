@@ -1,0 +1,548 @@
+1
+00:00:00,033 --> 00:00:02,783
+Con un modelo tan bestial
+como Gemini 4 Argon High,
+
+2
+00:00:02,783 --> 00:00:05,917
+¿realmente sigue valiendo
+la pena instalar kits de Skills,
+
+3
+00:00:05,917 --> 00:00:08,717
+memoria persistente
+y depuradores de navegador?
+
+4
+00:00:08,750 --> 00:00:12,917
+Corrimos doce ejecuciones reales en
+Antigravity y el resultado nos sorprendió:
+
+5
+00:00:12,917 --> 00:00:17,850
+el modelo en crudo ganó dos retos
+ahorrando 64 por ciento en tokens,
+
+6
+00:00:17,850 --> 00:00:20,917
+pero el Superkit ganó 4
+a 2 en sistemas complejos.
+
+7
+00:00:20,950 --> 00:00:24,350
+Hoy enfrentamos a la IA sin configuración
+contra el Mixiuh Superpowers Kit
+
+8
+00:00:24,350 --> 00:00:25,783
+en seis sistemas extremos,
+
+9
+00:00:25,783 --> 00:00:29,083
+y te regalo el repositorio completo
+para que lo instales en un minuto.
+
+10
+00:00:32,717 --> 00:00:35,450
+Soy Kevin, esto es Mixiuh Labs,
+
+11
+00:00:35,450 --> 00:00:38,567
+y durante semanas vi cómo miles
+de desarrolladores culpan al modelo
+
+12
+00:00:38,567 --> 00:00:41,267
+cuando su código sale
+lento, roto o carísimo.
+
+13
+00:00:41,300 --> 00:00:45,100
+El problema real es mandar
+a la IA a programar a ciegas:
+
+14
+00:00:45,100 --> 00:00:48,517
+sin reglas de arquitectura,
+sin memoria persistente entre sesiones
+
+15
+00:00:48,517 --> 00:00:51,100
+y sin un depurador
+que verifique el navegador.
+
+16
+00:00:51,133 --> 00:00:53,517
+Por eso empaquetamos
+el Mixiuh Superpowers Kit:
+
+17
+00:00:53,517 --> 00:00:56,783
+cinco habilidades modulares
+de alto rendimiento,
+
+18
+00:00:56,783 --> 00:01:00,567
+un banco de memoria infinita
+y un guardia de calidad por MCP.
+
+19
+00:01:00,600 --> 00:01:04,367
+En cada reto medimos el tiempo de entrega,
+el consumo real de tokens en dólares
+
+20
+00:01:04,367 --> 00:01:09,383
+y si la aplicación sostiene 120 cuadros
+por segundo sin un solo error de consola.
+
+21
+00:01:09,417 --> 00:01:14,183
+Veamos la diferencia brutal en código
+real a través de seis niveles extremos.
+
+22
+00:01:14,567 --> 00:01:18,750
+Nivel 1: simular la colisión gravitatoria
+de dos galaxias espirales con agujeros
+
+23
+00:01:18,750 --> 00:01:22,117
+negros supermasivos y lente
+relativista en tiempo real.
+
+24
+00:01:22,150 --> 00:01:28,633
+Sin el kit, Gemini 4 Argon High tardó
+45 minutos y logró animar 48 mil estrellas
+
+25
+00:01:28,633 --> 00:01:31,750
+a 60 cuadros con un millón de tokens,
+
+26
+00:01:31,750 --> 00:01:36,167
+pero dejó un error 404 en consola
+y una malla espacial casi plana.
+
+27
+00:01:36,200 --> 00:01:39,517
+Con el Superpowers Kit
+terminó en 44 minutos:
+
+28
+00:01:39,517 --> 00:01:45,750
+gastó 2 dólares con 25 centavos al auditar
+el navegador, pero entregó cero errores,
+
+29
+00:01:45,750 --> 00:01:49,483
+una deformación gravitatoria 3D
+brutal y memoria documentada.
+
+30
+00:01:49,517 --> 00:01:53,983
+Un minuto más rápido, cero errores
+en consola y mejor geometría relativista:
+
+31
+00:01:53,983 --> 00:01:56,350
+el primer punto
+es para el Superpowers Kit.
+
+32
+00:01:56,733 --> 00:02:00,833
+Nivel 2: una terminal institucional
+de trading de alta frecuencia capaz
+
+33
+00:02:00,833 --> 00:02:04,767
+de procesar miles de órdenes por segundo
+con libro de profundidad y mapa
+
+34
+00:02:04,767 --> 00:02:06,150
+de calor de liquidez.
+
+35
+00:02:06,150 --> 00:02:09,650
+Aquí la IA sin kit sufrió
+su corrida más larga:
+
+36
+00:02:09,650 --> 00:02:14,700
+tardó 73 minutos, escribió casi
+3 mil 900 líneas por un dólar setenta
+
+37
+00:02:14,700 --> 00:02:18,583
+y cinco y su motor se quedó
+en 11 mil órdenes por segundo.
+
+38
+00:02:18,583 --> 00:02:23,250
+En cambio, las Skills de arquitectura
+Zero-GC guiaron al Superkit directo
+
+39
+00:02:23,250 --> 00:02:27,117
+al grano en 57 minutos
+y por un dólar cincuenta y seis,
+
+40
+00:02:27,117 --> 00:02:30,833
+alcanzando 70 mil 406 órdenes por segundo.
+
+41
+00:02:30,867 --> 00:02:32,500
+Dieciséis minutos más rápido,
+
+42
+00:02:32,500 --> 00:02:36,967
+más barato en tokens
+y seis veces más caudal de órdenes:
+
+43
+00:02:36,967 --> 00:02:39,517
+el Superpowers Kit se pone dos a cero.
+
+44
+00:02:39,900 --> 00:02:44,817
+Nivel 3: un juego Arcade Bullet-Hell
+con jefe biomecánico de tres fases,
+
+45
+00:02:44,817 --> 00:02:49,200
+miles de proyectiles simultáneos,
+colisión continua y sintetizador musical.
+
+46
+00:02:49,200 --> 00:02:50,600
+Y aquí llegó la primera sorpresa:
+
+47
+00:02:50,600 --> 00:02:55,783
+Gemini 4 Argon High sin kit
+ya domina TypedArrays de fábrica,
+
+48
+00:02:55,783 --> 00:03:02,033
+terminó en 51 minutos por un dólar sesenta
+y cuatro y desató espirales de 379 balas
+
+49
+00:03:02,033 --> 00:03:03,483
+a 61 cuadros.
+
+50
+00:03:03,517 --> 00:03:07,467
+Con el Superpowers Kit, la sobrecarga
+de leer las cinco Skills e iterar
+
+51
+00:03:07,467 --> 00:03:11,750
+sobre la memoria alargó la entrega
+hasta los 69 minutos con un patrón
+
+52
+00:03:11,750 --> 00:03:14,633
+más conservador de 96 proyectiles.
+
+53
+00:03:14,667 --> 00:03:19,550
+Dieciocho minutos más veloz y con patrones
+de ataque cuatro veces más intensos:
+
+54
+00:03:19,550 --> 00:03:24,917
+primer punto legítimo para la IA sin kit,
+que acorta el marcador uno a dos.
+
+55
+00:03:25,300 --> 00:03:29,400
+Nivel 4: un centro de mando
+de ciberseguridad Zero-Trust capaz
+
+56
+00:03:29,400 --> 00:03:35,067
+de inspeccionar paquetes criptográficos
+y neutralizar ataques DDoS e inyecciones
+
+57
+00:03:35,067 --> 00:03:36,567
+SQL en vivo.
+
+58
+00:03:36,600 --> 00:03:40,150
+En este reto, la IA sin kit
+dio una cátedra de eficiencia:
+
+59
+00:03:40,150 --> 00:03:45,183
+en solo 5 pasos de agente y 23 minutos
+y medio construyó el globo 3D
+
+60
+00:03:45,183 --> 00:03:48,950
+con etiquetas flotantes
+por apenas 74 centavos.
+
+61
+00:03:48,983 --> 00:03:54,117
+Mientras tanto, el protocolo obligatorio
+del Superkit le hizo ejecutar 32 pasos
+
+62
+00:03:54,117 --> 00:03:59,783
+de lectura y auditoría, tardando
+43 minutos y consumiendo 2 dólares
+
+63
+00:03:59,783 --> 00:04:02,900
+con 4 centavos para llegar
+al mismo resultado.
+
+64
+00:04:02,933 --> 00:04:07,233
+Casi el doble de rápido y 64
+por ciento más barato en tokens:
+
+65
+00:04:07,233 --> 00:04:12,050
+la IA sin kit gana el cuarto reto
+y empata el partido dos a dos.
+
+66
+00:04:12,433 --> 00:04:17,283
+Nivel 5: un editor visual de flujos
+multi-agente con cables Bézier,
+
+67
+00:04:17,283 --> 00:04:21,467
+ejecución topológica en paralelo
+y detección de ciclos infinitos.
+
+68
+00:04:21,500 --> 00:04:25,433
+Con el marcador empatado, subimos
+la complejidad arquitectónica:
+
+69
+00:04:25,433 --> 00:04:29,833
+sin el kit, la IA tardó 55 minutos
+coordinando el compilador del grafo
+
+70
+00:04:29,833 --> 00:04:33,500
+con el visor WebGL y conectó 8 cables.
+
+71
+00:04:33,500 --> 00:04:37,183
+Aquí las plantillas del Superpowers
+Kit brillaron de nuevo:
+
+72
+00:04:37,183 --> 00:04:42,667
+resolvió el compilador topológico
+en 47 minutos con 10 cables perfectamente
+
+73
+00:04:42,667 --> 00:04:46,517
+distribuidos y un shader
+4D con iluminación Fresnel.
+
+74
+00:04:46,517 --> 00:04:49,567
+Ocho minutos más rápido
+y con un grafo visual impecable:
+
+75
+00:04:49,567 --> 00:04:53,900
+el Superpowers Kit rompe el empate
+y toma ventaja tres a dos.
+
+76
+00:04:54,283 --> 00:04:58,367
+Nivel final: construir un sistema
+operativo web completo con gestor
+
+77
+00:04:58,367 --> 00:05:02,633
+de ventanas, sistema de archivos
+virtual, terminal interactiva,
+
+78
+00:05:02,633 --> 00:05:05,083
+editor de código y monitor de recursos.
+
+79
+00:05:05,117 --> 00:05:09,667
+Sin el kit, la IA terminó rápido
+en 29 minutos por 72 centavos,
+
+80
+00:05:09,667 --> 00:05:13,300
+pero al no verificar el navegador dejó
+el arte ASCII de la terminal aplastado
+
+81
+00:05:13,300 --> 00:05:16,783
+en una línea y sin controles
+en la ventana 3D.
+
+82
+00:05:16,817 --> 00:05:23,200
+El Superpowers Kit invirtió 42 minutos
+y un dólar sesenta usando su Auto-Debugger
+
+83
+00:05:23,200 --> 00:05:26,550
+para inspeccionar el DOM,
+puliendo el banner de neofetch,
+
+84
+00:05:26,550 --> 00:05:29,600
+los presets 3D y las perillas
+del sintetizador.
+
+85
+00:05:29,633 --> 00:05:33,467
+Cuando integras cuatro subsistemas
+en una misma pantalla,
+
+86
+00:05:33,467 --> 00:05:35,417
+el Auto-Debugger marca la diferencia:
+
+87
+00:05:35,417 --> 00:05:39,900
+victoria final cuatro a dos
+para el Mixiuh Superpowers Kit.
+
+88
+00:05:40,283 --> 00:05:41,800
+Cuatro a dos en el marcador final:
+
+89
+00:05:41,800 --> 00:05:45,933
+un experimento cien por ciento real
+que demuestra tanto el poder nativo
+
+90
+00:05:45,933 --> 00:05:50,033
+de Gemini 4 Argon High
+como el valor del Superpowers Kit.
+
+91
+00:05:52,433 --> 00:05:53,917
+En tiempo acumulado,
+
+92
+00:05:53,917 --> 00:06:00,567
+la IA sin kit sumó 276 minutos
+frente a 302 minutos del Superkit,
+
+93
+00:06:00,567 --> 00:06:03,200
+que fue más rápido en los retos
+de mayor complejidad
+
+94
+00:06:03,200 --> 00:06:05,917
+pero invirtió tiempo
+auditando el navegador.
+
+95
+00:06:05,950 --> 00:06:07,133
+En calidad técnica,
+
+96
+00:06:07,133 --> 00:06:11,417
+el Superpowers Kit eliminó el único
+error de consola del torneo, sextuplicó
+
+97
+00:06:11,417 --> 00:06:16,733
+el rendimiento en trading a 70 mil órdenes
+por segundo y dejó memoria documentada.
+
+98
+00:06:16,733 --> 00:06:19,550
+Y en la factura de API está el dato clave:
+
+99
+00:06:19,550 --> 00:06:25,583
+7 dólares con 69 centavos y 6.1 millones
+de tokens sin kit, contra 10 dólares
+
+100
+00:06:25,583 --> 00:06:32,583
+con 85 centavos y 13.2 millones de tokens
+al cargar las Skills y el Auto-Debugger.
+
+101
+00:06:33,067 --> 00:06:37,667
+La lección es contundente:
+antes de pagar por un modelo más caro,
+
+102
+00:06:37,667 --> 00:06:39,833
+dale a tu agente reglas
+claras de arquitectura,
+
+103
+00:06:39,833 --> 00:06:43,533
+habilidades especializadas
+y verificación automática.
+
+104
+00:06:43,567 --> 00:06:47,600
+Para prototipos de un solo archivo,
+Gemini 4 Argon High en crudo
+
+105
+00:06:47,600 --> 00:06:51,000
+ya es tan capaz
+que ahorra tokens sin ayuda;
+
+106
+00:06:51,000 --> 00:06:53,517
+pero en arquitecturas
+multicapa y producción,
+
+107
+00:06:53,517 --> 00:06:56,800
+el Superpowers Kit gana 4 a 2.
+
+108
+00:06:56,833 --> 00:07:01,200
+Te dejé las doce demos interactivas
+y la descarga gratuita del Mixiuh
+
+109
+00:07:01,200 --> 00:07:06,817
+Superpowers Kit en labs punto mixiuh
+punto online, listo para Claude Code,
+
+110
+00:07:06,817 --> 00:07:08,567
+Antigravity y Cursor.
+
+111
+00:07:08,600 --> 00:07:14,000
+Suscríbete a Mixiuh Labs, descarga el kit
+hoy mismo y déjame en los comentarios
+
+112
+00:07:14,000 --> 00:07:19,300
+qué habilidad o torneo multinivel quieres
+que construyamos en el Episodio 04.
+
+113
+00:07:19,683 --> 00:07:21,917
+Experimento 03 terminado:
+
+114
+00:07:21,917 --> 00:07:25,317
+nos vemos en el siguiente
+nivel, aquí en Mixiuh Labs.

@@ -1,0 +1,387 @@
+{
+ "version": 1,
+ "episode": {
+  "id": "cc01",
+  "slug": "del-comentario-al-codigo-01-marca-ropa-verlet",
+  "title": "De un Comentario a una Marca de Ropa IA en 3D (OVERFIT) | Del Comentario al Codigo #01"
+ },
+ "duration": 290.283,
+ "duration_ts": "04:50",
+ "facts_used": false,
+ "titles": [
+  {
+   "text": "De un Comentario a una Marca de Ropa IA en 3D (OVERFIT) | Del",
+   "chars": 61,
+   "visible_ok": true,
+   "models_first": false,
+   "trimmed": true
+  },
+  {
+   "text": "Un Seguidor Nos Pidio Crear una Marca de Ropa: Hicimos 10 Diseños de",
+   "chars": 68,
+   "visible_ok": true,
+   "models_first": false,
+   "trimmed": true
+  },
+  {
+   "text": "OVERFIT: Creamos una Coleccion Streetwear de Programacion y Mockups",
+   "chars": 67,
+   "visible_ok": true,
+   "models_first": true,
+   "trimmed": true
+  }
+ ],
+ "description": "Propuesta @tenito03 vs OVERFIT Studio 3D: De un Comentario a una Marca de Ropa IA en 3D (OVERFIT) | Del Comentario al Codigo #01.\n\nDEMOS Y CÓDIGO\nLaboratorio interactivo Mixiuh Labs: https://labs.mixiuh.online\nRepositorio de experimentos: https://github.com/danpez/gemini-4-argon-vs-3.8-flash-benchmark\n\nCAPÍTULOS\n00:00 El comentario de @tenito03 que inicio todo\n00:35 La propuesta de @tenito03 y el nacimiento de OVERFIT\n01:13 Etapa 1: Mockups en blanco 300 GSM y siluetas 3D en Blender Cycles\n01:48 Etapa 2: Coleccion Guerra de Pesos (Los 10 diseños de OVERFIT)\n02:56 Etapa 3: Personalizacion 3D, Frente+Espalda y exportacion a redes\n03:53 Conclusion y como proponer el reto del Episodio 02\n\nHERRAMIENTAS\n- Voz: Voicefy, mi propia voz clonada, corre local en mi Mac.\n- Edición y subtítulos: Reelfy + Mixiuh Labs Studio (mi pipeline propio).\n- Música: chiptune original generada por código (sin samples ni pistas de terceros).\n\nLa narración usa mi propia voz clonada con Voicefy (corre local).\n\n#PropuestaTenito03 #OVERFITStudio3D #IA\n",
+ "description_bytes": 1044,
+ "hook": "Propuesta @tenito03 vs OVERFIT Studio 3D: De un Comentario a una Marca de Ropa IA en 3D (OVERFIT) | Del Comentario al Codigo #01.",
+ "chapters": {
+  "valid": true,
+  "in_description": true,
+  "items": [
+   {
+    "t": 0.0,
+    "ts": "00:00",
+    "title": "El comentario de @tenito03 que inicio todo"
+   },
+   {
+    "t": 35.717,
+    "ts": "00:35",
+    "title": "La propuesta de @tenito03 y el nacimiento de OVERFIT"
+   },
+   {
+    "t": 73.667,
+    "ts": "01:13",
+    "title": "Etapa 1: Mockups en blanco 300 GSM y siluetas 3D en Blender Cycles"
+   },
+   {
+    "t": 108.117,
+    "ts": "01:48",
+    "title": "Etapa 2: Coleccion Guerra de Pesos (Los 10 diseños de OVERFIT)"
+   },
+   {
+    "t": 176.25,
+    "ts": "02:56",
+    "title": "Etapa 3: Personalizacion 3D, Frente+Espalda y exportacion a redes"
+   },
+   {
+    "t": 233.517,
+    "ts": "03:53",
+    "title": "Conclusion y como proponer el reto del Episodio 02"
+   }
+  ],
+  "issues": [],
+  "fixes": [],
+  "remaining_issues": []
+ },
+ "links": [
+  {
+   "label": "Laboratorio interactivo Mixiuh Labs",
+   "url": "https://labs.mixiuh.online",
+   "status": "verificar que respondan"
+  },
+  {
+   "label": "Repositorio de experimentos",
+   "url": "https://github.com/danpez/gemini-4-argon-vs-3.8-flash-benchmark",
+   "status": "verificar que respondan"
+  }
+ ],
+ "tags": [
+  "Del Comentario al Codigo",
+  "OVERFIT",
+  "Mixiuh Labs",
+  "programacion creativa",
+  "mockup playera 3D",
+  "ropa de programadores",
+  "inteligencia artificial",
+  "vibe coding"
+ ],
+ "tags_chars": 156,
+ "hashtags": [
+  "#PropuestaTenito03",
+  "#OVERFITStudio3D",
+  "#IA"
+ ],
+ "pinned_comment": "Aquí no se opina: se prueba. ¿Qué metemos al laboratorio ahora? Los capítulos están en la descripción.",
+ "midrolls": {
+  "eligible": false,
+  "items": [],
+  "notes": [
+   "el video dura 04:50; los mid-rolls requieren al menos 8 min"
+  ],
+  "min_gap": 150.0
+ },
+ "end_screen": {
+  "present": true,
+  "layer": "L0052",
+  "t0": 279.6,
+  "t1": 290.283,
+  "dur": 10.683,
+  "ts0": "04:39",
+  "ts1": "04:50",
+  "elements": [
+   {
+    "slot": "video_left",
+    "type": "video",
+    "label": "Video: el más reciente (o una lista de Mixiuh Labs)",
+    "rect": [
+     218.0,
+     228.0,
+     512.0,
+     288.0
+    ],
+    "rect_pct": [
+     11.35,
+     21.11,
+     26.67,
+     26.67
+    ],
+    "start": 279.6,
+    "start_ts": "04:39"
+   },
+   {
+    "slot": "video_right",
+    "type": "video",
+    "label": "Video: el mejor para el espectador",
+    "rect": [
+     1190.0,
+     228.0,
+     512.0,
+     288.0
+    ],
+    "rect_pct": [
+     61.98,
+     21.11,
+     26.67,
+     26.67
+    ],
+    "start": 280.1,
+    "start_ts": "04:40"
+   },
+   {
+    "slot": "subscribe",
+    "type": "subscribe",
+    "label": "Botón de suscripción (logo del canal)",
+    "rect": [
+     824.0,
+     612.0,
+     272.0,
+     272.0
+    ],
+    "rect_pct": [
+     42.92,
+     56.67,
+     14.17,
+     25.19
+    ],
+    "start": 280.6,
+    "start_ts": "04:40"
+   }
+  ],
+  "issues": []
+ },
+ "video": {
+  "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/del-comentario-al-codigo-01-marca-ropa-verlet_2160p60.mp4",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "h264",
+  "profile": "High",
+  "acodec": "aac",
+  "sample_rate": 48000,
+  "channels": 2,
+  "abitrate": 320020,
+  "duration": 290.304,
+  "bitrate": 59238900
+ },
+ "loudness": {
+  "lufs": -14.01,
+  "true_peak_db": -1.75,
+  "source": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/build/mix.wav",
+  "duration": 290.283,
+  "sr": 48000
+ },
+ "upload": [
+  {
+   "item": "Archivo final",
+   "value": "del-comentario-al-codigo-01-marca-ropa-verlet_2160p60.mp4: 3840x2160 @60 fps, h264 High",
+   "status": "ok"
+  },
+  {
+   "item": "Audio del archivo",
+   "value": "aac 48000 Hz, 2 canales, 320 kbps (YouTube recomienda AAC-LC 48 kHz estéreo, 384 kbps)",
+   "status": "ok"
+  },
+  {
+   "item": "Loudness medido",
+   "value": "-14.0 LUFS integrados, true peak -1.8 dBTP (objetivo -14 LUFS, <= -1 dBTP; medido en mix.wav)",
+   "status": "ok"
+  },
+  {
+   "item": "Categoría",
+   "value": "Ciencia y tecnología",
+   "status": "manual"
+  },
+  {
+   "item": "Idioma del video y de título/descripción",
+   "value": "Español (México), es-MX",
+   "status": "manual"
+  },
+  {
+   "item": "Contenido alterado o sintético",
+   "value": "No. Motivo: La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+   "status": "manual"
+  },
+  {
+   "item": "Subtítulos a subir",
+   "value": "captions_es.srt (Español (México))",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: miniaturas",
+   "value": "thumb_A.jpg, thumb_B.jpg, thumb_C.jpg (1920x1080 JPG < 2 MB; sube las 3)",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: títulos",
+   "value": "hasta 3 títulos (sección 1)",
+   "status": "manual"
+  },
+  {
+   "item": "Capítulos",
+   "value": "en la descripción",
+   "status": "ok"
+  },
+  {
+   "item": "Público",
+   "value": "No, no es contenido para niños",
+   "status": "manual"
+  },
+  {
+   "item": "Pausas publicitarias",
+   "value": "manuales en las marcas de la sección 7; desactiva la colocación automática o revisa que no corten una frase",
+   "status": "manual"
+  },
+  {
+   "item": "Pantalla final",
+   "value": "plantilla con 2 videos + suscribirse sobre los huecos (sección 8)",
+   "status": "manual"
+  },
+  {
+   "item": "Tarjetas",
+   "value": "máximo 5, cuando se mencione el video, nunca en los últimos 20 s",
+   "status": "manual"
+  },
+  {
+   "item": "Funciones avanzadas del canal",
+   "value": "verificadas (capítulos, links clicables, Probar y comparar)",
+   "status": "manual"
+  },
+  {
+   "item": "Revisión final",
+   "value": "sube como Oculto, revisa 'Estadísticas para nerds' (content loudness) y publica",
+   "status": "manual"
+  }
+ ],
+ "settings": {
+  "category": "Ciencia y tecnología",
+  "language": "es-MX",
+  "altered_content": false,
+  "altered_reason": "La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+  "made_for_kids": false
+ },
+ "captions": {
+  "es": {
+   "srt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/captions_es.srt",
+   "vtt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/captions_es.vtt",
+   "n": 75,
+   "written": false
+  },
+  "en": {
+   "status": "omitido",
+   "note": "LLM no habilitado (usa --llm o MLABS_LLM=1)",
+   "n": 75
+  }
+ },
+ "thumbnails": [
+  {
+   "id": "A",
+   "text": "DE COMENTARIO A MARCA",
+   "sub": "RETO DE @TENITO03 · OVERFIT",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 499497,
+   "bytes_720": 286324,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 21.0,
+   "contrast": 11.25,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "comentario_tenito03_hero.mov t=2.5",
+    "right": "verlet_couture_yt_60fps.mov t=29.2"
+   },
+   "origin": "episode.yaml"
+  },
+  {
+   "id": "B",
+   "text": "10 DISEÑOS IA 3D",
+   "sub": "COLECCION GUERRA DE PESOS",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 533292,
+   "bytes_720": 301593,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 22.0,
+   "contrast": 9.77,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "verlet_couture_yt_60fps.mov t=36.5",
+    "right": "verlet_couture_yt_60fps.mov t=116.5"
+   },
+   "origin": "episode.yaml"
+  },
+  {
+   "id": "C",
+   "text": "MOCKUPS 300 GSM",
+   "sub": "FRENTE + ESPALDA + REDES",
+   "layout": "hero",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 460119,
+   "bytes_720": 257314,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 24.0,
+   "contrast": 12.32,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "right": "verlet_couture_yt_60fps.mov t=132"
+   },
+   "origin": "episode.yaml"
+  }
+ ],
+ "shorts": [],
+ "translations": {},
+ "warnings": [
+  "el título 'De un Comentario a una Marca de Ropa IA en 3D (OVERFIT) | Del' no empieza con los modelos",
+  "un título se recortó a 70 caracteres visibles: 'De un Comentario a una Marca de Ropa IA en 3D (OVERFIT) | Del'",
+  "el título 'Un Seguidor Nos Pidio Crear una Marca de Ropa: Hicimos 10 Diseños de' no empieza con los modelos",
+  "un título se recortó a 70 caracteres visibles: 'Un Seguidor Nos Pidio Crear una Marca de Ropa: Hicimos 10 Diseños de'",
+  "un título se recortó a 70 caracteres visibles: 'OVERFIT: Creamos una Coleccion Streetwear de Programacion y Mockups'"
+ ]
+}

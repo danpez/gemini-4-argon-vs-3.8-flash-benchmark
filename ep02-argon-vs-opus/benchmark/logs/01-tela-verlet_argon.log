@@ -1,0 +1,25 @@
+El simulador interactivo de tela física con desgarro en tiempo real ha sido escrito directamente en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/01-tela-verlet/index.html).
+
+### Arquitectura Técnica Implementada
+
+1. **Integrador de Verlet 3D y Solver Multipaso (`VerletClothEngine`)**:
+   - **Malla densa de estructuras de arreglos tipados (`Float32Array` / `Int32Array` / `Uint8Array`)**: `68 columnas × 42 filas` (**2,856 partículas** y **5,602 enlaces estructurales** horizontales y verticales, más **5,494 tensores diagonales de cizalla** activables en vivo).
+   - **Relajación iterativa configurable**: De `4` a `28` sub-pasos por frame (`14` por defecto) con control de rigidez (`stiffness`) y amortiguamiento (`damping`).
+   - **Presets de anclaje (`applyAnchorPreset`)**:
+     - **Cortina en Ganchos**: Borde superior suspendido en puntos de anclaje reforzados con caída natural en catenaria.
+     - **Bandera Lateral**: Anclaje en el mástil izquierdo sometido a flujo turbulento horizontal.
+     - **Red 4 Esquinas**: Dosel suspendido desde las cuatro esquinas con vórtex ascendente.
+     - **Riel de Ensayo**: Fijación continua superior para pruebas de tracción y corte quirúrgico.
+
+2. **Tensión Mecánica, Desgarro Físico y Sombreado (`LabRenderer`)**:
+   - **Fractura por elongación crítica**: Cada restricción evalúa su razón de estiramiento real ($\text{ratio} = d / L_0$) frente a `tearThreshold`; al superarlo se rompe dinámicamente (`cActive[i] = 0`), liberando chispas balísticas y concentrando la carga en los hilos vecinos para propagar el desgarro.
+   - **3 Modos de Renderizado por Hardware Canvas 2D**:
+     - **Mapa de Tensión**: Agrupamiento por lotes (*batching*) en 32 *buckets* precalculados (`TENSION_COLOR_LUT`) desde cian en reposo pasando por esmeralda y ámbar hasta rojo/blanco incandescente antes de la fractura.
+     - **Sombreado Volumétrico**: Cálculo de normales 3D por celda ($\vec{N} = \vec{d}_1 \times \vec{d}_2$ sobre las diagonales de cada *quad*) con iluminación direccional Lambertiana + brillo especular Blinn-Phong y tinte térmico por estrés.
+     - **Neón Cyberpunk**: Malla holográfica con barrido interferométrico y nodos reactivos al estrés.
+
+3. **Interacción Dual y Túnel de Viento (`SimplexNoise3D`)**:
+   - **Clic Izquierdo + Arrastrar**: Agarre elástico con radio de influencia configurable que permite tensar la tela hasta desgarrarla por tracción.
+   - **Clic Derecho (o `Shift + Clic Izquierdo`) + Arrastrar**: **Bisturí Láser** con estela de plasma que calcula intersección exacta de segmentos 2D (`segmentsIntersectOrTouch`) para cortar enlaces instantáneamente.
+   - **Alt + Clic**: Fija o libera el anclaje de cualquier nodo individual en vivo.
+   - **Ruido Simplex 3D + Onda de Choque Radial**: Generador `SimplexNoise3D` programado desde cero con proyección aerodinámica sobre la normal de superficie y botón/atajo (`Espacio`) para detonar una onda de choque radial.

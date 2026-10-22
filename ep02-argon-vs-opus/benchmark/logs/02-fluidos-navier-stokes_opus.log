@@ -1,0 +1,31 @@
+Guardé el simulador en `claude-opus-5.5/02-fluidos-navier-stokes/index.html`: un solo archivo de 1444 líneas, sin recursos externos. Lo probé en Chrome headless con Playwright: corre a 60 FPS, los 20 FBOs están completos y no aparece ningún mensaje en consola. Probé dibujar tinta, la explosión, los 4 modos, barreras, arrastrar el cilindro, la viscosidad, el cambio de resolución y la pantalla en vertical. Está en commit `191dec9` (solo ese archivo, con el autor de Mixiuh).
+
+**Cómo funciona por dentro**
+- **Contexto:** usa WebGL2 con texturas half-float (`RGBA16F`, `RG16F`, `R16F`). Si no hay WebGL2, cae a WebGL1 con `OES_texture_half_float`, y a float32 si tampoco hay eso. Si la GPU no permite filtrado lineal, hace la interpolación bilineal a mano.
+- **Pipeline por frame (62 pasadas):** inyección de fuerza y tinta → rotacional → confinamiento de vorticidad → viscosidad opcional (Jacobi implícito) → divergencia → presión (36 iteraciones de Jacobi, arrancando de la solución anterior) → resta del gradiente → advección semi-Lagrangiana de velocidad y tinta.
+- **Obstáculos:** una textura guarda dónde hay sólido y a qué velocidad se mueve. El cilindro arrastrable empuja el fluido de verdad. En sus paredes la velocidad del fluido es la del sólido, y la presión no atraviesa el borde. Las barreras se dibujan con Shift+arrastrar y se borran con Alt o clic derecho.
+- **Túnel de viento:** el fluido entra por la izquierda a velocidad fija y sale libre por la derecha. Arriba y abajo son paredes. Hay dos perfiles: flujo uniforme con 15 líneas de humo de colores, o un chorro estrecho de boquilla.
+- **Modos de visualización:**
+  - Tinta con bloom en 7 niveles.
+  - Velocidad: el color indica dirección y el brillo la magnitud, con flechas dibujadas en el shader.
+  - Vorticidad: azul es giro horario y rojo antihorario, con líneas de contorno.
+  - Presión, con isobaras.
+- **HUD:** todos los sliders que pediste, más:
+  - Selector de resolución de la rejilla y de la tinta.
+  - Botones de explosión, limpiar y pausa.
+  - Telemetría: FPS con gráfica, tamaño de la rejilla, estado de los FBOs, memoria de video, pasadas por frame y número de Reynolds.
+  - Teclas: `1–4` modos, `Espacio` explosión, `C` limpiar, `T` túnel, `O` cilindro, `B` borrar barreras, `P` pausa, `H` ocultar el HUD.
+
+**Bugs que encontré con las capturas y ya corregí**
+1. **El flujo volvía hacia atrás:** la mitad inferior del túnel corría en sentido contrario porque la entrada estaba como frontera abierta y el fluido se escapaba por ahí. La cambié a entrada con velocidad fija, y el paso de presión ya no la modifica.
+2. **Ruido en la vorticidad:** se veía ruido fino, del tamaño de las celdas, que el confinamiento amplificaba. Bajé ε por defecto de 22 a 10. Ahora la calle de vórtices de Karman se ve limpia, con vórtices horarios arriba y antihorarios abajo, como debe ser.
+3. **Presión con desfase:** todo el mapa salía desplazado por la caída de presión a lo largo del túnel. En modo túnel ahora la muestro relativa al flujo libre de la misma sección. Así se ven el punto de alta presión frente al cilindro y los núcleos de baja presión de los vórtices.
+4. **Detalles visuales:** el bloom dejaba neblina sobre el fondo, la explosión se saturaba a blanco, las barreras salían con bordes escalonados y `H` no ocultaba el panel.
+
+**Lo que falta probar**
+- Solo lo probé en Chrome de escritorio. Faltan Firefox, Safari, el móvil y una pantalla de 120 Hz, porque el modo headless limita a 60 FPS.
+- El arrastre multitáctil está programado pero no lo probé en un dispositivo real.
+
+**Otras notas**
+- Dejé `window.fluid` expuesto para ajustar parámetros desde la consola. Fue el que usé para comparar variantes; se puede quitar si el benchmark lo exige.
+- No actualicé el roadmap vivo (`mixiuh-roadmap-vivo`) porque esto es un entregable del benchmark, no un cambio de producto.

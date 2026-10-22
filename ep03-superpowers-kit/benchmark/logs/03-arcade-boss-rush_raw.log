@@ -1,0 +1,20 @@
+Se ha construido y guardado el videojuego completo **`CYBER//CORE: OVERLORD`** en un único archivo autocontenido en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/03-arcade-boss-rush/index.html).
+
+### Resumen de Arquitectura e Implementación
+
+1. **Jefe Biomecánico Multi-Fase (`CYBER//CORE: OVERLORD`)**:
+   - Renderizado procedural en Canvas 2D con campo hexagonal exterior, 8 segmentos de blindaje articulados destructibles, 6 pétalos mecánicos que se abren progresivamente, núcleo octogonal rotatorio y 4 torretas satelitales enlazadas por rayos de energía.
+   - **Fase 1 (`Protocolo Espiral Cuántica`)**: Cortinas matemáticas generadas mediante rosas polares ($r = \cos(k\theta)$), espirales de Fermat con ángulo áureo ($137.5077^\circ$) y ondas senoidales dobles en contrafase.
+   - **Fase 2 (`Cañones de Plasma y Barrido Láser`)**: Rayos láser gigantes con pre-aviso holográfico (*telegraphing*) y barrido angular, anillos de pulso electromagnético y drones buscadores.
+   - **Fase 3 (`Singularidad Overdrive`)**: Apertura completa del núcleo liberando vórtices combinados de 14 brazos + estallidos de Fermat capaces de sostener **1,500+ proyectiles simultáneos a 60–120 FPS** mediante `TypedArrays` ([`BulletPool`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/03-arcade-boss-rush/index.html#L935-L1041)) y renderizado por lotes (*color-batched paths*).
+
+2. **Nave Interceptor V-09, Piloto Automático IA y Mecánicas *Witch-Time***:
+   - **Piloto Automático IA ([`computeAISteering`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/03-arcade-boss-rush/index.html#L1763-L1860))**: Activo por defecto; evalúa amenazas en tiempo real consultando la rejilla espacial (`Spatial Hash Grid`) y el barrido de láseres, ejecutando maniobras evasivas, *Dash* neón con invulnerabilidad y *Bullet-Time* automático. Cede el control manual al instante al usar teclado (`WASD`/Flechas) o ratón.
+   - **Bomba EMP ([`triggerEMP`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/03-arcade-boss-rush/index.html#L1324-L1351))**: Limpia proyectiles hostiles convirtiéndolos en cristales de puntaje atraídos magnéticamente hacia la nave.
+   - **Motor de Roce (*Graze*) y *Bullet-Time***: Rozar proyectiles recarga la barra de dilatación temporal, aplica aberración cromática y deja estelas de post-imagen.
+
+3. **Motor DSP WebAudio en Tiempo Real ([`CyberAudioDSP`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/03-arcade-boss-rush/index.html#L591-L927))**:
+   - Secuenciador procedural *synthwave/darksynth* de 16 pasos (bombo, caja con ruido filtrado, *hi-hats*, bajo ácido con filtro resonante y arpegios que aceleran de `132 BPM` a `158 BPM` según la fase del jefe y se modulan con la cámara lenta), además de efectos sintetizados para disparos, carga láser, transición de fase, roce, *Dash* y onda EMP.
+
+4. **HUD Táctico de Cabina y Modo Debug Físico ([`renderDebugSpatialOverlay`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/03-arcade-boss-rush/index.html#L2172-L2249))**:
+   - Incluye barra de vida tri-segmentada, telemetría de FPS/balas/roce/combo y botonera táctica para saltar a `Fase 1`, `Fase 2`, `Fase 3`, `Detonar EMP`, `Bullet-Time`, `Modo Fuego`, `Mute DSP` y `Debug Físico` (que visualiza la rejilla espacial con mapa de calor por celda, *hitboxes* exactos y vectores de velocidad/evasión).

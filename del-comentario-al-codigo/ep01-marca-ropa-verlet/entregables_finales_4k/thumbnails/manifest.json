@@ -1,0 +1,82 @@
+{
+ "A": {
+  "hash": "dc166db8c61b1e7f08c52017dd280e8ab09098b3",
+  "info": {
+   "id": "A",
+   "text": "DE COMENTARIO A MARCA",
+   "sub": "RETO DE @TENITO03 · OVERFIT",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 499497,
+   "bytes_720": 286324,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 21.0,
+   "contrast": 11.25,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "comentario_tenito03_hero.mov t=2.5",
+    "right": "verlet_couture_yt_60fps.mov t=29.2"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "B": {
+  "hash": "bb851354a52af2704b86e4a6ecdc00e936d7bed4",
+  "info": {
+   "id": "B",
+   "text": "10 DISEÑOS IA 3D",
+   "sub": "COLECCION GUERRA DE PESOS",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 533292,
+   "bytes_720": 301593,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 22.0,
+   "contrast": 9.77,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "verlet_couture_yt_60fps.mov t=36.5",
+    "right": "verlet_couture_yt_60fps.mov t=116.5"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "C": {
+  "hash": "dafff9db4c1429db753e27e3f96a89bfbc53c05d",
+  "info": {
+   "id": "C",
+   "text": "MOCKUPS 300 GSM",
+   "sub": "FRENTE + ESPALDA + REDES",
+   "layout": "hero",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/cc01-marca-ropa-verlet/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 460119,
+   "bytes_720": 257314,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 24.0,
+   "contrast": 12.32,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "right": "verlet_couture_yt_60fps.mov t=132"
+   },
+   "origin": "episode.yaml"
+  }
+ }
+}

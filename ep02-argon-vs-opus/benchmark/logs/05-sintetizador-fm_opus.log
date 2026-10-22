@@ -1,0 +1,36 @@
+La estación está lista en `claude-opus-5.5/05-sintetizador-fm/index.html`. Es un solo archivo que usa solo Web Audio API y Canvas 2D: no carga audio, librerías ni fuentes externas. La probé en Chromium headless: 33 de 33 pruebas de interacción pasaron, no hubo errores de consola y corre a unos 57 fps. Hice commit `1602ebb` (sin push). **No lo he escuchado en altavoces**: el balance entre pistas lo ajusté midiendo niveles con el analizador, no de oído.
+
+**Motor de sonido**
+- **Sintetizador principal de 16 voces:** cada voz tiene un oscilador portador (Sine/Saw/Square/Triangle) modulado en frecuencia por otro oscilador. Se ajustan el ratio, el índice β y cómo decae la modulación. Tiene sub-oscilador una octava abajo, ADSR completo y filtro LP/HP/BP con cutoff, resonancia y envolvente. Si se tocan más de 16 notas, libera primero las voces que ya se están apagando, con un fundido corto sin clic.
+- **Efectos:** saturación con WaveShaper, delay estéreo ping-pong sincronizado al BPM, reverb con respuesta generada por código y sidechain que baja el volumen del sinte en cada bombo.
+- **Bajo mono estilo 303** con slide, acento y filtro resonante.
+- **Batería sintetizada:** el bombo barre de 150 Hz a 40 Hz exponencialmente. La caja mezcla un tono con ruido blanco filtrado de envolvente rápida, y hay clap. Los hi-hats metálicos salen de 6 osciladores cuadrados, y el hat cerrado corta al abierto.
+
+**Secuenciador**
+- **8 pistas:** Lead, Acordes, Bajo, Kick, Snare, Clap, Hat y Open Hat. Tiene BPM de 60 a 180, swing, botón TAP, compases encadenados (de 1 a 8), mute y solo por pista.
+- **Grabación:** REC graba en vivo ajustando cada nota al paso más cercano, o paso a paso cuando está detenido.
+- **Edición:**
+  - Click activa o borra.
+  - Arrastrar pinta la batería.
+  - La rueda cambia la nota.
+  - El click derecho cambia la duración.
+  - Shift+click pone acento y Alt+click pone slide.
+- **4 demos:** Cyberpunk Outrun (128 BPM), 8-Bit Boss Battle (150), Acid Techno Lab (135, con barrido automático del filtro del bajo) y Neo-Soul FM Keys (88, piano eléctrico estilo DX7). Al hacer click en una demo empieza a sonar de inmediato.
+
+**Teclado y perillas**
+- El piano tiene 5 octavas (C1 a C6) y se toca con el mouse (también deslizando), con la pantalla táctil o con el teclado de la computadora: filas Z–/ y Q–]. Las flechas ↑↓ cambian de octava y la barra espaciadora hace play/stop.
+- Las teclas se iluminan con un color por fuente: manual, lead, acordes y bajo.
+- Las perillas se arrastran (con Shift el ajuste es fino), responden a la rueda y vuelven a su valor inicial con doble click.
+
+**Visualizador**
+- **5 modos:** dual, osciloscopio, espectro FFT, goniómetro estéreo y espectrograma.
+- **Osciloscopio:** efecto de fósforo con persistencia y disparo estable. Puede mostrar solo los sintetizadores o la mezcla completa; con la mezcla, los hi-hats lo llenan de ruido.
+- **Espectro FFT:** escala logarítmica con barras, picos retenidos, curva envolvente y encima la respuesta teórica del filtro.
+- Muestra en vivo el pico y el RMS en dBFS y la frecuencia dominante con su nota.
+
+**Ajustes que hice tras probarlo**
+- **Niveles:** los hi-hats salían casi tan fuertes como el bombo y el clap casi no se oía. Los rebalanceé midiendo cada pista sola en las 4 demos.
+- **Volumen general:** la mezcla iba muy caliente (el compresor quitaba 8 dB), así que bajé el master.
+- **Teclado:** pasó de 4 a 5 octavas para que las notas del bajo también se iluminen.
+
+Dejé la entrada correspondiente en el roadmap.

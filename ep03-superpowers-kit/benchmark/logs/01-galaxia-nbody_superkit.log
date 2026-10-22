@@ -1,0 +1,27 @@
+Se ha construido y verificado el **Simulador Interactivo 3D de Colisión de Galaxias N-Body y Agujero Negro Supermasivo con Lente Gravitacional Relativista** siguiendo el protocolo **Mixiuh Labs Superpowers Kit**.
+
+### Archivos Entregados y Actualizados
+- [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html) — Simulador 3D 100% autocontenido (HTML5, CSS Glassmorphism Cyberpunk/Científico, motor físico N-Body en memoria contigua y 5 Shaders GLSL personalizados).
+- [MEMORY.md](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/MEMORY.md) — Memoria persistente actualizada con la arquitectura, decisiones técnicas (ADR) y verificación libre de errores.
+
+---
+
+### Arquitectura Astrofísica y Gráfica Implementada
+
+1. **Motor Gravitacional N-Body 3D de Alto Rendimiento (`36,000` a `60,000` Estrellas Activas, `48,000` por defecto)**:
+   - Implementado en [`updateStarColorsAndStep`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L1821-L2070) y [`populateSpiralGalaxy`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L1567-L1646) operando sobre buffers tipados pre-asignados (`Float32Array`, `Int32Array`, `Uint8Array`) con **cero asignaciones en el bucle `requestAnimationFrame` (Zero-GC)**.
+   - Partición espacial tridimensional **Barnes-Hut Octree 3D** en [`buildSpatialOctree`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L948-L994) con cálculo de centro de masa baricéntrico del halo y fricción dinámica de Chandrasekhar entre núcleos supermasivos.
+   - **Desplazamiento Espectral Doppler Relativista**: cada estrella calcula su velocidad radial respecto al observador ($v_{\text{rad}}/c$) y proximidad al pozo relativista, tiñéndose de azul/cian intenso al acercarse o en el núcleo caliente y ámbar/carmesí al alejarse en las colas de marea gravitacional.
+
+2. **Agujero Negro Supermasivo, Disco de Acreción Relativista y Lente de Einstein (GLSL)**:
+   - **Horizonte de Sucesos + Disco de Acreción Relativista** en [`createBlackHoleVisual`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L1265-L1361): turbulencia magnetohidrodinámica procedural mediante ruido FBM, rotación diferencial kepleriana en la órbita circular más interna estable (ISCO) y **beaming relativista Doppler** asimétrico.
+   - **Anillo de Einstein y Esfera de Fotones**: shader relativista con mapeo inverso de deflexión gravitacional $\beta = \theta - \theta_E^2 / \theta$, disco secundario curvado y **Nebulosa Volumétrica 3D** distorsionada dinámicamente alrededor de la singularidad primaria.
+   - **Jets Polares Relativistas**: conos gemelos de plasma astrofísico animado en los polos magnéticos de cada agujero negro.
+
+3. **Interacción en Vivo, Presets Astrofísicos y Modos Visuales**:
+   - **4 Presets Astrofísicos** ([`initPreset`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L1648-L1814)): *Colisión Vía Láctea-Andrómeda*, *Cuásar Binario Relativista*, *Anillo Einstein & Lente Puro*, y *Colapso de Cúmulo Globular*.
+   - **4 Modos Visuales**: *Espectro Doppler + Bloom*, *Mapa Térmico de Velocidad Orbital*, *Partición Espacial Octree 3D* ([`updateOctreeWireframe`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L2120-L2168)) y *Campo de Vectores Gravitacionales* ([`updateVectorField`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L2171-L2231)), además de la malla deformable de **Pozo Gravitatorio de Lorentz-Flamm** ([`updateGravityWellMesh`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-superpowers-kit/01-galaxia-nbody/index.html#L2075-L2111)).
+   - **Intervenciones en Vivo**: inyección de *Agujero Negro Errante* (mediante botón o doble clic con raycasting 3D), *Onda de Choque de Supernova Ia* y *Fusión de Núcleos Supermasivos*.
+
+4. **Verificación Headless y Aislamiento (Skill 02)**:
+   - Verificado mediante servidor en el puerto exclusivo `8811` y Chrome DevTools Protocol: `CONSOLE_ERRORS: 0`, `EXCEPTIONS: 0`, `gl.getError(): 0` a `60 FPS`, cerrando el puerto `8811` al finalizar.

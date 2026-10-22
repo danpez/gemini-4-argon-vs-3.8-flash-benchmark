@@ -1,0 +1,20 @@
+Se ha generado el simulador de Dinámica de Fluidos Computacional (CFD) acelerado por GPU en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/02-fluidos-navier-stokes/index.html).
+
+### Arquitectura de GPU y Pipeline Matemático Implementado
+
+1. **Pipeline Completo de Navier-Stokes Euleriano (*Stable Fluids* de Jos Stam) en Shaders GLSL y FBOs en Ping-Pong**:
+   - **Soporte Nativo de Punto Flotante**: Inicialización prioritaria en **WebGL2** (`EXT_color_buffer_float`, `RGBA16F`, `RG16F`, `R16F`, `OES_texture_float_linear`) con *fallback* automático a **WebGL1** (`OES_texture_half_float`) e interpolación bilineal manual en shader si el hardware no soporta filtrado lineal.
+   - **Inyección de Cantidad de Movimiento y Tinta (`splatShaderSource` / `windJetShaderSource`)**: Pulsos gaussianos con corrección de relación de aspecto ($\Delta \mathbf{u} = \mathbf{F}\exp(-\|\mathbf{x}-\mathbf{x}_0\|^2/r^2)$) y un peine aerodinámico de filamentos bioluminiscentes acoplado a una tobera de corriente libre para el túnel de viento.
+   - **Confinamiento de Vorticidad (`curlShaderSource` + `vorticityShaderSource`)**: Cálculo del rotacional escalar 2D ($\omega = \nabla \times \mathbf{u} = \partial_x v - \partial_y u$) con condiciones de capa límite *No-Slip* sobre el obstáculo y reinyección de fuerza rotacional $\mathbf{f}_{\text{vort}} = \varepsilon_{\text{curl}} (\mathbf{N} \times \boldsymbol{\omega})$ con $\mathbf{N} = \nabla|\omega| / \|\nabla|\omega|\|$.
+   - **Divergencia y Proyección de Presión de Helmholtz-Hodge (`divergenceShaderSource`, `pressureShaderSource`, `gradientSubtractShaderSource`)**: Cálculo de $\nabla \cdot \mathbf{u}$, resolución iterativa en GPU de la ecuación de Poisson ($\nabla^2 p = \nabla \cdot \mathbf{u}$) mediante múltiples iteraciones de **Jacobi** con condiciones de frontera pura de Neumann ($\partial p / \partial \mathbf{n} = 0$) en obstáculos y salida abierta en modo túnel de viento, seguida de la sustracción del gradiente $\mathbf{u} \leftarrow \mathbf{u}^* - \nabla p$.
+   - **Advección Semi-Lagrangiana (`advectionShaderSource`)**: Retroceso de partículas sobre la característica ($\mathbf{x}_{\text{prev}} = \mathbf{x} - \Delta t \, \mathbf{u}(\mathbf{x})$) con interpolación bilineal y disipación exponencial independiente para velocidad y tinta.
+
+2. **Obstáculos Sólidos Interactivos y Calle de Vórtices de Kármán**:
+   - **Cilindro Sólido Interactivo**: Arrastrable en tiempo real directamente sobre el lienzo (transfiriendo su velocidad instantánea $\mathbf{u}_{\text{obs}}$ a la condición de frontera *No-Slip* del fluido circundante) y con radio ajustable en caliente.
+   - **Editor de Barreras Sólidas (`wallPaintShaderSource`)**: Permite dibujar o limpiar paredes arbitrarias directamente en un FBO de máscara de obstáculos (`obstacleFBO`).
+
+3. **4 Modos de Visualización Científica y Estética (`displayShaderSource`)**:
+   - **1) Tinta Bioluminiscente + GPU Bloom**: Pirámide de *downsample/upsample* en FBOs dedicados (`bloomPrefilter` + `bloomBlur`) con mapeo de tonos *ACES Filmic*.
+   - **2) Mapa de Velocidad Vectorial**: Codificación HSV por ángulo $\text{atan2}(v, u)$ y magnitud $\|\mathbf{u}\|$, con superposición procedural en GPU de una malla de vectores direccionales (flechas SDF) y líneas de iso-magnitud.
+   - **3) Mapa de Vorticidad / Rotacional ($\nabla \times \mathbf{u}$)**: Paleta divergente científica (Cian eléctrico para giro antihorario $+\omega$ vs. Carmesí/Ámbar para giro horario $-\omega$) con líneas de contorno de iso-vorticidad.
+   - **4) Mapa de Presión Interna ($p$)**: Visualización del campo escalar de Poisson destacando las zonas de alta presión de estancamiento frente al cilindro y los núcleos de baja presión por succión en el centro de los vórtices, con isobaras topográficas.

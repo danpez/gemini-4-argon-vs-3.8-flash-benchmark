@@ -1,0 +1,18 @@
+La **Terminal Institucional Interactiva de Trading Cuantitativo y Microestructura de Mercado (`QUANTUM-HFT // L3`)** ha sido implementada y guardada en un único archivo autocontenido en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/02-terminal-trading/index.html).
+
+### Resumen de Arquitectura e Implementación
+
+1. **Motor Estocástico y Matching Engine L3 en Tiempo Real**:
+   - Modela simultáneamente cuatro activos (`BTC-PERP`, `NVDA-AI`, `ETH-PERP`, `SOL-HFT`) mediante ecuaciones diferenciales estocásticas combinando **Movimiento Browniano Geométrico (GBM)**, **Volatilidad Estocástica de Heston** ($dv_t = \kappa(\theta - v_t)dt + \xi\sqrt{v_t}dW_v$ con correlación $\rho < 0$) y **Saltos de Difusión de Poisson**.
+   - Ejecución manual **DMA (`MARKET` y `LIMIT`)** con apalancamiento configurable (`1x` a `100x`), barrido real de niveles de liquidez del libro de órdenes, cálculo dinámico de impacto/slippage, precio de liquidación, margen y PnL realizado/no realizado.
+   - Clic directo sobre cualquier fila de la escalera DOM para fijar órdenes `LIMIT` que descansan en el libro L3 y se ejecutan automáticamente cuando el precio las cruza.
+
+2. **Cuatro Visualizaciones Sincronizadas a 60–120 FPS (Canvas 2D/3D High-DPI)**:
+   - **Gráfico Principal de Velas Japonesas + Liquidez Heatmap L3 + VPVR**: Bandas de calor de liquidez histórica/activa detrás de las velas, Bandas de Bollinger `(20, 2)`, `VWAP` institucional, `EMA 9/21/50`, perfil de volumen lateral (`VPVR`) con línea `POC` (Point of Control), líneas de entrada/liquidación de cartera y sistema de explosiones de partículas aditivas en cada liquidación.
+   - **Superficie 3D Interactiva de Volatilidad Implícita y Profundidad L3**: Malla tridimensional con rotación orbital por ratón, zoom y modos `HIBRIDO 3D`, `PROFUNDIDAD L3` y `SONRISA IV` que deforma en vivo la curvatura ATM/Skew y los muros de liquidez.
+   - **Escalera DOM (Depth of Market) y Cinta `Time & Sales`**: Visualización de alta velocidad de 28 niveles Bid/Ask con profundidad acumulada, detección de muros institucionales (`WHALE`) y cinta de transacciones con alertas de liquidación (`LIQ`).
+   - **Osciloscopio de Microestructura y Flujo de Toxicidad**: Canal dual sincronizado con índice de toxicidad `VPIN` (zona crítica `> 0.72`), volatilidad instantánea de Heston ($\sigma_t$), histograma de desequilibrio de flujo de órdenes (`OFI`) y curva de Delta de Volumen Acumulado (`CVD`).
+
+3. **Simuladores de Eventos Extremos y Telemetría HUD**:
+   - Botones de estrés en vivo: `Disparar Flash Crash (-25%)`, `Inyectar Ballena ($50M Buy Wall)`, `Short Squeeze Algorítmico`, `Cascada de Liquidaciones` y `Calmar Mercado`.
+   - Iconografía 100% vectorial en SVG y tipografía monoespaciada financiera sin dependencias externas ni emojis Unicode.

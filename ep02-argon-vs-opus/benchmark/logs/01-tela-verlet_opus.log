@@ -1,0 +1,35 @@
+Terminé el simulador y está validado en Chromium headless: sin errores ni advertencias de consola en todas las pruebas.
+
+**Archivo:** `claude-opus-5.5/01-tela-verlet/index.html`. Es un único archivo (~1 300 líneas), sin recursos externos ni librerías.
+
+**Física (escrita desde cero)**
+- **Malla:** 72×44 = 3 168 partículas y 18 430 enlaces (estructurales, de cizalla y de flexión). Hay un selector para 65×40 y 96×58.
+- **Integración:** Verlet con 3 sub-pasos × 10 iteraciones de relajación (30 por frame), ambos ajustables desde el panel. El solver alterna el sentido de recorrido en cada iteración.
+- **Desgarro:** la elongación de cada enlace se compara con su longitud de reposo y el enlace se rompe al superar `tearThreshold`. Cuando una celda pierde 2 aristas, sus diagonales también mueren, así el corte se separa de verdad.
+- **Refuerzos:** la vaina del asta, el dobladillo y los ojales de las esquinas aguantan el doble. Sin ellos, la bandera y la red se rompían solas apenas arrancaban.
+- **Viento:** campo 3D con ruido Simplex propio, ráfagas que viajan con el flujo y presión aerodinámica según la normal de cada celda. El botón **Onda** dispara la explosión radial.
+- **Ratón:** clic izquierdo agarra con un núcleo rígido y un halo elástico. Clic derecho o Shift+clic es el bisturí láser con estela.
+
+**Render:** tres modos.
+- **Tensión:** cada hilo pasa de azul/cian a ámbar, rojo y blanco incandescente según su estrés.
+- **Volumétrico:** iluminación direccional (Lambert + Blinn-Phong) con normales suavizadas y cada celda subdividida 2×2, para que no se vea pixelado.
+- **Neón:** líneas con resplandor aditivo.
+
+Los bordes rotos brillan como brasas y salen chispas en cada ruptura.
+
+**HUD:** muestra FPS, ms de física, partículas activas, enlaces íntegros y rotos, rupturas por segundo, tensión máxima con barra, y una gráfica del historial de tensión con la línea de ruptura.
+
+**Resultados de las pruebas**
+
+| Prueba | Resultado |
+|---|---|
+| 30 s simulados por preset con desgarro activo | 0 rupturas espontáneas; pico de tensión entre 18% y 42% del umbral |
+| Corte láser del 80% a lo ancho | El desgarro siguió solo con el peso: de 314 a 458 enlaces rotos |
+| Arrastre fuerte con el ratón | 436 enlaces rotos, en la zona del agarre |
+| Barrido láser / onda de choque | 364 / 61 enlaces rotos |
+| Botones, sliders, atajos, 3 mallas | Funcionan; 60 FPS en tiempo real |
+
+- **Malla 96×58:** en headless bajó a unos 21 FPS. En un navegador normal debería ir mejor, pero no lo medí ahí.
+- **Prueba en tu navegador:** el arrastre y el corte con un ratón real no los probé; en las pruebas usé eventos de ratón simulados por Playwright.
+- **Sin commit:** no hice commit para no interferir con tu `run_benchmark_ep02.py`.
+- **Gancho de pruebas:** el archivo expone `window.VERLET_LAB`, que usé para las pruebas automáticas; no afecta al uso normal.

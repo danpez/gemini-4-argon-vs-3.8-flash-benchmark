@@ -1,56 +1,60 @@
-# 🚀 Benchmark Zero-Shot: Gemini 4 Argon (High) vs. Gemini 3.8 Flash (High)
+# Mixiuh Labs — Repositorio Oficial de Benchmarks, Codigo Zero-Shot y Kits de Ingenieria
 
-![Portada del Benchmark](videos-x-comparativa/00_portada_imagen_hilo_x.png)
+Portal interactivo en vivo: **[https://labs.mixiuh.online](https://labs.mixiuh.online)**
 
-Laboratorio comparativo cara a cara ejecutado en **Antigravity** para medir el salto generacional de **Gemini 4 Argon (High)** frente a **Gemini 3.8 Flash (High)** a través de **10 retos extremos de programación gráfica 3D/2D, shaders GLSL, motores físicos, algoritmos procedurales y CSS puro**.
-
-> **Regla de Oro del Benchmark ("Zero-Shot • Cero Assets Externos"):**
-> Cada prueba exigió entregar un único archivo `index.html` 100% autocontenido y funcional al primer intento, con **prohibición estricta de cargar imágenes, texturas `.png/.jpg` o modelos 3D externos**. Todo el arte, texturas, ruido fractal, física e iluminación tuvo que generarse matemáticamente en memoria.
+Este repositorio contiene el codigo fuente original (`index.html`), las auditorias de telemetria (reloj, tokens de entrada/salida/cache y costo real en USD), los kits descargables y la programacion omnicanal de todos los episodios de **Mixiuh Labs** (`@MixiuhLabs`).
 
 ---
 
-## 🏆 Resumen Ejecutivo de Resultados
+## Indice de Episodios y Series en este Repositorio
 
-* **Marcador Global de Calidad y Funcionalidad:** **10 - 0** a favor de **Gemini 4 Argon (High)**.
-* **Tiempo Total Acumulado (10 pruebas):**
-  * **Gemini 4 Argon (High):** `55 minutos` (**10/10 simuladores impecables** corriendo a `120 FPS`).
-  * **Gemini 3.8 Flash (High):** `94 minutos` (`8/10 funcionales`, con entregas rotas/injugables en *Raycasting 3D* y *Generador de Mazmorras*).
-* **Ahorro de Tiempo y Picos de Velocidad:** Argon completó toda la suite en **41.5% menos tiempo** (`39 minutos menos`), llegando a ser **5.5x más rápido** en el *Árbol Fractal* (`4 min` vs `22 min`) y **4.25x más rápido** en el *Motor de Raycasting 3D* (`4 min` vs `17 min`).
-
----
-
-## 🎮 Tabla Comparativa, Demos Jugables en Vivo y Código Fuente
-
-| # | Reto Zero-Shot | 4 Argon (High) | 3.8 Flash (High) | Ventaja de Argon | 🎮 Probar Demo en Vivo (GitHub Pages) | 📂 Código Fuente (`index.html`) | 🎬 Video Comparativo (20s) |
-| :-: | :--- | :-: | :-: | :--- | :---: | :---: | :---: |
-| **01** | **Sistema Solar Relativo** *(Three.js + Shaders GLSL)* | `11 min` | `7 min` | **🏆 Ganador** *(Granulación solar GLSL, nebulosa volumétrica, eclipses y árbol de matrices)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/sistema-solar/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/sistema-solar/) | [Argon](gemini-4-argon/sistema-solar/index.html) \| [Flash](gemini-3.8-flash/sistema-solar/index.html) | [Ver MP4](videos-x-comparativa/01_sistema_solar_vs.mp4) |
-| **02** | **Visualizador ADN 3D** *(Física Ley de Hooke + GLSL)* | **`5 min`** | `7 min` | **⚡ 1.4x más rápido** *(24.5k partículas a 120 FPS, 4 morfologías GLSL y sonda 3D)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/visualizador-adn/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/visualizador-adn/) | [Argon](gemini-4-argon/visualizador-adn/index.html) \| [Flash](gemini-3.8-flash/visualizador-adn/index.html) | [Ver MP4](videos-x-comparativa/02_visualizador_adn_vs.mp4) |
-| **03** | **Vida Artificial ("Boids")** *(Reynolds + Quadtree)* | `5 min` | `3 min` | **🏆 Ganador** *(Quadtree 98.8%, Leviatanes IA y barra de Keymaps directos en vivo)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/vida-artificial/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/vida-artificial/) | [Argon](gemini-4-argon/vida-artificial/index.html) \| [Flash](gemini-3.8-flash/vida-artificial/index.html) | [Ver MP4](videos-x-comparativa/03_vida_artificial_boids_vs.mp4) |
-| **04** | **Generador de Mazmorras** *(BSP + MST + A\* + FOV)* | **`12 min`** | `2 min` *(Roto)* | **🏆 Victoria Total** *(Flash abortó con bugs; Argon creó A\* en vivo, Fog of War y RPG)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/generador-mazmorras/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/generador-mazmorras/) | [Argon](gemini-4-argon/generador-mazmorras/index.html) \| [Flash](gemini-3.8-flash/generador-mazmorras/index.html) | [Ver MP4](videos-x-comparativa/04_generador_mazmorras_vs.mp4) |
-| **05** | **Simulador "Falling Sand"** *(Química estilo Noita)* | **`4 min`** | `9 min` | **⚡ 2.25x más rápido** *(Química emergente 10x superior con 12 elementos reactivos)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/falling-sand/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/falling-sand/) | [Argon](gemini-4-argon/falling-sand/index.html) \| [Flash](gemini-3.8-flash/falling-sand/index.html) | [Ver MP4](videos-x-comparativa/05_falling_sand_vs.mp4) |
-| **06** | **Motor 3D Raycasting** *(Puro Canvas 2D • Cero WebGL)* | **`4 min`** | `17 min` *(Roto)* | **⚡ 4.25x más rápido** *(Flash entregó un mundo roto; Argon creó un Wolfenstein 3D a 120 FPS)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/motor-raycasting/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/motor-raycasting/) | [Argon](gemini-4-argon/motor-raycasting/index.html) \| [Flash](gemini-3.8-flash/motor-raycasting/index.html) | [Ver MP4](videos-x-comparativa/06_motor_raycasting_vs.mp4) |
-| **07** | **Sprites Espaciales 8-Bits** *(Pixel Art + Arena Shmup)* | **`4 min`** | `13 min` | **⚡ 3.25x más rápido** *(Sombreado volumétrico 3D, visor de 4 etapas y Shmup 360°)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/generador-sprites/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/generador-sprites/) | [Argon](gemini-4-argon/generador-sprites/index.html) \| [Flash](gemini-3.8-flash/generador-sprites/index.html) | [Ver MP4](videos-x-comparativa/07_generador_sprites_vs.mp4) |
-| **08** | **Reloj Analógico Neumórfico** *(100% HTML y CSS Puro)* | **`2 min`** | `4 min` | **⚡ 2.0x más rápido** *(Tourbillon mecánico animado en CSS puro, cristal zafiro y 3 temas)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/reloj-analogico/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/reloj-analogico/) | [Argon](gemini-4-argon/reloj-analogico/index.html) \| [Flash](gemini-3.8-flash/reloj-analogico/index.html) | [Ver MP4](videos-x-comparativa/08_reloj_analogico_css_vs.mp4) |
-| **09** | **Árbol Fractal + Viento** *(Cinemática Directa FK + Perlin)* | **`4 min`** | `22 min` | **⚡ 5.5x más rápido** *(24,400 racimos foliares, esqueleto FK y vórtice de viento)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/arbol-fractal/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/arbol-fractal/) | [Argon](gemini-4-argon/arbol-fractal/index.html) \| [Flash](gemini-3.8-flash/arbol-fractal/index.html) | [Ver MP4](videos-x-comparativa/09_arbol_fractal_vs.mp4) |
-| **10** | **Spirograph Paramétrico** *(Hipotrocoides y Guilloché)* | **`4 min`** | `10 min` | **⚡ 2.5x más rápido** *(3er rotor Guilloché y mandalas de hasta 40,000 rad a 120 FPS)* | [▶️ Argon](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-4-argon/spirograph-parametrico/) \| [▶️ Flash](https://danpez.github.io/gemini-4-argon-vs-3.8-flash-benchmark/gemini-3.8-flash/spirograph-parametrico/) | [Argon](gemini-4-argon/spirograph-parametrico/index.html) \| [Flash](gemini-3.8-flash/spirograph-parametrico/index.html) | [Ver MP4](videos-x-comparativa/10_spirograph_parametrico_vs.mp4) |
+| Serie / Episodio | Carpeta en el Repositorio | Enfrentamiento / Proyecto | Marcador / Resultado | Tiempo Acumulado | Costo API Real |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **Episodio 03** | [`ep03-superpowers-kit/`](./ep03-superpowers-kit/) | **Gemini 4 Argon High Sin Kit vs. Mixiuh Superpowers Kit v1.0** (`6 Retos · 12 Corridas agy CLI`) | **SuperKit `4 - 2` Sin Kit** | `276 min` vs `302 min` | `$10.85` vs `$7.69 USD` |
+| **Del Comentario al Codigo #01** | [`del-comentario-al-codigo/ep01-marca-ropa-verlet/`](./del-comentario-al-codigo/ep01-marca-ropa-verlet/) | **Reto de `@tenito03` -> OVERFIT Studio 3D (`Coleccion Guerra de Pesos`)** | **3 Maniquies 300 GSM + 10 Artes 2K** | Estudio 3D en Vivo | Exportacion 4K |
+| **Episodio 02** | [`ep02-argon-vs-opus/`](./ep02-argon-vs-opus/) | **Gemini 4 Argon (High) vs. Claude Opus 5.5 (High)** (`6 Motores Fisicos, WebGL2 y FM`) | **Argon `4 - 2` Opus 5.5** | `90 min` vs `159 min` | `$6.26` vs `$16.26 USD` |
+| **Episodio 01** | [`ep01-argon-vs-flash/`](./ep01-argon-vs-flash/) | **Gemini 4 Argon (High) vs. Gemini 3.8 Flash (High)** (`10 Retos Zero-Shot + Medio Pixel`) | **Argon `10 - 0` Flash** | `55 min` vs `94 min` | `10/10` vs `8/10` func. |
 
 ---
 
-## 📜 Los 10 Mega-Prompts y Notas Originales del Laboratorio
+## 1. Episodio 03 — Gemini 4 Argon High Sin Kit vs. Mixiuh Superpowers Kit v1.0 (`ep03-superpowers-kit/`)
 
-Todos los prompts íntegros utilizados en las pruebas (con sus especificaciones matemáticas, restricciones y notas de evaluación) se encuentran en:
-👉 **[`2026-10-13-laboratorio-comparativo-gemini-3.8-flash-vs-4-argon.md`](2026-10-13-laboratorio-comparativo-gemini-3.8-flash-vs-4-argon.md)**
+12 corridas reales y aisladas ejecutadas mediante `agy --model gemini-4-argon-high --effort high` para responder con datos duros: **¿Siguen siendo necesarios los Kits de Skills, bancos de memoria y el Auto-Debugger MCP hoy?**
+
+- **Codigo de las 6 entregas Sin Kit (Raw):** [`ep03-superpowers-kit/ia-sin-kit/`](./ep03-superpowers-kit/ia-sin-kit/)
+- **Codigo de las 6 entregas Con Superpowers Kit:** [`ep03-superpowers-kit/ia-superpowers-kit/`](./ep03-superpowers-kit/ia-superpowers-kit/)
+- **Kit descargable gratuito (`AGENTS.md` + 5 Skills + `MEMORY_BANK.md`):** [`ep03-superpowers-kit/regalo-superpowers-kit/`](./ep03-superpowers-kit/regalo-superpowers-kit/)
+- **Telemetria completa y comparativas lado a lado:** [`ep03-superpowers-kit/benchmark/`](./ep03-superpowers-kit/benchmark/)
+
+| # | Reto | IA Sin Kit (`Argon High Raw`) | IA + Mixiuh Superpowers Kit | Ganador |
+| :-: | :--- | :--- | :--- | :-: |
+| **01** | **Colision Galactica N-Body 3D** | `42 min` · `$0.88` · `275k tok` (16k sin Bloom) | `46 min` · `$1.61` · `506k tok` (20k GPU + Bloom HDR + Lente Einstein) | **SuperKit (1-0)** |
+| **02** | **Terminal de Trading HFT Zero-GC** | `58 min` · `$1.60` · `471k tok` (`11,073 ord/s`) | `42 min` · `$1.40` · `400k tok` (`70,406 ord/s` en `Float64Array`) | **SuperKit (2-0)** |
+| **03** | **Arcade Bullet-Hell Boss Rush** | `51 min` · `$1.09` · `381k tok` (`1,829 proyectiles` a 60 FPS) | `69 min` · `$2.32` · `769k tok` (`432 proyectiles`) | **Sin Kit (2-1)** |
+| **04** | **Red Ciber-Defensa Zero-Trust 3D** | `48 min` · `$0.74` · `249k tok` (resuelto en `5 pasos`) | `30 min` · `$2.04` · `699k tok` (`21 pasos`) | **Sin Kit (2-2)** |
+| **05** | **Motor de Nodos IA + Shaders GLSL (DAG)** | `43 min` · `$1.41` · `513k tok` | `33 min` · `$1.41` · `523k tok` (`10 min mas rapido` + PiP Raymarching 3D) | **SuperKit (3-2)** |
+| **06** | **Sistema Operativo Web MixiuhOS** | `60 min` · `$1.97` · `761k tok` (ventanas iniciales solapadas) | `56 min` · `$2.07` · `627k tok` (4 apps limpias verificadas por MCP) | **SuperKit (4-2)** |
 
 ---
 
-## 💻 Cómo Ejecutar Localmente
+## 2. Del Comentario al Codigo #01 — OVERFIT Studio 3D (`del-comentario-al-codigo/ep01-marca-ropa-verlet/`)
 
-Ninguno de los 20 proyectos requiere `npm install` ni pasos de compilación. Puedes abrir cualquier archivo `index.html` directamente en tu navegador o levantar un servidor estático rápido:
+A partir del comentario de `@tenito03` en el Reel de la tela fisica de Verlet, construimos **OVERFIT Studio 3D** con 3 siluetas de 300 GSM en Blender Cycles (Hombre, Mujer y Mesa) y los 10 artes satiricos en 2K de la coleccion **"Guerra de Pesos"**:
+- **Aplicacion interactiva:** [`del-comentario-al-codigo/ep01-marca-ropa-verlet/app/index.html`](./del-comentario-al-codigo/ep01-marca-ropa-verlet/app/index.html)
+- **Guion oficial:** [`del-comentario-al-codigo/ep01-marca-ropa-verlet/guion/GUION_OFICIAL_YT_Y_REELS.md`](./del-comentario-al-codigo/ep01-marca-ropa-verlet/guion/GUION_OFICIAL_YT_Y_REELS.md)
 
-```bash
-git clone https://github.com/danpez/gemini-4-argon-vs-3.8-flash-benchmark.git
-cd gemini-4-argon-vs-3.8-flash-benchmark
+---
 
-# Servir Gemini 4 Argon en http://localhost:8081
-python3 -m http.server 8081 --directory gemini-4-argon
-```
+## 3. Episodio 02 — Gemini 4 Argon vs. Claude Opus 5.5 (`ep02-argon-vs-opus/`)
+
+- **Entregas de Claude Opus 5.5 (`High`):** [`ep02-argon-vs-opus/claude-opus-5.5/`](./ep02-argon-vs-opus/claude-opus-5.5/)
+- **Entregas de Gemini 4 Argon (`High`):** [`ep02-argon-vs-opus/gemini-4-argon/`](./ep02-argon-vs-opus/gemini-4-argon/)
+- **Telemetria de tokens y costos:** [`ep02-argon-vs-opus/benchmark/benchmark_results.json`](./ep02-argon-vs-opus/benchmark/benchmark_results.json)
+
+---
+
+## 4. Episodio 01 — Gemini 4 Argon vs. Gemini 3.8 Flash (`ep01-argon-vs-flash/`)
+
+- **Entregas de Gemini 4 Argon (`High`):** [`ep01-argon-vs-flash/gemini-4-argon/`](./ep01-argon-vs-flash/gemini-4-argon/)
+- **Entregas de Gemini 3.8 Flash (`High`):** [`ep01-argon-vs-flash/gemini-3.8-flash/`](./ep01-argon-vs-flash/gemini-3.8-flash/)
+- **Prompts y notas originales:** [`ep01-argon-vs-flash/2026-10-13-laboratorio-comparativo-gemini-3.8-flash-vs-4-argon.md`](./ep01-argon-vs-flash/2026-10-13-laboratorio-comparativo-gemini-3.8-flash-vs-4-argon.md)

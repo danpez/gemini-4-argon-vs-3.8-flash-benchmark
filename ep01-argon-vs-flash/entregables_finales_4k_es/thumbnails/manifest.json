@@ -1,0 +1,82 @@
+{
+ "A": {
+  "hash": "645f6971ee3c2402d7f685abeec0728ada5892e1",
+  "info": {
+   "id": "A",
+   "text": "0 | 10",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 466398,
+   "bytes_720": 250575,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 34.0,
+   "contrast": 10.72,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "motor_raycasting_comparativa.mov t=14.3",
+    "right": "motor_raycasting_comparativa.mov t=63"
+   },
+   "origin": "ep01"
+  }
+ },
+ "B": {
+  "hash": "2fc399ef2a6f3f733cf4319037a7082aac36c5ed",
+  "info": {
+   "id": "B",
+   "text": "22 MIN | 4 MIN",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 808235,
+   "bytes_720": 440872,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 20.0,
+   "contrast": 7.36,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "arbol_fractal_comparativa.mov t=55",
+    "right": "arbol_fractal_comparativa.mov t=174"
+   },
+   "origin": "ep01"
+  }
+ },
+ "C": {
+  "hash": "9a998ddb895d8423baf76b41118273cbbd856d04",
+  "info": {
+   "id": "C",
+   "text": "¿FLASH ROTO?",
+   "sub": "",
+   "layout": "hero",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep01-argon-vs-flash/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 437185,
+   "bytes_720": 238910,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 25.0,
+   "contrast": 9.99,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "motor_raycasting_comparativa.mov t=4.8"
+   },
+   "origin": "ep01"
+  }
+ }
+}

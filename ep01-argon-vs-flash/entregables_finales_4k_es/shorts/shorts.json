@@ -1,0 +1,469 @@
+{
+ "01_sistema-solar": {
+  "path": "01_sistema-solar.mp4",
+  "scene": "reto01",
+  "name": "01_sistema-solar",
+  "duration": 46.983333,
+  "beats_kept": [
+   "reto01-01",
+   "reto01-02",
+   "reto01-03",
+   "reto01-04",
+   "reto01-05",
+   "reto01-06",
+   "reto01-07",
+   "reto01-08",
+   "reto01-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 7,
+   "argon": 11
+  },
+  "title": "SISTEMA SOLAR RELATIVO",
+  "n": 1,
+  "slug": "sistema_solar",
+  "meta": {
+   "titles": [
+    "Sistema Solar Relativo: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 11 min, Flash en 7 min (Sistema Solar Relativo)",
+    "Reto 1: Sistema Solar Relativo en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Sistema Solar Relativo.\nPunto para Argon. Tiempo de entrega: Flash 7 min, Argon 11 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "03_vida-artificial": {
+  "path": "03_vida-artificial.mp4",
+  "scene": "reto03",
+  "name": "03_vida-artificial",
+  "duration": 49.35,
+  "beats_kept": [
+   "reto03-01",
+   "reto03-02",
+   "reto03-03",
+   "reto03-04",
+   "reto03-05",
+   "reto03-06",
+   "reto03-07",
+   "reto03-08",
+   "reto03-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 3,
+   "argon": 5
+  },
+  "title": "VIDA ARTIFICIAL",
+  "n": 3,
+  "slug": "vida_artificial",
+  "meta": {
+   "titles": [
+    "Vida Artificial: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 5 min, Flash en 3 min (Vida Artificial)",
+    "Reto 3: Vida Artificial en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Vida Artificial.\nPunto para Argon. Tiempo de entrega: Flash 3 min, Argon 5 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.01
+ },
+ "04_generador-mazmorras": {
+  "path": "04_generador-mazmorras.mp4",
+  "scene": "reto04",
+  "name": "04_generador-mazmorras",
+  "duration": 52.55,
+  "beats_kept": [
+   "reto04-01",
+   "reto04-02",
+   "reto04-03",
+   "reto04-04",
+   "reto04-05",
+   "reto04-06",
+   "reto04-07",
+   "reto04-08",
+   "reto04-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 2,
+   "argon": 12
+  },
+  "title": "GENERADOR DE MAZMORRAS",
+  "n": 4,
+  "slug": "generador_mazmorras",
+  "meta": {
+   "titles": [
+    "Generador de Mazmorras: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 12 min, Flash en 2 min (Generador de Mazmorras)",
+    "Reto 4: Generador de Mazmorras en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Generador de Mazmorras.\nPunto para Argon. Tiempo de entrega: Flash 2 min, Argon 12 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.01
+ },
+ "05_falling-sand": {
+  "path": "05_falling-sand.mp4",
+  "scene": "reto05",
+  "name": "05_falling-sand",
+  "duration": 50.916667,
+  "beats_kept": [
+   "reto05-01",
+   "reto05-02",
+   "reto05-03",
+   "reto05-04",
+   "reto05-05",
+   "reto05-06",
+   "reto05-07",
+   "reto05-08",
+   "reto05-09",
+   "reto05-10"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 9,
+   "argon": 4
+  },
+  "title": "SIMULADOR FALLING SAND",
+  "n": 5,
+  "slug": "falling_sand",
+  "meta": {
+   "titles": [
+    "Simulador Falling Sand: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 4 min, Flash en 9 min (Simulador Falling Sand)",
+    "Reto 5: Simulador Falling Sand en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Simulador Falling Sand.\nPunto para Argon. Tiempo de entrega: Flash 9 min, Argon 4 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.01
+ },
+ "06_motor-raycasting": {
+  "path": "06_motor-raycasting.mp4",
+  "scene": "reto06",
+  "name": "06_motor-raycasting",
+  "duration": 54.733333,
+  "beats_kept": [
+   "reto06-01",
+   "reto06-02",
+   "reto06-03",
+   "reto06-04",
+   "reto06-07",
+   "reto06-08",
+   "reto06-09",
+   "reto06-10",
+   "reto06-13"
+  ],
+  "beats_dropped": [
+   {
+    "id": "reto06-05",
+    "dur": 4.433,
+    "flags": [
+     "voice"
+    ],
+    "reason": "el Short pasaba de 58 s"
+   },
+   {
+    "id": "reto06-11",
+    "dur": 4.067,
+    "flags": [
+     "voice"
+    ],
+    "reason": "el Short pasaba de 58 s"
+   },
+   {
+    "id": "reto06-06",
+    "dur": 4.183,
+    "flags": [
+     "numbers",
+     "voice"
+    ],
+    "reason": "el Short pasaba de 58 s"
+   }
+  ],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 17,
+   "argon": 4
+  },
+  "title": "MOTOR 3D RAYCASTING",
+  "n": 6,
+  "slug": "motor_raycasting",
+  "meta": {
+   "titles": [
+    "Motor 3D Raycasting: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 4 min, Flash en 17 min (Motor 3D Raycasting)",
+    "Reto 6: Motor 3D Raycasting en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Motor 3D Raycasting.\nPunto para Argon. Tiempo de entrega: Flash 17 min, Argon 4 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "07_generador-sprites": {
+  "path": "07_generador-sprites.mp4",
+  "scene": "reto07",
+  "name": "07_generador-sprites",
+  "duration": 47.65,
+  "beats_kept": [
+   "reto07-01",
+   "reto07-02",
+   "reto07-03",
+   "reto07-04",
+   "reto07-05",
+   "reto07-06",
+   "reto07-07",
+   "reto07-08"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 13,
+   "argon": 4
+  },
+  "title": "SPRITES ESPACIALES 8 BITS",
+  "n": 7,
+  "slug": "generador_sprites",
+  "meta": {
+   "titles": [
+    "Sprites Espaciales 8 Bits: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 4 min, Flash en 13 min (Sprites Espaciales 8 Bits)",
+    "Reto 7: Sprites Espaciales 8 Bits en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Sprites Espaciales 8 Bits.\nPunto para Argon. Tiempo de entrega: Flash 13 min, Argon 4 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "08_reloj-analogico": {
+  "path": "08_reloj-analogico.mp4",
+  "scene": "reto08",
+  "name": "08_reloj-analogico",
+  "duration": 41.183333,
+  "beats_kept": [
+   "reto08-01",
+   "reto08-02",
+   "reto08-03",
+   "reto08-04",
+   "reto08-05",
+   "reto08-06",
+   "reto08-07"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 4,
+   "argon": 2
+  },
+  "title": "RELOJ ANALÓGICO CSS",
+  "n": 8,
+  "slug": "reloj_analogico",
+  "meta": {
+   "titles": [
+    "Reloj Analógico Css: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 2 min, Flash en 4 min (Reloj Analógico Css)",
+    "Reto 8: Reloj Analógico Css en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Reloj Analógico Css.\nPunto para Argon. Tiempo de entrega: Flash 4 min, Argon 2 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.01
+ },
+ "09_arbol-fractal": {
+  "path": "09_arbol-fractal.mp4",
+  "scene": "reto09",
+  "name": "09_arbol-fractal",
+  "duration": 57.966667,
+  "beats_kept": [
+   "reto09-01",
+   "reto09-02",
+   "reto09-03",
+   "reto09-04",
+   "reto09-05",
+   "reto09-06",
+   "reto09-07",
+   "reto09-08",
+   "reto09-09",
+   "reto09-10",
+   "reto09-11"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 22,
+   "argon": 4
+  },
+  "title": "ÁRBOL FRACTAL CON VIENTO",
+  "n": 9,
+  "slug": "arbol_fractal",
+  "meta": {
+   "titles": [
+    "Árbol Fractal con Viento: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 4 min, Flash en 22 min (Árbol Fractal con Viento)",
+    "Reto 9: Árbol Fractal con Viento en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Árbol Fractal con Viento.\nPunto para Argon. Tiempo de entrega: Flash 22 min, Argon 4 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "10_spirograph-parametrico": {
+  "path": "10_spirograph-parametrico.mp4",
+  "scene": "reto10",
+  "name": "10_spirograph-parametrico",
+  "duration": 54.133333,
+  "beats_kept": [
+   "reto10-01",
+   "reto10-02",
+   "reto10-03",
+   "reto10-04",
+   "reto10-05",
+   "reto10-06",
+   "reto10-07",
+   "reto10-08",
+   "reto10-09",
+   "reto10-10"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 10,
+   "argon": 4
+  },
+  "title": "SPIROGRAPH PARAMÉTRICO",
+  "n": 10,
+  "slug": "spirograph_parametrico",
+  "meta": {
+   "titles": [
+    "Spirograph Paramétrico: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 4 min, Flash en 10 min (Spirograph Paramétrico)",
+    "Reto 10: Spirograph Paramétrico en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Spirograph Paramétrico.\nPunto para Argon. Tiempo de entrega: Flash 10 min, Argon 4 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.03
+ },
+ "02_visualizador-adn": {
+  "path": "02_visualizador-adn.mp4",
+  "scene": "reto02",
+  "name": "02_visualizador-adn",
+  "duration": 51.733333,
+  "beats_kept": [
+   "reto02-01",
+   "reto02-02",
+   "reto02-03",
+   "reto02-04",
+   "reto02-05",
+   "reto02-06",
+   "reto02-07",
+   "reto02-08",
+   "reto02-09"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 2160,
+  "H": 3840,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 7,
+   "argon": 5
+  },
+  "title": "VISUALIZADOR DE ADN 3D",
+  "n": 2,
+  "slug": "visualizador_adn",
+  "meta": {
+   "titles": [
+    "Visualizador de Adn 3D: Gemini 4 Argon vs 3.8 Flash",
+    "Mismo prompt: Argon en 5 min, Flash en 7 min (Visualizador de Adn 3D)",
+    "Reto 2: Visualizador de Adn 3D en un solo intento (Gemini 4 Argon vs 3.8 Flash)"
+   ],
+   "description": "Mismo prompt, un solo intento, cero imágenes: Visualizador de Adn 3D.\nPunto para Argon. Tiempo de entrega: Flash 7 min, Argon 5 min.\nVideo completo con los 10 retos: [ENLACE_AL_VIDEO_COMPLETO]\n#Shorts #Gemini #IA",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#IA"
+   ]
+  },
+  "lufs": -14.02
+ }
+}

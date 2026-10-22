@@ -1,0 +1,261 @@
+{
+ "01_01-tela-verlet": {
+  "path": "01_01-tela-verlet.mp4",
+  "scene": "reto01",
+  "name": "01_01-tela-verlet",
+  "duration": 51.45,
+  "beats_kept": [
+   "reto01-01",
+   "reto01-02",
+   "reto01-03",
+   "reto01-04",
+   "reto01-06"
+  ],
+  "beats_dropped": [
+   {
+    "id": "reto01-05",
+    "dur": 9.7,
+    "flags": [
+     "voice"
+    ],
+    "reason": "el Short pasaba de 59.2 s"
+   }
+  ],
+  "warnings": [],
+  "W": 1080,
+  "H": 1920,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 31,
+   "argon": 7
+  },
+  "title": "VERLET CLOTH PHYSICS",
+  "n": 1,
+  "slug": "01_tela_verlet",
+  "meta": {
+   "titles": [
+    "Verlet Cloth Physics: Gemini 4 Argon vs Claude Opus 5.5",
+    "Same prompt: Argon in 7 min, Opus 5.5 in 31 min (Verlet Cloth Physics)",
+    "Challenge 1: Verlet Cloth Physics in a single attempt (Gemini 4 Argon vs Claude Opus 5.5)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Verlet Cloth Physics.\nPoint to Argon. Delivery time: Opus 5.5 31 min, Argon 7 min.\nFull video with all 6 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.03
+ },
+ "02_02-fluidos-navier-stokes": {
+  "path": "02_02-fluidos-navier-stokes.mp4",
+  "scene": "reto02",
+  "name": "02_02-fluidos-navier-stokes",
+  "duration": 56.75,
+  "beats_kept": [
+   "reto02-01",
+   "reto02-02",
+   "reto02-03",
+   "reto02-04",
+   "reto02-05",
+   "reto02-06"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 1080,
+  "H": 1920,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 18,
+   "argon": 10
+  },
+  "title": "NAVIER-STOKES GLSL",
+  "n": 2,
+  "slug": "02_fluidos_navier_stokes",
+  "meta": {
+   "titles": [
+    "Navier-stokes Glsl: Gemini 4 Argon vs Claude Opus 5.5",
+    "Same prompt: Argon in 10 min, Opus 5.5 in 18 min (Navier-stokes Glsl)",
+    "Challenge 2: Navier-stokes Glsl in a single attempt (Gemini 4 Argon vs Claude Opus 5.5)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Navier-stokes Glsl.\nPoint to Argon. Delivery time: Opus 5.5 18 min, Argon 10 min.\nFull video with all 6 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "03_03-cuerpo-blando-sdf": {
+  "path": "03_03-cuerpo-blando-sdf.mp4",
+  "scene": "reto03",
+  "name": "03_03-cuerpo-blando-sdf",
+  "duration": 53.433333,
+  "beats_kept": [
+   "reto03-01",
+   "reto03-02",
+   "reto03-03",
+   "reto03-04",
+   "reto03-05"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 1080,
+  "H": 1920,
+  "fps": 60,
+  "winner": "flash",
+  "times": {
+   "flash": 31,
+   "argon": 35
+  },
+  "title": "SDF SOFT BODIES",
+  "n": 3,
+  "slug": "03_cuerpo_blando_sdf",
+  "meta": {
+   "titles": [
+    "Sdf Soft Bodies: Gemini 4 Argon vs Claude Opus 5.5",
+    "Same prompt: Opus 5.5 in 31 min, Argon in 35 min (Sdf Soft Bodies)",
+    "Challenge 3: Sdf Soft Bodies in a single attempt (Gemini 4 Argon vs Claude Opus 5.5)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Sdf Soft Bodies.\nPoint to Opus 5.5. Delivery time: Opus 5.5 31 min, Argon 35 min.\nFull video with all 6 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "04_04-voxel-minecraft": {
+  "path": "04_04-voxel-minecraft.mp4",
+  "scene": "reto04",
+  "name": "04_04-voxel-minecraft",
+  "duration": 53.65,
+  "beats_kept": [
+   "reto04-01",
+   "reto04-02",
+   "reto04-04",
+   "reto04-05",
+   "reto04-06"
+  ],
+  "beats_dropped": [
+   {
+    "id": "reto04-03",
+    "dur": 6.833,
+    "flags": [
+     "voice"
+    ],
+    "reason": "el Short pasaba de 59.2 s"
+   }
+  ],
+  "warnings": [],
+  "W": 1080,
+  "H": 1920,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 24,
+   "argon": 7
+  },
+  "title": "3D VOXEL ENGINE",
+  "n": 4,
+  "slug": "04_voxel_minecraft",
+  "meta": {
+   "titles": [
+    "3D Voxel Engine: Gemini 4 Argon vs Claude Opus 5.5",
+    "Same prompt: Argon in 7 min, Opus 5.5 in 24 min (3D Voxel Engine)",
+    "Challenge 4: 3D Voxel Engine in a single attempt (Gemini 4 Argon vs Claude Opus 5.5)"
+   ],
+   "description": "Same prompt, one attempt, zero images: 3D Voxel Engine.\nPoint to Argon. Delivery time: Opus 5.5 24 min, Argon 7 min.\nFull video with all 6 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "05_05-sintetizador-fm": {
+  "path": "05_05-sintetizador-fm.mp4",
+  "scene": "reto05",
+  "name": "05_05-sintetizador-fm",
+  "duration": 55.066667,
+  "beats_kept": [
+   "reto05-01",
+   "reto05-02",
+   "reto05-03",
+   "reto05-04",
+   "reto05-05"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 1080,
+  "H": 1920,
+  "fps": 60,
+  "winner": "flash",
+  "times": {
+   "flash": 23,
+   "argon": 8
+  },
+  "title": "FM SYNTHESIZER",
+  "n": 5,
+  "slug": "05_sintetizador_fm",
+  "meta": {
+   "titles": [
+    "Fm Synthesizer: Gemini 4 Argon vs Claude Opus 5.5",
+    "Same prompt: Opus 5.5 in 23 min, Argon in 8 min (Fm Synthesizer)",
+    "Challenge 5: Fm Synthesizer in a single attempt (Gemini 4 Argon vs Claude Opus 5.5)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Fm Synthesizer.\nPoint to Opus 5.5. Delivery time: Opus 5.5 23 min, Argon 8 min.\nFull video with all 6 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.02
+ },
+ "06_06-pinball-ccd": {
+  "path": "06_06-pinball-ccd.mp4",
+  "scene": "reto06",
+  "name": "06_06-pinball-ccd",
+  "duration": 57.566667,
+  "beats_kept": [
+   "reto06-01",
+   "reto06-02",
+   "reto06-03",
+   "reto06-04",
+   "reto06-05"
+  ],
+  "beats_dropped": [],
+  "warnings": [],
+  "W": 1080,
+  "H": 1920,
+  "fps": 60,
+  "winner": "argon",
+  "times": {
+   "flash": 32,
+   "argon": 23
+  },
+  "title": "CYBERPUNK PINBALL",
+  "n": 6,
+  "slug": "06_pinball_ccd",
+  "meta": {
+   "titles": [
+    "Cyberpunk Pinball: Gemini 4 Argon vs Claude Opus 5.5",
+    "Same prompt: Argon in 23 min, Opus 5.5 in 32 min (Cyberpunk Pinball)",
+    "Challenge 6: Cyberpunk Pinball in a single attempt (Gemini 4 Argon vs Claude Opus 5.5)"
+   ],
+   "description": "Same prompt, one attempt, zero images: Cyberpunk Pinball.\nPoint to Argon. Delivery time: Opus 5.5 32 min, Argon 23 min.\nFull video with all 6 challenges: [LINK_TO_FULL_VIDEO]\n#Shorts #Gemini #AI",
+   "hashtags": [
+    "#Shorts",
+    "#Gemini",
+    "#AI"
+   ]
+  },
+  "lufs": -14.01
+ }
+}

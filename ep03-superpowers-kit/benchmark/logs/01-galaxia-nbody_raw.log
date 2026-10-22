@@ -1,0 +1,19 @@
+Se ha creado el simulador astrofísico autocontenido en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/01-galaxia-nbody/index.html).
+
+### Resumen de Arquitectura e Implementación
+
+1. **Simulación Gravitacional N-Body 3D (`35,000` a `60,000` Estrellas Activas)**:
+   - Integrador simpléctico en [`stepPhysics`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/01-galaxia-nbody/index.html#L1949-L2128) sobre `Float32Array` tipados de alto rendimiento con potencial gravitatorio suavizado y halo logarítmico de materia oscura.
+   - Cálculo por estrella de velocidad orbital y velocidad radial proyectada hacia la línea de visión del observador para alimentar el shader de desplazamiento Doppler relativista (`computeDopplerSpectrum` y `computeThermalVelocity`).
+
+2. **Agujero Negro Supermasivo, Disco de Acreción Relativista y Lente Gravitacional (GLSL)**:
+   - Ensamblaje relativista en [`createBlackHoleAssembly`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/01-galaxia-nbody/index.html#L1246-L1348) con Horizonte de Sucesos, Esfera de Fotones Fresnel, Disco de Acreción Shakura-Sunyaev con turbulencia FBM, rotación diferencial kepleriana ($\Omega \propto r^{-3/2}$), beaming relativista Doppler asimétrico y Jets Polares Bipolares.
+   - Post-procesado a pantalla completa (`postMaterial`) con deflexión gravitacional de Einstein-Schwarzschild ($\vec{\beta} = \vec{\theta} - \theta_E^2 \vec{\theta}/|\vec{\theta}|^2$), dispersión cromática en el anillo de fotones y bloom relativista.
+
+3. **Partición Espacial Barnes-Hut Octree 3D, Pozo de Potencial y Campo de Vectores**:
+   - Construcción en vivo del árbol espacial en [`buildSpatialOctree`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/01-galaxia-nbody/index.html#L1587-L1663), campo tridimensional de aceleración gravitatoria en [`updateGravitationalVectorField`](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/01-galaxia-nbody/index.html#L1706-L1764) y malla deformable de curvatura espacio-temporal (`wellGridMesh`).
+
+4. **Presets Astrofísicos, Interacción 3D y HUD de Observatorio**:
+   - **4 Presets**: *Colisión Andrómeda-Vía Láctea*, *Cuásar Binario Relativista*, *Anillo de Einstein & Lente Puro* y *Colapso de Cúmulo Globular*.
+   - **4 Modos Visuales**: *Espectro Doppler + Bloom Relativista*, *Mapa Térmico de Velocidad Orbital*, *Partición Espacial Octree 3D* y *Campo de Vectores Gravitacionales*.
+   - **Eventos Interactivos**: Inyección de Agujeros Negros Errantes (`injectWanderingBlackHole`), Onda de Choque de Supernova (`triggerSupernovaShockwave` por botón o doble clic 3D) y Fusión de Núcleos Supermasivos (`triggerCoreMerger`).

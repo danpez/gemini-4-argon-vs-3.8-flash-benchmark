@@ -1,0 +1,29 @@
+Se ha construido y guardado la estación de síntesis polifónica FM/Sustractiva **CHRONOS-FM // DSP-16** en un único archivo autocontenido:
+
+- [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep02-argon-vs-opus/gemini-4-argon/05-sintetizador-fm/index.html)
+
+### Arquitectura DSP y Características Implementadas
+
+1. **Motor de Síntesis Polifónica FM + Sustractiva (100% Web Audio API Nativa):**
+   - **Oscilador Portador (Carrier) + Unison Detune + Sub-Oscilador (-1 Octava):** Selección en tiempo real de formas de onda (`Sine`, `Sawtooth`, `Square`, `Triangle`), nivel de sub-oscilador, desafinación estéreo y portamento (`Glide`).
+   - **Motor de Modulación FM:** Oscilador modulador independiente (`Sine`, `Triangle`, `Square`, `Sawtooth`) con control de relación armónica (`FM Ratio` de `0.5x` a `8.0x`), índice de modulación en Hz (`FM Index`) y decaimiento dinámico de modulación (`FM Decay`).
+   - **Cadena Sustractiva y Efectos Master:** Filtro resonante por voz (`BiquadFilterNode` en modos `Lowpass`, `Bandpass` y `Highpass` con `Cutoff`, `Resonance Q` y modulación por envolvente `Env Amt`), envolvente `ADSR` con curva interactiva en Canvas, saturación suave (`WaveShaperNode` con sobremuestreo `2x`), Delay estéreo Ping-Pong sincronizado al tempo (`DelayNode` L/R con retroalimentación) y compresor/limitador maestro (`DynamicsCompressorNode`).
+   - **Sintetizador de Percusión Procedural Integrado:**
+     - **Analog Kick:** Barrido exponencial de frecuencia (`155 Hz → 36 Hz`) + clic transitorio.
+     - **Noise Snare:** Buffer de ruido blanco filtrado en paso alto + cuerpo tonal triangular (`220 Hz → 110 Hz`).
+     - **Metallic Hi-Hat (Closed & Open):** Matriz de 6 osciladores cuadrados en proporciones inarmónicas metálicas + ruido filtrado en banda alta (`6.8 kHz – 9.4 kHz`).
+
+2. **Secuenciador por Pasos (16-Step Sequencer) y 4 Canciones Demo Listas para Sonar:**
+   - Planificador de alta precisión (*Lookahead Audio Scheduler*) con pistas independientes para **Lead/Arpegio**, **Pad/Acordes (Tríadas)**, **FM Sub Bass**, **Analog Kick**, **Noise Snare** y **Metallic Hat** (con soporte para *Closed* y *Open Hat*), botones de `Mute` por pista, control de **BPM (60–180)**, **Swing (0–65%)**, clic izquierdo para activar/desactivar pasos y clic derecho/rueda del mouse para cambiar la nota musical de cada paso.
+   - **4 Demos Pre-programadas (con patches FM/Filtro propios):**
+     1. *Cyberpunk Outrun (128 BPM)*
+     2. *8-Bit Boss Battle (150 BPM)*
+     3. *Acid Techno Lab (135 BPM)*
+     4. *Blade Runner Pad (108 BPM)*
+
+3. **Teclado Musical Polifónico de 2.5 Octavas y Perillas (Knobs) Rotatorias SVG:**
+   - 30 teclas interactivas mediante mouse/touch o teclado de computadora (`Z..M` para la octava inferior y `Q..P` para la octava superior, más selector de octava), con iluminación reactiva diferenciada para notas tocadas manualmente (cian) y notas disparadas por el secuenciador (magenta).
+
+4. **Visualizador Dual de Laboratorio a 60 FPS (`AnalyserNode`):**
+   - **CH1 — Osciloscopio de Fósforo (Dominio del Tiempo):** Con estabilización por cruce por cero (*rising zero-crossing trigger*), persistencia luminosa y lectura RMS en dB.
+   - **CH2 — Analizador de Espectro FFT (Dominio de la Frecuencia):** 64 bandas logarítmicas con retención de picos (*peak hold*), curva envolvente armónica superpuesta y detector de frecuencia pico en Hz, con selector de vista (`DUAL SPLIT`, `SOLO OSC`, `SOLO FFT`).

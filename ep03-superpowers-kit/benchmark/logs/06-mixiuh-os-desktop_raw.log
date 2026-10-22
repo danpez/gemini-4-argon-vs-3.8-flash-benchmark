@@ -1,0 +1,12 @@
+El entorno de escritorio y sistema operativo web interactivo **`MIXIUH OS v4.0 // CYBER-KERNEL DESKTOP`** ha sido implementado en un único archivo autocontenido en [index.html](file:///Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep03-superpowers-kit/ia-sin-kit/06-mixiuh-os-desktop/index.html).
+
+### Características implementadas
+- **Gestor de Ventanas Flotantes Glassmorphic + Barra Superior + Dock con Física de Resortes**:
+  - Control de foco (`z-index`), arrastre desde la barra de título, redimensionado desde bordes y esquinas, minimizado al Dock, maximizado/restaurado y modos **Organizar en Mosaico (2x2)**, **Cascada Dinámica** y **Exposé**.
+  - Fondo procedural en vivo con malla cibernética interactiva al cursor y selector de 4 temas dinámicos (`Cyberpunk Cyan`, `Quantum Violet`, `Emerald Matrix`, `Solar Amber`).
+  - Iconografía 100% en SVG vectorial sin recursos externos ni emojis Unicode.
+- **4 Aplicaciones Ejecutándose en Paralelo desde el Arranque**:
+  1. **HoloCore 3D Shader Studio**: Motor de proyección 3D/4D interactivo (órbita con ratón y zoom con rueda) con selector entre *Toroide Cuántico*, *Esfera Geodésica* e *Hipercubo 4D*, modos de renderizado y explosión de partículas.
+  2. **Mixiuh Kernel Terminal (`zsh // mixiuh-os`)**: Terminal interactiva con historial de comandos (`ArrowUp`/`ArrowDown`) y botones de ejecución rápida (`neofetch`, `benchmark`, `top`, `matrix`, `netstat`, `clear`).
+  3. **PulseWave FM Synth & Spectrum Analyzer**: Sintetizador FM polifónico con WebAudio API, arpegiador de 16 pasos con botón Play/Stop, controles de filtro/resonancia/BPM, teclado tocable y analizador de espectro FFT + osciloscopio a 60 FPS.
+  4. **Kernel Telemetry & Task Manager**: Monitor en tiempo real con anillos SVG de CPU, GPU Frame Time, Memoria Heap y FPS, gráficos sparkline dobles y gestor de procesos con botón de prioridad *Boost / Reset*.

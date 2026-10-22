@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MIXIUH OS v4.0 // CYBER-KERNEL DESKTOP</title>
+<style>
+  :root {
+    --accent: #00f0ff;
+    --accent-rgb: 0, 240, 255;
+    --accent-sec: #7000ff;
+    --accent-sec-rgb: 112, 0, 255;
+    --bg-dark: #050811;
+    --panel-bg: rgba(10, 15, 28, 0.76);
+    --panel-header: rgba(16, 23, 42, 0.88);
+    --border-dim: rgba(255, 255, 255, 0.09);
+    --border-active: rgba(var(--accent-rgb), 0.55);
+    --text-main: #e2e8f0;
+    --text-muted: #8b9bb4;
+    --danger: #ff2a6d;
+    --warning: #ffb800;
+    --success: #05d5aa;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Menlo, Consolas, monospace;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    font-size: 12px;
+  }
+
+  /* WALLPAPER CANVAS */
+  #desktop-wallpaper {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* AMBIENT VIGNETTE & SCANLINES */
+  .cyber-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 50%, transparent 55%, rgba(2, 4, 9, 0.65) 100%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.012) 0px, rgba(255,255,255,0.012) 1px, transparent 1px, transparent 3px);
+  }
+
+  /* TOP SYSTEM BAR */
+  #top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 38px;
+    background: rgba(7, 11, 22, 0.84);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(var(--accent-rgb), 0.25);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    z-index: 9000;
+  }
+
+  .brand-cluster {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.18), rgba(var(--accent-sec-rgb), 0.18));
+    border: 1px solid rgba(var(--accent-rgb), 0.4);
+    box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.2);
+  }
+
+  .brand-logo svg {
+    width: 15px;
+    height: 15px;
+    stroke: var(--accent);
+    filter: drop-shadow(0 0 4px var(--accent));
+  }
+
+  .kernel-badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--accent);
+    background: rgba(var(--accent-rgb), 0.08);
+    border: 1px solid rgba(var(--accent-rgb), 0.2);
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.6px;
+  }
+
+  .top-actions {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .sys-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .sys-btn svg {
+    width: 13px;
+    height: 13px;
+    stroke: var(--accent);
+    transition: transform 0.2s ease;
+  }
+
+  .sys-btn:hover {
+    background: rgba(var(--accent-rgb), 0.14);
+    border-color: rgba(var(--accent-rgb), 0.5);
+    color: #fff;
+    box-shadow: 0 0 14px rgba(var(--accent-rgb), 0.25);
+    transform: translateY(-1px);
+  }
+
+  .sys-btn.active-mode {
+    background: rgba(var(--accent-rgb), 0.22);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 16px rgba(var(--accent-rgb), 0.4);
+  }
+
+  .sys-btn.stress-active {
+    background: rgba(255, 42, 109, 0.24);
+    border-color: var(--danger);
+    color: #ffdce5;
+    box-shadow: 0 0 18px rgba(255, 42, 109, 0.5);
+    animation: pulseDanger 0.9s infinite alternate;
+  }
+
+  .sys-btn.stress-active svg {
+    stroke: var(--danger);
+  }
+
+  @keyframes pulseDanger {
+    from { box-shadow: 0 0 8px rgba(255, 42, 109, 0.35); }
+    to { box-shadow: 0 0 20px rgba(255, 42, 109, 0.75); }
+  }
+
+  .telemetry-cluster {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+
+  .stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 9px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .stat-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 8px var(--success);
+  }
+
+  /* DESKTOP STAGE */
+  #desktop-stage {
+    position: fixed;
+    top: 38px;
+    left: 0;
+    right: 0;
+    bottom: 76px;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  /* FLOATING WINDOWS */
+  .os-window {
+    position: absolute;
+    background: var(--panel-bg);
+    backdrop-filter: blur(22px) saturate(190%);
+    -webkit-backdrop-filter: blur(22px) saturate(190%);
+    border: 1px solid var(--border-dim);
+    border-radius: 11px;
+    box-shadow:
+      0 22px 55px rgba(0, 0, 0, 0.68),
+      0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 310px;
+    min-height: 210px;
+    transition:
+      box-shadow 0.2s ease,
+      border-color 0.2s ease,
+      opacity 0.22s ease,
+      transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .os-window.smooth-layout {
+    transition:
+      left 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+      top 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+      width 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+      height 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      opacity 0.25s ease;
+  }
+
+  .os-window.focused {
+    border-color: var(--border-active);
+    box-shadow:
+      0 26px 68px rgba(0, 0, 0, 0.82),
+      0 0 24px rgba(var(--accent-rgb), 0.16),
+      0 0 0 1px rgba(var(--accent-rgb), 0.22) inset;
+  }
+
+  .os-window.minimized {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(120px) scale(0.45);
+  }
+
+  .os-window.expose-card {
+    cursor: pointer;
+    border-color: rgba(var(--accent-rgb), 0.65);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 25px rgba(var(--accent-rgb), 0.28);
+  }
+
+  .os-window.expose-card:hover {
+    transform: scale(1.025);
+    border-color: #fff;
+  }
+
+  /* WINDOW TITLEBAR */
+  .win-titlebar {
+    height: 34px;
+    background: var(--panel-header);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 11px;
+    cursor: grab;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  .win-titlebar:active {
+    cursor: grabbing;
+  }
+
+  .os-window.focused .win-titlebar {
+    background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.14) 0%, rgba(16, 23, 42, 0.92) 55%);
+    border-bottom-color: rgba(var(--accent-rgb), 0.28);
+  }
+
+  .win-title-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+  }
+
+  .win-title-left svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--accent);
+  }
+
+  .win-title-text {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #f1f5f9;
+  }
+
+  .win-tag {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .win-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .win-ctrl-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.15s ease;
+  }
+
+  .win-ctrl-btn svg {
+    width: 10px;
+    height: 10px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+  }
+
+  .win-ctrl-btn:hover {
+    color: #fff;
+    background: rgba(var(--accent-rgb), 0.25);
+    border-color: var(--accent);
+  }
+
+  .win-ctrl-btn.btn-close:hover {
+    background: rgba(255, 42, 109, 0.35);
+    border-color: var(--danger);
+    color: #fff;
+  }
+
+  /* WINDOW CONTENT */
+  .win-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* RESIZE HANDLES */
+  .resize-handle {
+    position: absolute;
+    z-index: 30;
+  }
+  .resize-r { top: 34px; right: 0; bottom: 10px; width: 6px; cursor: ew-resize; }
+  .resize-b { bottom: 0; left: 10px; right: 10px; height: 6px; cursor: ns-resize; }
+  .resize-l { top: 34px; left: 0; bottom: 10px; width: 6px; cursor: ew-resize; }
+  .resize-br { bottom: 0; right: 0; width: 14px; height: 14px; cursor: nwse-resize; }
+  .resize-bl { bottom: 0; left: 0; width: 14px; height: 14px; cursor: nesw-resize; }
+
+  /* DOCK BAR */
+  #dock-wrapper {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9200;
+    display: flex;
+    align-items: flex-end;
+    padding: 8px 14px;
+    background: rgba(8, 12, 24, 0.78);
+    backdrop-filter: blur(24px) saturate(200%);
+    -webkit-backdrop-filter: blur(24px) saturate(200%);
+    border: 1px solid rgba(var(--accent-rgb), 0.32);
+    border-radius: 18px;
+    box-shadow:
+      0 18px 45px rgba(0, 0, 0, 0.75),
+      0 0 24px rgba(var(--accent-rgb), 0.14);
+    gap: 12px;
+  }
+
+  .dock-item {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform-origin: bottom center;
+    will-change: transform, width, height;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .dock-item:hover {
+    border-color: var(--accent);
+    background: linear-gradient(145deg, rgba(var(--accent-rgb), 0.24), rgba(var(--accent-sec-rgb), 0.18));
+    box-shadow: 0 8px 22px rgba(var(--accent-rgb), 0.35);
+  }
+
+  .dock-item svg {
+    width: 24px;
+    height: 24px;
+    stroke: var(--accent);
+    filter: drop-shadow(0 0 6px rgba(var(--accent-rgb), 0.45));
+    pointer-events: none;
+  }
+
+  .dock-tooltip {
+    position: absolute;
+    top: -32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: rgba(6, 10, 20, 0.94);
+    border: 1px solid rgba(var(--accent-rgb), 0.45);
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.16s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+
+  .dock-item:hover .dock-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dock-dot {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    transition: width 0.2s ease, opacity 0.2s ease;
+  }
+
+  .dock-item.focused-dock .dock-dot {
+    width: 16px;
+  }
+
+  .dock-item.minimized-dock .dock-dot {
+    background: var(--warning);
+    box-shadow: 0 0 8px var(--warning);
+  }
+
+  .dock-divider {
+    width: 1px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.12);
+    align-self: center;
+    margin: 0 2px;
+  }
+
+  /* =====================================================
+     APP 1: HOLOCORE 3D SHADER STUDIO
+     ===================================================== */
+  .holo-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    background: radial-gradient(circle at center, rgba(16, 26, 48, 0.5), rgba(4, 7, 15, 0.85));
+  }
+
+  #holo-canvas {
+    width: 100%;
+    flex: 1;
+    display: block;
+    cursor: grab;
+  }
+
+  #holo-canvas:active {
+    cursor: grabbing;
+  }
+
+  .holo-hud-top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .holo-metrics {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--accent);
+    background: rgba(4, 8, 18, 0.72);
+    border: 1px solid rgba(var(--accent-rgb), 0.28);
+    padding: 5px 9px;
+    border-radius: 6px;
+    line-height: 1.45;
+  }
+
+  .holo-toolbar {
+    background: rgba(8, 13, 25, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  .mini-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .mini-btn:hover {
+    border-color: var(--accent);
+    color: #fff;
+    background: rgba(var(--accent-rgb), 0.15);
+  }
+
+  .mini-btn.active {
+    background: rgba(var(--accent-rgb), 0.26);
+    border-color: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(var(--accent-rgb), 0.3);
+  }
+
+  .slider-compact {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-muted);
+  }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 68px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    outline: none;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+    cursor: pointer;
+  }
+
+  /* =====================================================
+     APP 2: MIXIUH KERNEL TERMINAL
+     ===================================================== */
+  .term-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(4, 7, 14, 0.88);
+    font-family: var(--font-mono);
+  }
+
+  .term-quickbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 10px;
+    background: rgba(12, 18, 34, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    flex-wrap: wrap;
+  }
+
+  .term-output {
+    flex: 1;
+    padding: 10px 12px;
+    overflow-y: auto;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #d1fae5;
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  .term-output::-webkit-scrollbar {
+    width: 5px;
+  }
+  .term-output::-webkit-scrollbar-thumb {
+    background: rgba(var(--accent-rgb), 0.35);
+    border-radius: 3px;
+  }
+
+  .term-line {
+    margin-bottom: 4px;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .term-ascii {
+    color: var(--accent);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 4px 0;
+    font-size: 10px;
+  }
+
+  .term-input-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 10px;
+    background: rgba(8, 12, 24, 0.95);
+    border-top: 1px solid rgba(var(--accent-rgb), 0.22);
+  }
+
+  .term-prompt {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .term-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  /* =====================================================
+     APP 3: PULSEWAVE FM SYNTH & SPECTRUM ANALYZER
+     ===================================================== */
+  .synth-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 9px 11px;
+    gap: 8px;
+    background: rgba(6, 10, 20, 0.82);
+  }
+
+  .synth-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .synth-controls-grid {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .synth-scope-wrap {
+    flex: 1;
+    min-height: 76px;
+    background: rgba(3, 5, 11, 0.9);
+    border: 1px solid rgba(var(--accent-rgb), 0.25);
+    border-radius: 7px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #synth-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .seq-grid {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 3px;
+    height: 22px;
+  }
+
+  .seq-step {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.1s ease;
+  }
+
+  .seq-step.active {
+    background: rgba(var(--accent-rgb), 0.35);
+    border-color: var(--accent);
+  }
+
+  .seq-step.playing {
+    box-shadow: 0 0 10px #fff;
+    border-color: #fff;
+    background: var(--accent);
+  }
+
+  .piano-keys {
+    display: flex;
+    gap: 4px;
+    height: 54px;
+  }
+
+  .piano-key {
+    flex: 1;
+    background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.04) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-bottom: 3px solid rgba(var(--accent-rgb), 0.45);
+    border-radius: 0 0 6px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    color: var(--text-muted);
+    transition: all 0.08s ease;
+  }
+
+  .piano-key.sharp {
+    background: linear-gradient(180deg, rgba(12, 18, 34, 0.95) 0%, rgba(25, 35, 60, 0.95) 100%);
+    border-bottom-color: var(--accent-sec);
+    color: var(--accent);
+  }
+
+  .piano-key:hover, .piano-key.key-active {
+    background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.55) 0%, rgba(var(--accent-rgb), 0.2) 100%);
+    border-color: #fff;
+    color: #fff;
+    transform: translateY(2px);
+    box-shadow: 0 0 14px rgba(var(--accent-rgb), 0.5);
+  }
+
+  /* =====================================================
+     APP 4: KERNEL TELEMETRY & TASK MANAGER
+     ===================================================== */
+  .task-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 9px 11px;
+    gap: 8px;
+    background: rgba(6, 10, 20, 0.84);
+  }
+
+  .gauges-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+  }
+
+  .gauge-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 7px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  .gauge-ring {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .gauge-info {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-mono);
+  }
+
+  .gauge-label {
+    font-size: 9px;
+    color: var(--text-muted);
+  }
+
+  .gauge-val {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .sparkline-box {
+    height: 50px;
+    background: rgba(3, 5, 11, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #telemetry-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .proc-table-wrap {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 6px;
+    background: rgba(4, 7, 14, 0.65);
+  }
+
+  .proc-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 10px;
+  }
+
+  .proc-table th {
+    text-align: left;
+    padding: 5px 8px;
+    background: rgba(15, 23, 42, 0.9);
+    color: var(--text-muted);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .proc-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: #e2e8f0;
+  }
+
+  .proc-table tr:hover td {
+    background: rgba(var(--accent-rgb), 0.08);
+  }
+
+  .prio-badge {
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 9px;
+    background: rgba(var(--accent-rgb), 0.16);
+    color: var(--accent);
+    border: 1px solid rgba(var(--accent-rgb), 0.35);
+  }
+
+  .prio-badge.boosted {
+    background: rgba(5, 213, 170, 0.2);
+    color: var(--success);
+    border-color: var(--success);
+  }
+</style>
+</head>
+<body>
+
+<!-- PROCEDURAL INTERACTIVE WALLPAPER -->
+<canvas id="desktop-wallpaper"></canvas>
+<div class="cyber-overlay"></div>
+
+<!-- TOP SYSTEM BAR -->
+<header id="top-bar">
+  <div class="brand-cluster">
+    <div class="brand-logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+        <line x1="12" y1="22" x2="12" y2="15.5"></line>
+        <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+        <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+        <line x1="12" y1="2" x2="12" y2="8.5"></line>
+      </svg>
+      <span>MIXIUH OS v4.0</span>
+    </div>
+    <span class="kernel-badge">CYBER-KERNEL // ZERO-SHOT</span>
+  </div>
+
+  <div class="top-actions">
+    <button class="sys-btn" id="btn-tile" title="Organizar en Mosaico Automático">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+        <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+        <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+        <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+      </svg>
+      <span>Organizar en Mosaico (4 Apps)</span>
+    </button>
+
+    <button class="sys-btn" id="btn-cascade" title="Cascada Dinámica">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <rect x="3" y="3" width="11" height="9" rx="1"></rect>
+        <rect x="8" y="8" width="11" height="9" rx="1"></rect>
+        <rect x="13" y="13" width="8" height="8" rx="1"></rect>
+      </svg>
+      <span>Cascada Dinámica</span>
+    </button>
+
+    <button class="sys-btn" id="btn-expose" title="Vista General Exposé">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4"></path>
+        <rect x="8" y="8" width="8" height="8" rx="1"></rect>
+      </svg>
+      <span>Exposé</span>
+    </button>
+
+    <button class="sys-btn" id="btn-theme" title="Cambiar Tema Visual">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <circle cx="12" cy="12" r="9"></circle>
+        <path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor" fill-opacity="0.3"></path>
+      </svg>
+      <span id="theme-label">Tema: Cyberpunk Cyan</span>
+    </button>
+
+    <button class="sys-btn" id="btn-stress" title="Ejecutar Stress Test Global">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+      <span id="stress-label">Ejecutar Stress Test Global</span>
+    </button>
+  </div>
+
+  <div class="telemetry-cluster">
+    <div class="stat-pill">
+      <span class="stat-dot" id="fps-dot"></span>
+      <span id="top-fps">60 FPS</span>
+    </div>
+    <div class="stat-pill">
+      <span id="top-clock">12:00:00</span>
+    </div>
+  </div>
+</header>
+
+<!-- DESKTOP STAGE WITH 4 LIVE APPLICATIONS -->
+<main id="desktop-stage">
+
+  <!-- =================================================
+       WINDOW 1: HOLOCORE 3D SHADER STUDIO
+       ================================================= -->
+  <section class="os-window focused" id="win-holo" data-app="holo">
+    <div class="win-titlebar">
+      <div class="win-title-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+          <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+        <span class="win-title-text">HoloCore 3D Shader Studio</span>
+        <span class="win-tag">WEBGL // 4D-PROJECTION</span>
+      </div>
+      <div class="win-controls">
+        <button class="win-ctrl-btn" data-action="minimize" title="Minimizar">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="win-ctrl-btn" data-action="maximize" title="Maximizar / Restaurar">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg>
+        </button>
+        <button class="win-ctrl-btn btn-close" data-action="minimize" title="Ocultar al Dock">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div class="win-body holo-layout">
+      <div class="holo-hud-top">
+        <div class="holo-metrics" id="holo-hud-stats">
+          GEOM: TOROIDE CUANTICO<br>
+          VERTS: 576 // PARTICLES: 240
+        </div>
+        <div class="holo-metrics">
+          DRAG: ORBITA 3D // WHEEL: ZOOM
+        </div>
+      </div>
+      <canvas id="holo-canvas"></canvas>
+      <div class="holo-toolbar">
+        <div class="btn-group">
+          <button class="mini-btn active" data-geom="torus">Toroide Cuántico</button>
+          <button class="mini-btn" data-geom="sphere">Esfera Geodésica</button>
+          <button class="mini-btn" data-geom="hypercube">Hipercubo 4D</button>
+        </div>
+        <div class="btn-group">
+          <button class="mini-btn active" id="btn-holo-mode">Modo: Plasma + Wireframe</button>
+          <button class="mini-btn" id="btn-holo-explode">Explosión de Partículas</button>
+          <div class="slider-compact">
+            <span>VEL</span>
+            <input type="range" id="holo-speed" min="0" max="4" step="0.1" value="1.2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="resize-handle resize-r"></div>
+    <div class="resize-handle resize-b"></div>
+    <div class="resize-handle resize-l"></div>
+    <div class="resize-handle resize-br"></div>
+    <div class="resize-handle resize-bl"></div>
+  </section>
+
+  <!-- =================================================
+       WINDOW 2: MIXIUH KERNEL TERMINAL (zsh // mixiuh-os)
+       ================================================= -->
+  <section class="os-window" id="win-term" data-app="term">
+    <div class="win-titlebar">
+      <div class="win-title-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <polyline points="4 17 10 11 4 5"></polyline>
+          <line x1="12" y1="19" x2="20" y2="19"></line>
+        </svg>
+        <span class="win-title-text">Mixiuh Kernel Terminal</span>
+        <span class="win-tag">zsh // mixiuh-os</span>
+      </div>
+      <div class="win-controls">
+        <button class="win-ctrl-btn" data-action="minimize" title="Minimizar">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="win-ctrl-btn" data-action="maximize" title="Maximizar / Restaurar">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg>
+        </button>
+        <button class="win-ctrl-btn btn-close" data-action="minimize" title="Ocultar al Dock">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div class="win-body term-layout">
+      <div class="term-quickbar">
+        <button class="mini-btn" data-cmd="neofetch">neofetch</button>
+        <button class="mini-btn" data-cmd="benchmark">benchmark</button>
+        <button class="mini-btn" data-cmd="top">top</button>
+        <button class="mini-btn" data-cmd="matrix">matrix</button>
+        <button class="mini-btn" data-cmd="netstat">netstat</button>
+        <button class="mini-btn" data-cmd="clear">clear</button>
+      </div>
+      <div class="term-output" id="term-output"></div>
+      <div class="term-input-row">
+        <span class="term-prompt">root@mixiuh-os:~#</span>
+        <input type="text" class="term-input" id="term-input" placeholder="Escribe un comando (help, neofetch, benchmark, top, matrix, netstat, clear)..." autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="resize-handle resize-r"></div>
+    <div class="resize-handle resize-b"></div>
+    <div class="resize-handle resize-l"></div>
+    <div class="resize-handle resize-br"></div>
+    <div class="resize-handle resize-bl"></div>
+  </section>
+
+  <!-- =================================================
+       WINDOW 3: PULSEWAVE FM SYNTH & SPECTRUM ANALYZER
+       ================================================= -->
+  <section class="os-window" id="win-synth" data-app="synth">
+    <div class="win-titlebar">
+      <div class="win-title-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <path d="M2 12h3l3-8 4 16 3-8h7"></path>
+        </svg>
+        <span class="win-title-text">PulseWave FM Synth &amp; Spectrum</span>
+        <span class="win-tag">WEBAUDIO // 64-BIT DSP</span>
+      </div>
+      <div class="win-controls">
+        <button class="win-ctrl-btn" data-action="minimize" title="Minimizar">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="win-ctrl-btn" data-action="maximize" title="Maximizar / Restaurar">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg>
+        </button>
+        <button class="win-ctrl-btn btn-close" data-action="minimize" title="Ocultar al Dock">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div class="win-body synth-layout">
+      <div class="synth-top-row">
+        <div class="btn-group">
+          <button class="mini-btn" id="btn-seq-toggle">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span id="seq-btn-text">Play Arpeggiator</span>
+          </button>
+          <button class="mini-btn active" data-wave="sawtooth">SAW</button>
+          <button class="mini-btn" data-wave="square">SQR</button>
+          <button class="mini-btn" data-wave="triangle">TRI</button>
+        </div>
+        <div class="synth-controls-grid">
+          <div class="slider-compact">
+            <span>CUTOFF</span>
+            <input type="range" id="synth-cutoff" min="180" max="7500" step="20" value="2400">
+          </div>
+          <div class="slider-compact">
+            <span>RES</span>
+            <input type="range" id="synth-res" min="0.5" max="16" step="0.5" value="4.5">
+          </div>
+          <div class="slider-compact">
+            <span>BPM</span>
+            <input type="range" id="synth-bpm" min="80" max="170" step="2" value="128">
+          </div>
+        </div>
+      </div>
+
+      <div class="synth-scope-wrap">
+        <canvas id="synth-canvas"></canvas>
+      </div>
+
+      <div class="seq-grid" id="seq-grid"></div>
+
+      <div class="piano-keys" id="piano-keys"></div>
+    </div>
+    <div class="resize-handle resize-r"></div>
+    <div class="resize-handle resize-b"></div>
+    <div class="resize-handle resize-l"></div>
+    <div class="resize-handle resize-br"></div>
+    <div class="resize-handle resize-bl"></div>
+  </section>
+
+  <!-- =================================================
+       WINDOW 4: KERNEL TELEMETRY & TASK MANAGER
+       ================================================= -->
+  <section class="os-window" id="win-task" data-app="task">
+    <div class="win-titlebar">
+      <div class="win-title-left">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+          <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+          <rect x="9" y="9" width="6" height="6"></rect>
+          <line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line>
+          <line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line>
+          <line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line>
+          <line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line>
+        </svg>
+        <span class="win-title-text">Kernel Telemetry &amp; Task Manager</span>
+        <span class="win-tag">SCHEDULER // LIVE</span>
+      </div>
+      <div class="win-controls">
+        <button class="win-ctrl-btn" data-action="minimize" title="Minimizar">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </button>
+        <button class="win-ctrl-btn" data-action="maximize" title="Maximizar / Restaurar">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="2"></rect></svg>
+        </button>
+        <button class="win-ctrl-btn btn-close" data-action="minimize" title="Ocultar al Dock">
+          <svg viewBox="0 0 24 24" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+    <div class="win-body task-layout">
+      <div class="gauges-row">
+        <div class="gauge-card">
+          <svg class="gauge-ring" viewBox="0 0 36 36">
+            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3.5"></circle>
+            <circle id="ring-cpu" cx="18" cy="18" r="14" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-dasharray="88" stroke-dashoffset="50" stroke-linecap="round" transform="rotate(-90 18 18)"></circle>
+          </svg>
+          <div class="gauge-info">
+            <span class="gauge-label">CPU CORE</span>
+            <span class="gauge-val" id="val-cpu">28%</span>
+          </div>
+        </div>
+        <div class="gauge-card">
+          <svg class="gauge-ring" viewBox="0 0 36 36">
+            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3.5"></circle>
+            <circle id="ring-gpu" cx="18" cy="18" r="14" fill="none" stroke="var(--success)" stroke-width="3.5" stroke-dasharray="88" stroke-dashoffset="65" stroke-linecap="round" transform="rotate(-90 18 18)"></circle>
+          </svg>
+          <div class="gauge-info">
+            <span class="gauge-label">GPU FRAME</span>
+            <span class="gauge-val" id="val-gpu">4.2 ms</span>
+          </div>
+        </div>
+        <div class="gauge-card">
+          <svg class="gauge-ring" viewBox="0 0 36 36">
+            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3.5"></circle>
+            <circle id="ring-mem" cx="18" cy="18" r="14" fill="none" stroke="var(--warning)" stroke-width="3.5" stroke-dasharray="88" stroke-dashoffset="42" stroke-linecap="round" transform="rotate(-90 18 18)"></circle>
+          </svg>
+          <div class="gauge-info">
+            <span class="gauge-label">HEAP MEM</span>
+            <span class="gauge-val" id="val-mem">412 MB</span>
+          </div>
+        </div>
+        <div class="gauge-card">
+          <svg class="gauge-ring" viewBox="0 0 36 36">
+            <circle cx="18" cy="18" r="14" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="3.5"></circle>
+            <circle id="ring-fps" cx="18" cy="18" r="14" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-dasharray="88" stroke-dashoffset="8" stroke-linecap="round" transform="rotate(-90 18 18)"></circle>
+          </svg>
+          <div class="gauge-info">
+            <span class="gauge-label">COMPOSITOR</span>
+            <span class="gauge-val" id="val-fps">60 FPS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sparkline-box">
+        <canvas id="telemetry-canvas"></canvas>
+      </div>
+
+      <div class="proc-table-wrap">
+        <table class="proc-table">
+          <thead>
+            <tr>
+              <th>PID</th>
+              <th>PROCESO DEL KERNEL</th>
+              <th>CPU%</th>
+              <th>MEM</th>
+              <th>PRIORIDAD</th>
+              <th>ACCION</th>
+            </tr>
+          </thead>
+          <tbody id="proc-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="resize-handle resize-r"></div>
+    <div class="resize-handle resize-b"></div>
+    <div class="resize-handle resize-l"></div>
+    <div class="resize-handle resize-br"></div>
+    <div class="resize-handle resize-bl"></div>
+  </section>
+
+</main>
+
+<!-- SPRING PHYSICS DOCK -->
+<nav id="dock-wrapper">
+  <div class="dock-item focused-dock" data-target="win-holo">
+    <span class="dock-tooltip">HoloCore 3D Shader Studio</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+    </svg>
+    <span class="dock-dot"></span>
+  </div>
+
+  <div class="dock-item" data-target="win-term">
+    <span class="dock-tooltip">Mixiuh Kernel Terminal</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <polyline points="4 17 10 11 4 5"></polyline>
+      <line x1="12" y1="19" x2="20" y2="19"></line>
+    </svg>
+    <span class="dock-dot"></span>
+  </div>
+
+  <div class="dock-item" data-target="win-synth">
+    <span class="dock-tooltip">PulseWave FM Synth</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <path d="M2 12h3l3-8 4 16 3-8h7"></path>
+    </svg>
+    <span class="dock-dot"></span>
+  </div>
+
+  <div class="dock-item" data-target="win-task">
+    <span class="dock-tooltip">Kernel Telemetry &amp; Tasks</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+      <rect x="9" y="9" width="6" height="6"></rect>
+      <line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line>
+      <line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line>
+    </svg>
+    <span class="dock-dot"></span>
+  </div>
+
+  <div class="dock-divider"></div>
+
+  <div class="dock-item" id="dock-tile-btn">
+    <span class="dock-tooltip">Mosaico Automático 2x2</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+      <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+      <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+      <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+      <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+    </svg>
+  </div>
+</nav>
+
+<script>
+(() => {
+  'use strict';
+
+  /* =========================================================================
+     GLOBAL OS STATE & THEME ENGINE
+     ========================================================================= */
+  const THEMES = [
+    { name: 'Cyberpunk Cyan', accent: '#00f0ff', rgb: '0, 240, 255', sec: '#7000ff', secRgb: '112, 0, 255', bg: '#050811' },
+    { name: 'Quantum Violet', accent: '#c084fc', rgb: '192, 132, 252', sec: '#f43f5e', secRgb: '244, 63, 94', bg: '#090514' },
+    { name: 'Emerald Matrix', accent: '#10b981', rgb: '16, 185, 129', sec: '#06b6d4', secRgb: '6, 182, 212', bg: '#030d09' },
+    { name: 'Solar Amber',    accent: '#f59e0b', rgb: '245, 158, 11', sec: '#ef4444', secRgb: '239, 68, 68', bg: '#100904' }
+  ];
+
+  let currentThemeIdx = 0;
+  let globalStressMode = false;
+  let exposeActive = false;
+  let currentFps = 60;
+  const pointer = { x: window.innerWidth * 0.5, y: window.innerHeight * 0.5 };
+
+  window.addEventListener('pointermove', (e) => {
+    pointer.x = e.clientX;
+    pointer.y = e.clientY;
+  });
+
+  function applyTheme(idx) {
+    currentThemeIdx = idx % THEMES.length;
+    const t = THEMES[currentThemeIdx];
+    const root = document.documentElement;
+    root.style.setProperty('--accent', t.accent);
+    root.style.setProperty('--accent-rgb', t.rgb);
+    root.style.setProperty('--accent-sec', t.sec);
+    root.style.setProperty('--accent-sec-rgb', t.secRgb);
+    root.style.setProperty('--bg-dark', t.bg);
+    document.getElementById('theme-label').textContent = 'Tema: ' + t.name;
+  }
+
+  document.getElementById('btn-theme').addEventListener('click', () => {
+    applyTheme(currentThemeIdx + 1);
+  });
+
+  /* CLOCK UPDATE */
+  function updateClock() {
+    const now = new Date();
+    const hh = String(now.getHours()).padStart(2, '0');
+    const mm = String(now.getMinutes()).padStart(2, '0');
+    const ss = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('top-clock').textContent = `${hh}:${mm}:${ss}`;
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+
+  /* =========================================================================
+     PROCEDURAL WALLPAPER SHADER CANVAS (INTERACTIVE CYBER MESH)
+     ========================================================================= */
+  const wpCanvas = document.getElementById('desktop-wallpaper');
+  const wpCtx = wpCanvas.getContext('2d');
+  const wpNodes = [];
+
+  function initWallpaper() {
+    wpCanvas.width = window.innerWidth * window.devicePixelRatio;
+    wpCanvas.height = window.innerHeight * window.devicePixelRatio;
+    wpCtx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+
+    if (wpNodes.length === 0) {
+      for (let i = 0; i < 56; i++) {
+        wpNodes.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          vx: (Math.random() - 0.5) * 0.65,
+          vy: (Math.random() - 0.5) * 0.65,
+          r: 1.4 + Math.random() * 1.8
+        });
+      }
+    }
+  }
+  window.addEventListener('resize', initWallpaper);
+  initWallpaper();
+
+  function renderWallpaper(time) {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const theme = THEMES[currentThemeIdx];
+    wpCtx.clearRect(0, 0, w, h);
+
+    // Subtle perspective cyber grid at bottom
+    wpCtx.strokeStyle = `rgba(${theme.rgb}, 0.06)`;
+    wpCtx.lineWidth = 1;
+    const gridRows = 10;
+    const horizon = h * 0.52;
+    for (let i = 0; i <= gridRows; i++) {
+      const p = i / gridRows;
+      const y = horizon + Math.pow(p, 1.7) * (h - horizon);
+      wpCtx.beginPath();
+      wpCtx.moveTo(0, y);
+      wpCtx.lineTo(w, y);
+      wpCtx.stroke();
+    }
+
+    const speedMult = globalStressMode ? 3.8 : 1.0;
+
+    // Update & draw interactive constellation nodes
+    for (let i = 0; i < wpNodes.length; i++) {
+      const n = wpNodes[i];
+      n.x += n.vx * speedMult;
+      n.y += n.vy * speedMult;
+
+      if (n.x < 0 || n.x > w) n.vx *= -1;
+      if (n.y < 0 || n.y > h) n.vy *= -1;
+
+      const dxm = pointer.x - n.x;
+      const dym = pointer.y - n.y;
+      const distMouse = Math.hypot(dxm, dym);
+      if (distMouse < 180 && distMouse > 1) {
+        n.x -= (dxm / distMouse) * 0.6;
+        n.y -= (dym / distMouse) * 0.6;
+      }
+
+      wpCtx.fillStyle = `rgba(${theme.rgb}, 0.45)`;
+      wpCtx.beginPath();
+      wpCtx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      wpCtx.fill();
+
+      for (let j = i + 1; j < wpNodes.length; j++) {
+        const m = wpNodes[j];
+        const d = Math.hypot(n.x - m.x, n.y - m.y);
+        if (d < 155) {
+          const alpha = (1 - d / 155) * 0.16;
+          wpCtx.strokeStyle = `rgba(${theme.rgb}, ${alpha})`;
+          wpCtx.beginPath();
+          wpCtx.moveTo(n.x, n.y);
+          wpCtx.lineTo(m.x, m.y);
+          wpCtx.stroke();
+        }
+      }
+    }
+  }
+
+  /* =========================================================================
+     WINDOW MANAGER: Z-INDEX, DRAG, RESIZE, TILE 2x2, CASCADE, EXPOSE
+     ========================================================================= */
+  const stage = document.getElementById('desktop-stage');
+  const windows = Array.from(document.querySelectorAll('.os-window'));
+  const dockItems = Array.from(document.querySelectorAll('.dock-item[data-target]'));
+  let topZ = 100;
+
+  function focusWindow(win) {
+    if (!win) return;
+    if (exposeActive) {
+      exitExposeMode();
+    }
+    win.classList.remove('minimized');
+    topZ++;
+    win.style.zIndex = topZ;
+    windows.forEach(w => w.classList.toggle('focused', w === win));
+    updateDockIndicators();
+  }
+
+  function updateDockIndicators() {
+    dockItems.forEach(item => {
+      const targetId = item.getAttribute('data-target');
+      const win = document.getElementById(targetId);
+      if (!win) return;
+      item.classList.toggle('focused-dock', win.classList.contains('focused') && !win.classList.contains('minimized'));
+      item.classList.toggle('minimized-dock', win.classList.contains('minimized'));
+    });
+  }
+
+  function animateWindowLayout(callback) {
+    windows.forEach(w => w.classList.add('smooth-layout'));
+    callback();
+    setTimeout(() => {
+      windows.forEach(w => w.classList.remove('smooth-layout'));
+      window.dispatchEvent(new Event('resize'));
+    }, 400);
+  }
+
+  // Tile 2x2 Layout
+  function tileAllWindows() {
+    if (exposeActive) exitExposeMode();
+    const sw = stage.clientWidth;
+    const sh = stage.clientHeight;
+    const gap = 12;
+    const halfW = Math.floor((sw - gap * 3) / 2);
+    const halfH = Math.floor((sh - gap * 3) / 2);
+
+    const coords = [
+      { left: gap,           top: gap,           width: halfW, height: halfH },
+      { left: gap * 2 + halfW, top: gap,         width: halfW, height: halfH },
+      { left: gap,           top: gap * 2 + halfH, width: halfW, height: halfH },
+      { left: gap * 2 + halfW, top: gap * 2 + halfH, width: halfW, height: halfH }
+    ];
+
+    animateWindowLayout(() => {
+      windows.forEach((win, i) => {
+        win.classList.remove('minimized');
+        win.dataset.maximized = 'false';
+        const c = coords[i % coords.length];
+        win.style.left = c.left + 'px';
+        win.style.top = c.top + 'px';
+        win.style.width = c.width + 'px';
+        win.style.height = c.height + 'px';
+      });
+    });
+    updateDockIndicators();
+  }
+
+  // Dynamic Cascade Layout
+  function cascadeWindows() {
+    if (exposeActive) exitExposeMode();
+    const sw = stage.clientWidth;
+    const sh = stage.clientHeight;
+    const w = Math.min(620, Math.floor(sw * 0.56));
+    const h = Math.min(410, Math.floor(sh * 0.62));
+    const startX = Math.max(24, Math.floor((sw - w - 150) / 2));
+    const startY = 22;
+
+    animateWindowLayout(() => {
+      windows.forEach((win, i) => {
+        win.classList.remove('minimized');
+        win.dataset.maximized = 'false';
+        win.style.left = (startX + i * 44) + 'px';
+        win.style.top = (startY + i * 38) + 'px';
+        win.style.width = w + 'px';
+        win.style.height = h + 'px';
+        topZ++;
+        win.style.zIndex = topZ;
+      });
+      focusWindow(windows[windows.length - 1]);
+    });
+  }
+
+  // Exposé Overview Mode
+  const savedBeforeExpose = new Map();
+  function toggleExposeMode() {
+    if (exposeActive) {
+      exitExposeMode();
+      return;
+    }
+    exposeActive = true;
+    document.getElementById('btn-expose').classList.add('active-mode');
+    const sw = stage.clientWidth;
+    const sh = stage.clientHeight;
+    const pad = 28;
+    const cardW = Math.floor((sw - pad * 3) / 2);
+    const cardH = Math.floor((sh - pad * 3) / 2);
+
+    animateWindowLayout(() => {
+      windows.forEach((win, i) => {
+        savedBeforeExpose.set(win.id, {
+          left: win.style.left,
+          top: win.style.top,
+          width: win.style.width,
+          height: win.style.height
+        });
+        win.classList.remove('minimized');
+        win.classList.add('expose-card');
+        const col = i % 2;
+        const row = Math.floor(i / 2);
+        win.style.left = (pad + col * (cardW + pad)) + 'px';
+        win.style.top = (pad + row * (cardH + pad)) + 'px';
+        win.style.width = cardW + 'px';
+        win.style.height = cardH + 'px';
+      });
+    });
+  }
+
+  function exitExposeMode() {
+    exposeActive = false;
+    document.getElementById('btn-expose').classList.remove('active-mode');
+    animateWindowLayout(() => {
+      windows.forEach(win => {
+        win.classList.remove('expose-card');
+        const prev = savedBeforeExpose.get(win.id);
+        if (prev) {
+          win.style.left = prev.left;
+          win.style.top = prev.top;
+          win.style.width = prev.width;
+          win.style.height = prev.height;
+        }
+      });
+    });
+  }
+
+  document.getElementById('btn-tile').addEventListener('click', tileAllWindows);
+  document.getElementById('dock-tile-btn').addEventListener('click', tileAllWindows);
+  document.getElementById('btn-cascade').addEventListener('click', cascadeWindows);
+  document.getElementById('btn-expose').addEventListener('click', toggleExposeMode);
+
+  // Dragging, Resizing & Controls per Window
+  windows.forEach(win => {
+    win.addEventListener('pointerdown', () => focusWindow(win));
+
+    const titlebar = win.querySelector('.win-titlebar');
+    titlebar.addEventListener('dblclick', (e) => {
+      if (e.target.closest('.win-controls')) return;
+      toggleMaximize(win);
+    });
+
+    titlebar.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('.win-controls') || exposeActive) return;
+      if (win.dataset.maximized === 'true') return;
+      e.preventDefault();
+      focusWindow(win);
+
+      const startX = e.clientX;
+      const startY = e.clientY;
+      const origLeft = parseFloat(win.style.left) || 0;
+      const origTop = parseFloat(win.style.top) || 0;
+
+      function onMove(ev) {
+        const dx = ev.clientX - startX;
+        const dy = ev.clientY - startY;
+        const maxTop = stage.clientHeight - 40;
+        win.style.left = Math.max(-120, Math.min(stage.clientWidth - 120, origLeft + dx)) + 'px';
+        win.style.top = Math.max(0, Math.min(maxTop, origTop + dy)) + 'px';
+      }
+
+      function onUp() {
+        window.removeEventListener('pointermove', onMove);
+        window.removeEventListener('pointerup', onUp);
+      }
+
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', onUp);
+    });
+
+    // Window buttons (Minimize / Maximize)
+    win.querySelectorAll('.win-ctrl-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const action = btn.getAttribute('data-action');
+        if (action === 'minimize') {
+          win.classList.add('minimized');
+          win.classList.remove('focused');
+          updateDockIndicators();
+        } else if (action === 'maximize') {
+          toggleMaximize(win);
+        }
+      });
+    });
+
+    // Resize Handles
+    win.querySelectorAll('.resize-handle').forEach(handle => {
+      handle.addEventListener('pointerdown', (e) => {
+        if (exposeActive) return;
+        e.preventDefault();
+        e.stopPropagation();
+        focusWindow(win);
+
+        const startX = e.clientX;
+        const startY = e.clientY;
+        const startW = win.offsetWidth;
+        const startH = win.offsetHeight;
+        const startL = parseFloat(win.style.left) || 0;
+        const isRight = handle.classList.contains('resize-r') || handle.classList.contains('resize-br');
+        const isBottom = handle.classList.contains('resize-b') || handle.classList.contains('resize-br') || handle.classList.contains('resize-bl');
+        const isLeft = handle.classList.contains('resize-l') || handle.classList.contains('resize-bl');
+
+        function onResizeMove(ev) {
+          const dx = ev.clientX - startX;
+          const dy = ev.clientY - startY;
+          if (isRight) {
+            win.style.width = Math.max(310, startW + dx) + 'px';
+          }
+          if (isBottom) {
+            win.style.height = Math.max(210, startH + dy) + 'px';
+          }
+          if (isLeft) {
+            const newW = Math.max(310, startW - dx);
+            if (newW > 310) {
+              win.style.left = (startL + dx) + 'px';
+              win.style.width = newW + 'px';
+            }
+          }
+          window.dispatchEvent(new Event('resize'));
+        }
+
+        function onResizeUp() {
+          window.removeEventListener('pointermove', onResizeMove);
+          window.removeEventListener('pointerup', onResizeUp);
+        }
+
+        window.addEventListener('pointermove', onResizeMove);
+        window.addEventListener('pointerup', onResizeUp);
+      });
+    });
+  });
+
+  function toggleMaximize(win) {
+    animateWindowLayout(() => {
+      if (win.dataset.maximized === 'true') {
+        win.style.left = win.dataset.prevLeft || '40px';
+        win.style.top = win.dataset.prevTop || '40px';
+        win.style.width = win.dataset.prevWidth || '520px';
+        win.style.height = win.dataset.prevHeight || '360px';
+        win.dataset.maximized = 'false';
+      } else {
+        win.dataset.prevLeft = win.style.left;
+        win.dataset.prevTop = win.style.top;
+        win.dataset.prevWidth = win.style.width;
+        win.dataset.prevHeight = win.style.height;
+        win.style.left = '8px';
+        win.style.top = '8px';
+        win.style.width = (stage.clientWidth - 16) + 'px';
+        win.style.height = (stage.clientHeight - 16) + 'px';
+        win.dataset.maximized = 'true';
+      }
+    });
+  }
+
+  /* =========================================================================
+     SPRING PHYSICS DOCK MAGNIFICATION
+     ========================================================================= */
+  const dockWrapper = document.getElementById('dock-wrapper');
+  const allDockButtons = Array.from(dockWrapper.querySelectorAll('.dock-item'));
+  const dockSprings = allDockButtons.map(() => ({ scale: 1, target: 1, vel: 0 }));
+  let dockMouseX = null;
+
+  dockWrapper.addEventListener('pointermove', (e) => {
+    dockMouseX = e.clientX;
+  });
+
+  dockWrapper.addEventListener('pointerleave', () => {
+    dockMouseX = null;
+  });
+
+  dockItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const targetId = item.getAttribute('data-target');
+      const win = document.getElementById(targetId);
+      if (!win) return;
+      if (win.classList.contains('minimized')) {
+        focusWindow(win);
+      } else if (win.classList.contains('focused')) {
+        win.classList.add('minimized');
+        win.classList.remove('focused');
+        updateDockIndicators();
+      } else {
+        focusWindow(win);
+      }
+    });
+  });
+
+  function updateDockPhysics() {
+    const stiffness = 0.24;
+    const damping = 0.72;
+
+    allDockButtons.forEach((btn, i) => {
+      const sp = dockSprings[i];
+      if (dockMouseX === null) {
+        sp.target = 1.0;
+      } else {
+        const rect = btn.getBoundingClientRect();
+        const center = rect.left + rect.width / 2;
+        const dist = Math.abs(dockMouseX - center);
+        const maxDist = 135;
+        if (dist < maxDist) {
+          const norm = 1 - dist / maxDist;
+          sp.target = 1 + 0.42 * (norm * norm);
+        } else {
+          sp.target = 1.0;
+        }
+      }
+
+      const force = (sp.target - sp.scale) * stiffness;
+      sp.vel = (sp.vel + force) * damping;
+      sp.scale += sp.vel;
+      btn.style.transform = `translateY(${-(sp.scale - 1) * 18}px) scale(${sp.scale.toFixed(3)})`;
+    });
+  }
+
+  /* =========================================================================
+     APP 1: HOLOCORE 3D SHADER STUDIO (3D / 4D PROJECTION & PARTICLES)
+     ========================================================================= */
+  const holoCanvas = document.getElementById('holo-canvas');
+  const holoCtx = holoCanvas.getContext('2d');
+  let holoGeomType = 'torus';
+  let holoRenderMode = 0; // 0: Plasma+Wire, 1: Wireframe Pure, 2: Neon Nodes
+  let holoRotX = 0.45;
+  let holoRotY = 0.65;
+  let holoZoom = 1.0;
+  let holoExplosion = 0;
+  let holoSpeed = 1.2;
+
+  const holoParticles = Array.from({ length: 220 }, () => ({
+    theta: Math.random() * Math.PI * 2,
+    phi: Math.acos(2 * Math.random() - 1),
+    rad: 0.35 + Math.random() * 1.4,
+    speed: 0.004 + Math.random() * 0.012
+  }));
+
+  function resizeHoloCanvas() {
+    const rect = holoCanvas.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+    holoCanvas.width = rect.width * window.devicePixelRatio;
+    holoCanvas.height = rect.height * window.devicePixelRatio;
+    holoCtx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+  }
+  window.addEventListener('resize', resizeHoloCanvas);
+
+  // Interactive Orbit on Canvas
+  let holoDragging = false;
+  let holoLastX = 0, holoLastY = 0;
+  holoCanvas.addEventListener('pointerdown', (e) => {
+    holoDragging = true;
+    holoLastX = e.clientX;
+    holoLastY = e.clientY;
+  });
+  window.addEventListener('pointermove', (e) => {
+    if (!holoDragging) return;
+    holoRotY += (e.clientX - holoLastX) * 0.01;
+    holoRotX += (e.clientY - holoLastY) * 0.01;
+    holoLastX = e.clientX;
+    holoLastY = e.clientY;
+  });
+  window.addEventListener('pointerup', () => { holoDragging = false; });
+  holoCanvas.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    holoZoom = Math.max(0.55, Math.min(2.1, holoZoom - e.deltaY * 0.001));
+  }, { passive: false });
+
+  // Geometry Builders
+  function buildGeometry(type, time) {
+    const verts = [];
+    const edges = [];
+
+    if (type === 'torus') {
+      const uSteps = 22, vSteps = 12;
+      const R = 1.15, r = 0.45;
+      for (let i = 0; i < uSteps; i++) {
+        const u = (i / uSteps) * Math.PI * 2;
+        for (let j = 0; j < vSteps; j++) {
+          const v = (j / vSteps) * Math.PI * 2;
+          const wave = 1 + 0.08 * Math.sin(u * 3 + time * 2.5);
+          const x = (R + r * Math.cos(v)) * Math.cos(u) * wave;
+          const y = (R + r * Math.cos(v)) * Math.sin(u) * wave;
+          const z = r * Math.sin(v);
+          verts.push([x, y, z]);
+          const idx = i * vSteps + j;
+          edges.push([idx, i * vSteps + ((j + 1) % vSteps)]);
+          edges.push([idx, ((i + 1) % uSteps) * vSteps + j]);
+        }
+      }
+    } else if (type === 'sphere') {
+      const lat = 13, lon = 20;
+      const rad = 1.35;
+      for (let i = 0; i <= lat; i++) {
+        const theta = (i / lat) * Math.PI;
+        for (let j = 0; j < lon; j++) {
+          const phi = (j / lon) * Math.PI * 2;
+          const pulse = rad * (1 + 0.06 * Math.sin(theta * 4 + time * 3));
+          const x = pulse * Math.sin(theta) * Math.cos(phi);
+          const y = pulse * Math.cos(theta);
+          const z = pulse * Math.sin(theta) * Math.sin(phi);
+          verts.push([x, y, z]);
+          const idx = i * lon + j;
+          if (j < lon) edges.push([idx, i * lon + ((j + 1) % lon)]);
+          if (i < lat) edges.push([idx, (i + 1) * lon + j]);
+        }
+      }
+    } else if (type === 'hypercube') {
+      // 4D Tesseract projected to 3D
+      const v4 = [];
+      for (let i = 0; i < 16; i++) {
+        v4.push([
+          (i & 1) ? 1 : -1,
+          (i & 2) ? 1 : -1,
+          (i & 4) ? 1 : -1,
+          (i & 8) ? 1 : -1
+        ]);
+      }
+      const angle4D = time * 0.9;
+      const cosA = Math.cos(angle4D), sinA = Math.sin(angle4D);
+      for (let i = 0; i < 16; i++) {
+        let [x, y, z, w] = v4[i];
+        // Rotate XW and ZW planes in 4D
+        const xw = x * cosA - w * sinA;
+        const ww = x * sinA + w * cosA;
+        const dist4 = 2.6;
+        const scale = 1.65 / (dist4 - ww);
+        verts.push([xw * scale, y * scale, z * scale]);
+      }
+      for (let i = 0; i < 16; i++) {
+        for (let j = i + 1; j < 16; j++) {
+          const diff = i ^ j;
+          if ((diff & (diff - 1)) === 0) edges.push([i, j]);
+        }
+      }
+    }
+    return { verts, edges };
+  }
+
+  function renderHoloStudio(time) {
+    const rect = holoCanvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+    if (w <= 0 || h <= 0) return;
+
+    const theme = THEMES[currentThemeIdx];
+    holoCtx.clearRect(0, 0, w, h);
+
+    // Subtle radial core glow
+    const grad = holoCtx.createRadialGradient(w * 0.5, h * 0.5, 5, w * 0.5, h * 0.5, Math.min(w, h) * 0.48);
+    grad.addColorStop(0, `rgba(${theme.rgb}, ${holoRenderMode === 0 ? 0.22 : 0.08})`);
+    grad.addColorStop(0.5, `rgba(${theme.secRgb}, 0.06)`);
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    holoCtx.fillStyle = grad;
+    holoCtx.fillRect(0, 0, w, h);
+
+    const speedFactor = (globalStressMode ? 2.8 : 1.0) * holoSpeed;
+    if (!holoDragging) {
+      holoRotY += 0.011 * speedFactor;
+      holoRotX += 0.006 * speedFactor;
+    }
+
+    if (holoExplosion > 0) {
+      holoExplosion = Math.max(0, holoExplosion - 0.022);
+    }
+
+    const { verts, edges } = buildGeometry(holoGeomType, time);
+    const cosY = Math.cos(holoRotY), sinY = Math.sin(holoRotY);
+    const cosX = Math.cos(holoRotX), sinX = Math.sin(holoRotX);
+    const fov = Math.min(w, h) * 0.42 * holoZoom;
+
+    const projected = verts.map(([vx, vy, vz], idx) => {
+      const exp = 1 + holoExplosion * (1.2 + (idx % 7) * 0.28);
+      let x = vx * exp, y = vy * exp, z = vz * exp;
+      // Rotate Y
+      let tx = x * cosY - z * sinY;
+      let tz = x * sinY + z * cosY;
+      x = tx; z = tz;
+      // Rotate X
+      let ty = y * cosX - z * sinX;
+      tz = y * sinX + z * cosX;
+      y = ty; z = tz;
+
+      const depth = 3.8 + z;
+      const scale = fov / Math.max(0.4, depth);
+      return {
+        sx: w * 0.5 + x * scale,
+        sy: h * 0.5 + y * scale,
+        z: z,
+        scale: scale
+      };
+    });
+
+    // Draw Wireframe Edges
+    if (holoRenderMode !== 2) {
+      holoCtx.lineWidth = holoRenderMode === 0 ? 1.25 : 1.0;
+      for (let i = 0; i < edges.length; i++) {
+        const [a, b] = edges[i];
+        const pa = projected[a];
+        const pb = projected[b];
+        if (!pa || !pb) continue;
+        const depthAlpha = Math.max(0.12, Math.min(0.85, (2.2 - (pa.z + pb.z) * 0.5) / 3.2));
+        holoCtx.strokeStyle = (i % 3 === 0 && holoRenderMode === 0)
+          ? `rgba(${theme.secRgb}, ${depthAlpha})`
+          : `rgba(${theme.rgb}, ${depthAlpha})`;
+        holoCtx.beginPath();
+        holoCtx.moveTo(pa.sx, pa.sy);
+        holoCtx.lineTo(pb.sx, pb.sy);
+        holoCtx.stroke();
+      }
+    }
+
+    // Draw Vertices / Plasma Nodes
+    if (holoRenderMode === 0 || holoRenderMode === 2) {
+      for (let i = 0; i < projected.length; i++) {
+        const p = projected[i];
+        const r = holoRenderMode === 2 ? 2.6 : 1.7;
+        holoCtx.fillStyle = `rgba(${theme.rgb}, 0.85)`;
+        holoCtx.beginPath();
+        holoCtx.arc(p.sx, p.sy, r, 0, Math.PI * 2);
+        holoCtx.fill();
+      }
+    }
+
+    // Draw Ambient Orbiting Quantum Particles
+    holoCtx.fillStyle = '#ffffff';
+    for (let i = 0; i < holoParticles.length; i++) {
+      const pt = holoParticles[i];
+      pt.theta += pt.speed * speedFactor;
+      const r = pt.rad * (1 + holoExplosion * 1.6);
+      const px = r * Math.sin(pt.phi) * Math.cos(pt.theta);
+      const py = r * Math.cos(pt.phi);
+      const pz = r * Math.sin(pt.phi) * Math.sin(pt.theta);
+      const scale = fov / Math.max(0.5, 3.8 + pz);
+      const sx = w * 0.5 + px * scale;
+      const sy = h * 0.5 + py * scale;
+      holoCtx.globalAlpha = 0.55;
+      holoCtx.fillRect(sx, sy, 1.8, 1.8);
+    }
+    holoCtx.globalAlpha = 1.0;
+  }
+
+  // HoloCore UI Controls
+  document.querySelectorAll('[data-geom]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-geom]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      holoGeomType = btn.getAttribute('data-geom');
+      const names = { torus: 'TOROIDE CUANTICO', sphere: 'ESFERA GEODESICA', hypercube: 'HIPERCUBO 4D' };
+      const counts = { torus: 264, sphere: 280, hypercube: 16 };
+      document.getElementById('holo-hud-stats').innerHTML =
+        `GEOM: ${names[holoGeomType]}<br>VERTS: ${counts[holoGeomType]} // PARTICLES: 220`;
+    });
+  });
+
+  document.getElementById('btn-holo-mode').addEventListener('click', (e) => {
+    holoRenderMode = (holoRenderMode + 1) % 3;
+    const labels = ['Modo: Plasma + Wireframe', 'Modo: Wireframe Puro', 'Modo: Nodos Cuánticos'];
+    e.currentTarget.textContent = labels[holoRenderMode];
+  });
+
+  document.getElementById('btn-holo-explode').addEventListener('click', () => {
+    holoExplosion = 1.0;
+  });
+
+  document.getElementById('holo-speed').addEventListener('input', (e) => {
+    holoSpeed = parseFloat(e.target.value);
+  });
+
+  /* =========================================================================
+     APP 2: MIXIUH KERNEL TERMINAL (zsh // mixiuh-os)
+     ========================================================================= */
+  const termOutput = document.getElementById('term-output');
+  const termInput = document.getElementById('term-input');
+  const cmdHistory = [];
+  let historyIdx = -1;
+
+  function appendTerm(html, className = 'term-line') {
+    const div = document.createElement('div');
+    div.className = className;
+    div.innerHTML = html;
+    termOutput.appendChild(div);
+    termOutput.scrollTop = termOutput.scrollHeight;
+  }
+
+  function runTerminalCommand(raw) {
+    const cmd = raw.trim().toLowerCase();
+    if (!cmd) return;
+    cmdHistory.push(raw);
+    historyIdx = cmdHistory.length;
+
+    appendTerm(`<span style="color:var(--accent)">root@mixiuh-os:~#</span> ${raw}`);
+
+    if (cmd === 'clear') {
+      termOutput.innerHTML = '';
+      return;
+    }
+
+    if (cmd === 'help') {
+      appendTerm(
+        `Comandos integrados del Kernel Mixiuh OS v4.0:\n` +
+        `  <span style="color:var(--accent)">neofetch</span>   - Especificaciones del sistema y arquitectura ASCII\n` +
+        `  <span style="color:var(--accent)">benchmark</span>  - Ejecuta suite sintética ALU + WebGL Shader Matrix\n` +
+        `  <span style="color:var(--accent)">top</span>        - Instantánea de procesos en tiempo real y scheduler\n` +
+        `  <span style="color:var(--accent)">matrix</span>     - Inyección de flujo binario criptográfico en vivo\n` +
+        `  <span style="color:var(--accent)">netstat</span>    - Túneles cuánticos activos y latencia de nodos\n` +
+        `  <span style="color:var(--accent)">clear</span>      - Limpia el buffer de la terminal`
+      );
+    } else if (cmd === 'neofetch') {
+      appendTerm(
+`   /\\_____/\\     <span style="color:#fff;font-weight:700">root@mixiuh-os.cyber</span>
+  /  o   o  \\    ----------------------------
+ ( ==  ^  == )   <span style="color:var(--accent)">OS</span>: Mixiuh OS v4.0 Cyber-Kernel (arm64-web)
+  )         (    <span style="color:var(--accent)">Kernel</span>: 6.12.0-mixiuh-rt-zero-shot
+ (           )   <span style="color:var(--accent)">Compositor</span>: GlassFX Blur Engine @ ${currentFps} Hz
+( (  )   (  ) )  <span style="color:var(--accent)">DSP Audio</span>: PulseWave 64-bit WebAudio Synth
+(__(__)___(__)__) <span style="color:var(--accent)">Theme</span>: ${THEMES[currentThemeIdx].name}`,
+        'term-ascii'
+      );
+    } else if (cmd === 'benchmark') {
+      appendTerm(`[BENCHMARK] Iniciando prueba de estrés multicore WebGL + DSP...`);
+      setTimeout(() => {
+        const score = 18420 + Math.floor(Math.random() * 950);
+        appendTerm(
+          `<span style="color:var(--success)">[OK]</span> Tensor Matrix 4D Projection: 1.92 ms/frame\n` +
+          `<span style="color:var(--success)">[OK]</span> Fast Fourier Transform 2048-bins: 0.31 ms\n` +
+          `<span style="color:#fff;font-weight:700">PUNTUACION GLOBAL MIXIUH-MARK: ${score} PTS (RANGO S+)</span>`
+        );
+      }, 240);
+    } else if (cmd === 'top') {
+      appendTerm(
+        `PID   USER   PR  VIRT   RES   STATE   COMMAND\n` +
+        `101   root   RT  184M   64M   RUN     holocore-webgl-daemon\n` +
+        `204   root   20  128M   42M   RUN     pulsewave-dsp-engine\n` +
+        `309   root   15   96M   31M   RUN     glassfx-window-server\n` +
+        `412   root   20   54M   19M   SLEEP   zsh-kernel-shell`
+      );
+    } else if (cmd === 'matrix') {
+      let stream = '';
+      for (let r = 0; r < 4; r++) {
+        let line = '';
+        for (let c = 0; c < 46; c++) {
+          line += Math.random() > 0.5 ? '1 ' : '0 ';
+        }
+        stream += line + '\n';
+      }
+      appendTerm(`<span style="color:#10b981">${stream.trim()}</span>`);
+    } else if (cmd === 'netstat') {
+      appendTerm(
+        `PROTO  LOCAL ADDR          QUANTUM PEER         STATE       LATENCY\n` +
+        `Q-TLS  10.44.0.1:443       core.mixiuh.online   ESTABLISHED 1.4 ms\n` +
+        `WSS    10.44.0.1:8080      node-alpha.cyber     ESTABLISHED 2.8 ms\n` +
+        `UDP6   [::1]:5353          mesh-sync.local      LISTENING   0.2 ms`
+      );
+    } else {
+      appendTerm(`zsh: comando no reconocido: '${cmd}'. Escribe <span style="color:var(--accent)">help</span> para ver opciones.`);
+    }
+  }
+
+  termInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      runTerminalCommand(termInput.value);
+      termInput.value = '';
+    } else if (e.key === 'ArrowUp') {
+      if (historyIdx > 0) {
+        historyIdx--;
+        termInput.value = cmdHistory[historyIdx];
+      }
+      e.preventDefault();
+    } else if (e.key === 'ArrowDown') {
+      if (historyIdx < cmdHistory.length - 1) {
+        historyIdx++;
+        termInput.value = cmdHistory[historyIdx];
+      } else {
+        historyIdx = cmdHistory.length;
+        termInput.value = '';
+      }
+      e.preventDefault();
+    }
+  });
+
+  document.querySelectorAll('[data-cmd]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      runTerminalCommand(btn.getAttribute('data-cmd'));
+    });
+  });
+
+  // Initial boot output in Terminal
+  runTerminalCommand('neofetch');
+
+  /* =========================================================================
+     APP 3: PULSEWAVE FM SYNTH & SPECTRUM ANALYZER (WEBAUDIO API + 60FPS FFT)
+     ========================================================================= */
+  const synthCanvas = document.getElementById('synth-canvas');
+  const synthCtx = synthCanvas.getContext('2d');
+  const seqGrid = document.getElementById('seq-grid');
+  const pianoContainer = document.getElementById('piano-keys');
+
+  const NOTES = [
+    { name: 'C4',  freq: 261.63, sharp: false },
+    { name: 'C#4', freq: 277.18, sharp: true },
+    { name: 'D4',  freq: 293.66, sharp: false },
+    { name: 'D#4', freq: 311.13, sharp: true },
+    { name: 'E4',  freq: 329.63, sharp: false },
+    { name: 'F4',  freq: 349.23, sharp: false },
+    { name: 'F#4', freq: 369.99, sharp: true },
+    { name: 'G4',  freq: 392.00, sharp: false },
+    { name: 'G#4', freq: 415.30, sharp: true },
+    { name: 'A4',  freq: 440.00, sharp: false },
+    { name: 'A#4', freq: 466.16, sharp: true },
+    { name: 'B4',  freq: 493.88, sharp: false },
+    { name: 'C5',  freq: 523.25, sharp: false }
+  ];
+
+  let audioCtx = null;
+  let analyser = null;
+  let filterNode = null;
+  let waveType = 'sawtooth';
+  let cutoffFreq = 2400;
+  let resonanceQ = 4.5;
+  let bpm = 128;
+  let seqPlaying = false;
+  let seqStepIndex = 0;
+  let seqTimer = null;
+  let lastPlayedFreq = 261.63;
+  let synthEnergy = 0.25;
+
+  const seqPattern = [1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 1];
+  const seqNoteOrder = [0, 3, 7, 10, 12, 10, 7, 3, 0, 5, 7, 12, 10, 7, 5, 3];
+
+  // Build 16-step sequencer UI
+  seqPattern.forEach((val, idx) => {
+    const cell = document.createElement('div');
+    cell.className = 'seq-step' + (val ? ' active' : '');
+    cell.addEventListener('click', () => {
+      seqPattern[idx] = seqPattern[idx] ? 0 : 1;
+      cell.classList.toggle('active', Boolean(seqPattern[idx]));
+    });
+    seqGrid.appendChild(cell);
+  });
+
+  // Build playable Piano Keys UI
+  NOTES.forEach((n) => {
+    const key = document.createElement('div');
+    key.className = 'piano-key' + (n.sharp ? ' sharp' : '');
+    key.innerHTML = `<span>${n.name}</span>`;
+    key.addEventListener('pointerdown', () => {
+      key.classList.add('key-active');
+      triggerSynthNote(n.freq, 0.28);
+      setTimeout(() => key.classList.remove('key-active'), 180);
+    });
+    pianoContainer.appendChild(key);
+  });
+
+  function ensureAudioEngine() {
+    if (!audioCtx) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioCtx = new AudioContextClass();
+      analyser = audioCtx.createAnalyser();
+      analyser.fftSize = 256;
+      filterNode = audioCtx.createBiquadFilter();
+      filterNode.type = 'lowpass';
+      filterNode.frequency.value = cutoffFreq;
+      filterNode.Q.value = resonanceQ;
+      filterNode.connect(analyser);
+      analyser.connect(audioCtx.destination);
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+  }
+
+  function triggerSynthNote(freq, duration = 0.2) {
+    ensureAudioEngine();
+    lastPlayedFreq = freq;
+    synthEnergy = 1.0;
+
+    const now = audioCtx.currentTime;
+    const osc = audioCtx.createOscillator();
+    const modOsc = audioCtx.createOscillator();
+    const modGain = audioCtx.createGain();
+    const env = audioCtx.createGain();
+
+    osc.type = waveType;
+    osc.frequency.setValueAtTime(freq, now);
+
+    // FM Modulation
+    modOsc.type = 'sine';
+    modOsc.frequency.setValueAtTime(freq * 2, now);
+    modGain.gain.setValueAtTime(freq * 0.35, now);
+
+    filterNode.frequency.setValueAtTime(cutoffFreq, now);
+    filterNode.Q.setValueAtTime(resonanceQ, now);
+
+    env.gain.setValueAtTime(0.001, now);
+    env.gain.exponentialRampToValueAtTime(0.18, now + 0.015);
+    env.gain.exponentialRampToValueAtTime(0.0008, now + duration);
+
+    modOsc.connect(modGain);
+    modGain.connect(osc.frequency);
+    osc.connect(env);
+    env.connect(filterNode);
+
+    osc.start(now);
+    modOsc.start(now);
+    osc.stop(now + duration);
+    modOsc.stop(now + duration);
+  }
+
+  function stepSequencerTick() {
+    const cells = seqGrid.querySelectorAll('.seq-step');
+    cells.forEach((c, i) => c.classList.toggle('playing', i === seqStepIndex));
+
+    if (seqPattern[seqStepIndex]) {
+      const noteIdx = seqNoteOrder[seqStepIndex % seqNoteOrder.length];
+      const note = NOTES[noteIdx];
+      triggerSynthNote(note.freq, 0.16);
+      const keyEls = pianoContainer.querySelectorAll('.piano-key');
+      if (keyEls[noteIdx]) {
+        keyEls[noteIdx].classList.add('key-active');
+        setTimeout(() => keyEls[noteIdx].classList.remove('key-active'), 110);
+      }
+    }
+    seqStepIndex = (seqStepIndex + 1) % 16;
+  }
+
+  function restartSequencerTimer() {
+    if (seqTimer) clearInterval(seqTimer);
+    if (seqPlaying) {
+      const intervalMs = (60 / bpm / 4) * 1000;
+      seqTimer = setInterval(stepSequencerTick, intervalMs);
+    }
+  }
+
+  document.getElementById('btn-seq-toggle').addEventListener('click', (e) => {
+    seqPlaying = !seqPlaying;
+    const btn = e.currentTarget;
+    btn.classList.toggle('active', seqPlaying);
+    document.getElementById('seq-btn-text').textContent = seqPlaying ? 'Stop Arpeggiator' : 'Play Arpeggiator';
+    if (seqPlaying) {
+      ensureAudioEngine();
+      stepSequencerTick();
+      restartSequencerTimer();
+    } else {
+      if (seqTimer) clearInterval(seqTimer);
+      seqGrid.querySelectorAll('.seq-step').forEach(c => c.classList.remove('playing'));
+    }
+  });
+
+  document.querySelectorAll('[data-wave]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('[data-wave]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      waveType = btn.getAttribute('data-wave');
+    });
+  });
+
+  document.getElementById('synth-cutoff').addEventListener('input', (e) => {
+    cutoffFreq = parseFloat(e.target.value);
+    if (filterNode && audioCtx) filterNode.frequency.setValueAtTime(cutoffFreq, audioCtx.currentTime);
+  });
+
+  document.getElementById('synth-res').addEventListener('input', (e) => {
+    resonanceQ = parseFloat(e.target.value);
+    if (filterNode && audioCtx) filterNode.Q.setValueAtTime(resonanceQ, audioCtx.currentTime);
+  });
+
+  document.getElementById('synth-bpm').addEventListener('input', (e) => {
+    bpm = parseFloat(e.target.value);
+    if (seqPlaying) restartSequencerTimer();
+  });
+
+  function resizeSynthCanvas() {
+    const rect = synthCanvas.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+    synthCanvas.width = rect.width * window.devicePixelRatio;
+    synthCanvas.height = rect.height * window.devicePixelRatio;
+    synthCtx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+  }
+  window.addEventListener('resize', resizeSynthCanvas);
+
+  const freqData = new Uint8Array(128);
+  const timeData = new Uint8Array(128);
+
+  function renderSynthVisualizer(time) {
+    const rect = synthCanvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+    if (w <= 0 || h <= 0) return;
+
+    const theme = THEMES[currentThemeIdx];
+    synthCtx.clearRect(0, 0, w, h);
+
+    synthEnergy = Math.max(0.18, synthEnergy * 0.96);
+
+    let hasRealAudio = false;
+    if (analyser && seqPlaying) {
+      analyser.getByteFrequencyData(freqData);
+      analyser.getByteTimeDomainData(timeData);
+      hasRealAudio = true;
+    }
+
+    // Draw FFT Spectrum Bars
+    const bars = 36;
+    const barW = (w / bars) - 2;
+    for (let i = 0; i < bars; i++) {
+      let val;
+      if (hasRealAudio) {
+        val = freqData[i * 2] / 255;
+      } else {
+        // Live idle harmonic carrier wave so scope is always active at 60 FPS
+        const norm = i / bars;
+        val = (Math.sin(time * 4.5 + i * 0.35) * 0.5 + 0.5) * (1 - norm * 0.65) * (synthEnergy + (globalStressMode ? 0.45 : 0.15));
+      }
+      const bh = Math.max(3, val * (h * 0.78));
+      synthCtx.fillStyle = `rgba(${theme.rgb}, ${0.25 + val * 0.55})`;
+      synthCtx.fillRect(i * (barW + 2), h - bh, barW, bh);
+    }
+
+    // Draw Oscilloscope Waveform Line
+    synthCtx.strokeStyle = '#ffffff';
+    synthCtx.lineWidth = 1.6;
+    synthCtx.beginPath();
+    const slices = 80;
+    for (let i = 0; i < slices; i++) {
+      const x = (i / (slices - 1)) * w;
+      let y;
+      if (hasRealAudio) {
+        const v = timeData[i] / 128.0;
+        y = (v * h) / 2;
+      } else {
+        const phase = time * 8 + (i / slices) * (lastPlayedFreq / 45);
+        y = h * 0.45 + Math.sin(phase) * Math.cos(phase * 0.5) * (h * 0.26 * synthEnergy);
+      }
+      if (i === 0) synthCtx.moveTo(x, y);
+      else synthCtx.lineTo(x, y);
+    }
+    synthCtx.stroke();
+  }
+
+  /* =========================================================================
+     APP 4: KERNEL TELEMETRY & TASK MANAGER
+     ========================================================================= */
+  const telCanvas = document.getElementById('telemetry-canvas');
+  const telCtx = telCanvas.getContext('2d');
+  const procTbody = document.getElementById('proc-tbody');
+
+  const cpuHistory = Array(60).fill(26);
+  const gpuHistory = Array(60).fill(18);
+
+  const PROCESSES = [
+    { pid: 101, name: 'holocore-webgl-shader', cpu: 14.2, mem: '148 MB', prio: 'REALTIME', boosted: false },
+    { pid: 204, name: 'pulsewave-dsp-synth',   cpu: 6.8,  mem: '92 MB',  prio: 'HIGH',     boosted: false },
+    { pid: 309, name: 'glassfx-compositor',    cpu: 5.4,  mem: '110 MB', prio: 'HIGH',     boosted: false },
+    { pid: 412, name: 'zsh-kernel-terminal',   cpu: 1.9,  mem: '38 MB',  prio: 'NORMAL',   boosted: false },
+    { pid: 518, name: 'quantum-mesh-daemon',   cpu: 2.3,  mem: '24 MB',  prio: 'NORMAL',   boosted: false }
+  ];
+
+  function renderProcessTable() {
+    procTbody.innerHTML = '';
+    PROCESSES.forEach((p, idx) => {
+      const tr = document.createElement('tr');
+      const liveCpu = (p.cpu * (globalStressMode ? 2.4 : 1) + (Math.random() * 1.8 - 0.9)).toFixed(1);
+      tr.innerHTML = `
+        <td>#${p.pid}</td>
+        <td style="font-weight:600;color:#fff">${p.name}</td>
+        <td style="color:var(--accent)">${liveCpu}%</td>
+        <td>${p.mem}</td>
+        <td><span class="prio-badge ${p.boosted ? 'boosted' : ''}">${p.boosted ? 'TURBO-RT' : p.prio}</span></td>
+        <td>
+          <button class="mini-btn" data-boost="${idx}">${p.boosted ? 'Reset' : 'Boost'}</button>
+        </td>
+      `;
+      procTbody.appendChild(tr);
+    });
+
+    procTbody.querySelectorAll('[data-boost]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const i = parseInt(btn.getAttribute('data-boost'), 10);
+        PROCESSES[i].boosted = !PROCESSES[i].boosted;
+        renderProcessTable();
+      });
+    });
+  }
+  renderProcessTable();
+
+  function resizeTelemetryCanvas() {
+    const rect = telCanvas.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+    telCanvas.width = rect.width * window.devicePixelRatio;
+    telCanvas.height = rect.height * window.devicePixelRatio;
+    telCtx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
+  }
+  window.addEventListener('resize', resizeTelemetryCanvas);
+
+  function updateTelemetryMetrics() {
+    const baseCpu = globalStressMode ? 78 : 26;
+    const cpuVal = Math.min(99, Math.max(8, Math.round(baseCpu + (Math.random() * 14 - 7))));
+    const gpuMs = (globalStressMode ? 8.4 : 3.6) + (Math.random() * 1.2 - 0.6);
+    const memMb = globalStressMode ? 740 + Math.floor(Math.random() * 40) : 412 + Math.floor(Math.random() * 18);
+
+    cpuHistory.push(cpuVal);
+    cpuHistory.shift();
+    gpuHistory.push(Math.min(95, gpuMs * 8));
+    gpuHistory.shift();
+
+    document.getElementById('val-cpu').textContent = `${cpuVal}%`;
+    document.getElementById('val-gpu').textContent = `${gpuMs.toFixed(1)} ms`;
+    document.getElementById('val-mem').textContent = `${memMb} MB`;
+    document.getElementById('val-fps').textContent = `${currentFps} FPS`;
+
+    // Update SVG Circular Rings (circumference = 88)
+    document.getElementById('ring-cpu').style.strokeDashoffset = String(88 - (cpuVal / 100) * 88);
+    document.getElementById('ring-gpu').style.strokeDashoffset = String(88 - Math.min(1, gpuMs / 16) * 88);
+    document.getElementById('ring-mem').style.strokeDashoffset = String(88 - Math.min(1, memMb / 1024) * 88);
+    document.getElementById('ring-fps').style.strokeDashoffset = String(88 - Math.min(1, currentFps / 60) * 88);
+
+    renderProcessTable();
+  }
+  setInterval(updateTelemetryMetrics, 900);
+
+  function renderTelemetrySparklines() {
+    const rect = telCanvas.getBoundingClientRect();
+    const w = rect.width;
+    const h = rect.height;
+    if (w <= 0 || h <= 0) return;
+
+    const theme = THEMES[currentThemeIdx];
+    telCtx.clearRect(0, 0, w, h);
+
+    // Draw CPU Sparkline Area
+    telCtx.beginPath();
+    for (let i = 0; i < cpuHistory.length; i++) {
+      const x = (i / (cpuHistory.length - 1)) * w;
+      const y = h - (cpuHistory[i] / 100) * (h - 8) - 4;
+      if (i === 0) telCtx.moveTo(x, y);
+      else telCtx.lineTo(x, y);
+    }
+    telCtx.strokeStyle = theme.accent;
+    telCtx.lineWidth = 1.6;
+    telCtx.stroke();
+
+    telCtx.lineTo(w, h);
+    telCtx.lineTo(0, h);
+    telCtx.closePath();
+    telCtx.fillStyle = `rgba(${theme.rgb}, 0.16)`;
+    telCtx.fill();
+
+    // Draw GPU Sparkline
+    telCtx.beginPath();
+    for (let i = 0; i < gpuHistory.length; i++) {
+      const x = (i / (gpuHistory.length - 1)) * w;
+      const y = h - (gpuHistory[i] / 100) * (h - 8) - 4;
+      if (i === 0) telCtx.moveTo(x, y);
+      else telCtx.lineTo(x, y);
+    }
+    telCtx.strokeStyle = '#05d5aa';
+    telCtx.lineWidth = 1.2;
+    telCtx.stroke();
+  }
+
+  /* =========================================================================
+     GLOBAL STRESS TEST BUTTON
+     ========================================================================= */
+  const stressBtn = document.getElementById('btn-stress');
+  stressBtn.addEventListener('click', () => {
+    globalStressMode = !globalStressMode;
+    stressBtn.classList.toggle('stress-active', globalStressMode);
+    document.getElementById('stress-label').textContent = globalStressMode
+      ? 'Stress Test: ACTIVO (OVERDRIVE)'
+      : 'Ejecutar Stress Test Global';
+    if (globalStressMode) {
+      holoExplosion = 0.85;
+      synthEnergy = 1.0;
+    }
+    updateTelemetryMetrics();
+  });
+
+  /* =========================================================================
+     MASTER 60-120 FPS ANIMATION LOOP & INITIAL BOOT LAYOUT
+     ========================================================================= */
+  let frameCount = 0;
+  let lastFpsStamp = performance.now();
+
+  function masterLoop(now) {
+    frameCount++;
+    if (now - lastFpsStamp >= 500) {
+      currentFps = Math.min(120, Math.max(30, Math.round((frameCount * 1000) / (now - lastFpsStamp))));
+      document.getElementById('top-fps').textContent = `${currentFps} FPS`;
+      frameCount = 0;
+      lastFpsStamp = now;
+    }
+
+    const t = now * 0.001;
+    renderWallpaper(t);
+    updateDockPhysics();
+    renderHoloStudio(t);
+    renderSynthVisualizer(t);
+    renderTelemetrySparklines();
+
+    requestAnimationFrame(masterLoop);
+  }
+
+  // Boot into clean 2x2 Tiled Layout so all 4 apps are simultaneously visible and live
+  window.addEventListener('load', () => {
+    tileAllWindows();
+    setTimeout(() => {
+      resizeHoloCanvas();
+      resizeSynthCanvas();
+      resizeTelemetryCanvas();
+    }, 60);
+    requestAnimationFrame(masterLoop);
+  });
+})();
+</script>
+</body>
+</html>

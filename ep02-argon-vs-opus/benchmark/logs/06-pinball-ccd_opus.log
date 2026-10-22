@@ -1,0 +1,36 @@
+La mesa de pinball está terminada en `claude-opus-5.5/06-pinball-ccd/index.html`: un solo HTML de unas 1,500 líneas, sin librerías ni archivos externos. En Chromium headless carga sin errores de consola y corre a unos 60 fps. Está en el commit `c0c95b0`, sin push.
+
+**Física**
+- **Sub-pasos:** usa al menos 16 por frame (unos 1 ms cada uno) y sube el número si el frame tarda más.
+- **Paredes:** en cada sub-paso se busca el punto más cercano de cada pared. Además hay una guardia de colisión continua: si el centro de la bola cruzó una pared, la regresa al punto de impacto del lado correcto y la hace rebotar.
+- **Flippers:** son cápsulas que se adelgazan hacia la punta. La bola recibe la velocidad del flipper en el punto exacto de contacto (v = ω×r). Tienen su propia guardia contra túnel, calculada en el marco que gira con el flipper.
+
+**Pruebas de túnel** (a 4200 px/s, la velocidad máxima):
+
+| Prueba | Sub-pasos por frame | Bolas que atravesaron | Rescates de la guardia |
+|---|---|---|---|
+| Paredes, 400 bolas | 16 / 4 / 2 | 0 / 0 / 0 | 6 / 2,728 / 3,939 |
+| Caídas sobre el flipper mientras sube, 3,000 | 16 / 4 / 2 | 0 / 0 / 0 | 0 / 22 / 1,420 |
+
+En las paredes eso suma unos 700,000 sub-pasos. Con solo 2 sub-pasos, la guardia evita los cruces que el método por sub-pasos no detecta. La primera versión de mi prueba marcó 9 falsos positivos: bolas que rodeaban la punta del flipper levantado y pasaban por debajo, lo cual es legal. Corregí la prueba, no el motor.
+
+Disparos con el flipper: la bola sale a entre 1,670 y 2,990 px/s según dónde pega. El resorte al máximo la lanza a 2,651 px/s y le da la vuelta completa al arco.
+
+**La mesa**
+- Resorte con medidor de tensión: se mantiene Espacio o se arrastra el émbolo con el mouse.
+- 2 flippers (no hice el tercero, que era opcional).
+- 4 bumpers activos con onda de choque, sacudida de la mesa y sonido propio cada uno.
+- 2 slingshots que patean la bola.
+- 4 dianas abatibles: al tumbarlas todas empieza la multibola de 3 bolas, con choques entre ellas. Si ya hay multibola, el multiplicador se duplica.
+- Una rampa elevada que sube el multiplicador a 2×, 4× y 8×.
+- Un spinner en la órbita izquierda, una compuerta de un solo sentido en el carril de lanzamiento y "ball save" de 8 segundos.
+
+**Visual, sonido y controles**
+- Estelas que cambian de color con la velocidad, chispas en cada rebote y sonido sintetizado con botón de mute.
+- Marcador LED de 128×96 puntos: puntaje, récord, bolas, multiplicador, tensión del resorte y dianas.
+- Modo debug (tecla G): normales de cada pared, vectores de velocidad, los puntos de cada sub-paso, la flecha ω×r en el contacto, marcas donde actuó la guardia, FPS y tiempo de física.
+- En debug, `[` y `]` cambian los sub-pasos en vivo y T activa cámara lenta, para mostrar la guardia en acción en el video.
+
+En una partida simulada en el navegador, el lanzamiento, las dianas, la multibola, la rampa (x2), el drenaje y el cambio de bola funcionaron. No apliqué `tsc` porque el archivo no tiene TypeScript.
+
+Falta jugarla a mano y escuchar el sonido; la prueba headless no verifica ni el tacto ni el audio. También agregué esta prueba 06 a la memoria `mixiuh-roadmap-vivo`.
