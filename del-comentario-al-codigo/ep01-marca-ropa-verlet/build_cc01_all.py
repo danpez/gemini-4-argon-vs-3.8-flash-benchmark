@@ -1451,13 +1451,24 @@ def build_youtube_16x9(package_only: bool = False) -> Path:
 def sync_to_icloud() -> None:
     print(f"\n=== [3/3] Syncing Complete Package to iCloud Drive: {ICLOUD_DIR} ===", flush=True)
     ICLOUD_DIR.mkdir(parents=True, exist_ok=True)
-    for sub in ("app", "comentario-original", "guion", "programacion", "entregables_finales_4k"):
+    for sub in ("app", "comentario-original", "guion", "programacion"):
         src_d = EP_DIR / sub
         dst_d = ICLOUD_DIR / sub
         if src_d.exists():
             if dst_d.exists():
                 shutil.rmtree(dst_d)
             shutil.copytree(src_d, dst_d)
+    # Sync all contents of OUT_DIR (entregables_finales_4k) directly into ICLOUD_DIR root so there are zero stale files
+    for item in OUT_DIR.iterdir():
+        if item.name == ".DS_Store":
+            continue
+        dst_item = ICLOUD_DIR / item.name
+        if item.is_dir():
+            if dst_item.exists():
+                shutil.rmtree(dst_item)
+            shutil.copytree(item, dst_item)
+        else:
+            shutil.copy2(item, dst_item)
     print("  [iCloud Sync Complete]", flush=True)
 
 
