@@ -1,0 +1,202 @@
+{
+  "01-rover-suspension": {
+    "haiku": {
+      "fps": 60,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "title": "ROVER-01 · Laboratorio de Suspensión Planetaria",
+      "canvases": 2,
+      "buttons": 6,
+      "inputs": 5,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/01_rover_suspension_haiku.png"
+    },
+    "sonnet": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [
+        "SyntaxError: Unexpected end of input"
+      ],
+      "title": "ROVER-LAB // Suspensión de Hooke + Terreno Destructible",
+      "canvases": 3,
+      "buttons": 4,
+      "inputs": 9,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/01_rover_suspension_sonnet.png"
+    },
+    "opus": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "ROVER-LAB · Suspensión Hooke + Terreno Destructible",
+      "canvases": 2,
+      "buttons": 10,
+      "inputs": 6,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/01_rover_suspension_opus.png"
+    }
+  },
+  "02-slime-feromonas": {
+    "haiku": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [
+        "Error: ERROR: 0:17: '=' : dimension mismatch\nERROR: 0:17: 'assign' : cannot convert from 'highp 3-component vector of float' to 'out highp 4-component vector of float'\n"
+      ],
+      "title": "Physarum Polycephalum · Laboratorio de Inteligencia de Enjambre",
+      "canvases": 1,
+      "buttons": 1,
+      "inputs": 1,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/02_slime_feromonas_haiku.png"
+    },
+    "sonnet": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Physarum Lab · 50 000 agentes · Enjambre bioluminiscente",
+      "canvases": 5,
+      "buttons": 16,
+      "inputs": 20,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/02_slime_feromonas_sonnet.png"
+    },
+    "opus": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Φ PHYSARUM·LAB — Inteligencia de Enjambre y Slime Mold",
+      "canvases": 2,
+      "buttons": 21,
+      "inputs": 24,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/02_slime_feromonas_opus.png"
+    }
+  },
+  "03-puente-estructural": {
+    "haiku": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Structural Bridge Builder & Stress Analyzer",
+      "canvases": 1,
+      "buttons": 14,
+      "inputs": 8,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/03_puente_estructural_haiku.png"
+    },
+    "sonnet": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "BRIDGE·LAB — Simulador de Ingeniería Estructural y Colapso de Puentes",
+      "canvases": 1,
+      "buttons": 19,
+      "inputs": 11,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/03_puente_estructural_sonnet.png"
+    },
+    "opus": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Structural Bridge Builder & Stress Analyzer — Simulador de Colapso de Puentes",
+      "canvases": 1,
+      "buttons": 24,
+      "inputs": 11,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/03_puente_estructural_opus.png"
+    }
+  },
+  "04-sintetizador-acido-3d": {
+    "haiku": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "ACID LAB 3D · TB-303 / TR-909 · Espectro Holográfico",
+      "canvases": 2,
+      "buttons": 120,
+      "inputs": 32,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/04_sintetizador_acido_3d_haiku.png"
+    },
+    "sonnet": {
+      "fps": 50,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "title": "ACID//HOLODOME — TB-303 + TR-909 + Túnel Holográfico Espectral 3D",
+      "canvases": 2,
+      "buttons": 139,
+      "inputs": 16,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/04_sintetizador_acido_3d_sonnet.png"
+    },
+    "opus": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "ACID 303·909 — Holo-Spectral Studio",
+      "canvases": 2,
+      "buttons": 7,
+      "inputs": 17,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/04_sintetizador_acido_3d_opus.png"
+    }
+  },
+  "05-pathtracer-bvh": {
+    "haiku": {
+      "fps": 37,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Path Tracer Monte Carlo en Tiempo Real · WebGL2",
+      "canvases": 1,
+      "buttons": 2,
+      "inputs": 14,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/05_pathtracer_bvh_haiku.png"
+    },
+    "sonnet": {
+      "fps": 22,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "Path Tracer Estocástico WebGL2 · BVH · Cáusticas · Dispersión · Á-Trous",
+      "canvases": 1,
+      "buttons": 5,
+      "inputs": 22,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/05_pathtracer_bvh_sonnet.png"
+    },
+    "opus": {
+      "fps": 15,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "PHOTON//FORGE — Path Tracer Monte Carlo en WebGL2",
+      "canvases": 1,
+      "buttons": 5,
+      "inputs": 17,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/05_pathtracer_bvh_opus.png"
+    }
+  },
+  "06-consola-retro-cpu": {
+    "haiku": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "CYBER-8 · Consola Retro CHIP-8 Extendida",
+      "canvases": 1,
+      "buttons": 7,
+      "inputs": 2,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/06_consola_retro_cpu_haiku.png"
+    },
+    "sonnet": {
+      "fps": 60,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "CYBER-8 · Consola Retro Virtual (CHIP-8 Extendido)",
+      "canvases": 1,
+      "buttons": 10,
+      "inputs": 13,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/06_consola_retro_cpu_sonnet.png"
+    },
+    "opus": {
+      "fps": 61,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "title": "NEON-8 · Consola Retro Virtual CHIP-8 · Emulador + Debugger + Ensamblador",
+      "canvases": 1,
+      "buttons": 25,
+      "inputs": 16,
+      "screenshot": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/ep04-escalera-claude/benchmark/screenshots/06_consola_retro_cpu_opus.png"
+    }
+  }
+}

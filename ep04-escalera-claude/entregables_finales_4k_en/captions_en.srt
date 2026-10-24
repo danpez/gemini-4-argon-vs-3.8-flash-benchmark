@@ -1,0 +1,579 @@
+1
+00:00:00,033 --> 00:00:02,250
+One dollar and fifty-four cents for Haiku,
+
+2
+00:00:02,250 --> 00:00:04,417
+twelve dollars and twenty-two
+cents for Sonnet,
+
+3
+00:00:04,417 --> 00:00:07,133
+and nearly thirty dollars for Opus:
+
+4
+00:00:07,133 --> 00:00:10,367
+is it actually worth paying twenty times
+more when coding with Claude?
+
+5
+00:00:10,567 --> 00:00:15,650
+We ran eighteen isolated benchmarks
+across all three tiers of Claude 5.5
+
+6
+00:00:15,650 --> 00:00:20,017
+and the unthinkable happened:
+Opus swept the first half three to zero,
+
+7
+00:00:20,017 --> 00:00:22,983
+but Haiku and Sonnet stole
+the final three challenges.
+
+8
+00:00:23,017 --> 00:00:27,617
+Today we climb the entire Claude ladder
+across six extreme engineering challenges
+
+9
+00:00:27,617 --> 00:00:31,167
+to find out exactly where you
+should spend your money.
+
+10
+00:00:34,767 --> 00:00:36,833
+I'm Kevin, this is Mixiuh Labs,
+
+11
+00:00:36,833 --> 00:00:40,700
+and every single week developers ask me
+whether it still makes sense to pay
+
+12
+00:00:40,700 --> 00:00:44,900
+flagship Opus pricing when Sonnet
+and Haiku are so fast.
+
+13
+00:00:44,933 --> 00:00:46,767
+To answer with hard data,
+
+14
+00:00:46,767 --> 00:00:50,883
+we ran the exact same one-shot
+prompt across all three models:
+
+15
+00:00:50,883 --> 00:00:56,650
+first you'll see Haiku and Sonnet side
+by side, followed by Opus in full screen.
+
+16
+00:00:56,650 --> 00:01:00,350
+Our refereeing rule is strict:
+we score real physics accuracy,
+
+17
+00:01:00,350 --> 00:01:04,900
+zero console errors, and return
+on investment per dollar spent on the API.
+
+18
+00:01:04,933 --> 00:01:08,583
+In total, Haiku finished all
+six challenges in 87 minutes for a dollar
+
+19
+00:01:08,583 --> 00:01:14,100
+fifty-four, Sonnet in 105 minutes
+for twelve dollars and twenty-two cents,
+
+20
+00:01:14,100 --> 00:01:17,850
+and Opus in 179 minutes
+for nearly thirty dollars.
+
+21
+00:01:17,883 --> 00:01:22,483
+Let's jump into all six extreme challenges
+to see where each tier of Claude shines
+
+22
+00:01:22,483 --> 00:01:24,367
+and where it stumbles.
+
+23
+00:01:24,750 --> 00:01:29,750
+Challenge 1: build a Martian Rover
+suspension testbed with an articulated
+
+24
+00:01:29,750 --> 00:01:33,500
+chassis, Hooke's law spring-dampers,
+deformable terrain,
+
+25
+00:01:33,500 --> 00:01:35,033
+and live telemetry graphs.
+
+26
+00:01:35,067 --> 00:01:39,133
+On the left, Haiku surprised us
+by delivering a working 60 FPS rover
+
+27
+00:01:39,133 --> 00:01:42,900
+in 19 minutes for just 35 cents;
+but on the right,
+
+28
+00:01:42,900 --> 00:01:47,933
+Sonnet spent two dollars and fifty-one
+cents and truncated its script,
+
+29
+00:01:47,933 --> 00:01:49,317
+leaving a black screen.
+
+30
+00:01:49,350 --> 00:01:54,683
+When Opus 5.5 takes over, the engineering
+leap is massive: it spent 42 minutes
+
+31
+00:01:54,683 --> 00:01:59,633
+and 6 dollars and 81 cents to build
+a rope-plank suspension bridge,
+
+32
+00:01:59,633 --> 00:02:03,317
+lunar craters, volumetric headlights,
+and live force vectors.
+
+33
+00:02:03,350 --> 00:02:07,567
+While Haiku deserves credit
+for running at 60 FPS for 35 cents,
+
+34
+00:02:07,567 --> 00:02:11,267
+Opus's suspension bridge physics
+and telemetry are in another league:
+
+35
+00:02:11,267 --> 00:02:13,833
+point one goes to Opus 5.5.
+
+36
+00:02:14,217 --> 00:02:18,833
+Challenge 2: simulate a biological
+Physarum slime mold in WebGL2 where tens
+
+37
+00:02:18,833 --> 00:02:22,817
+of thousands of GPU agents form
+optimal rail networks by following
+
+38
+00:02:22,817 --> 00:02:24,083
+pheromone trails.
+
+39
+00:02:24,117 --> 00:02:27,567
+Here Haiku cost just 6 cents in 5 minutes,
+
+40
+00:02:27,567 --> 00:02:33,417
+but failed to compile its GLSL shader
+due to a vec3-to-vec4 dimension mismatch;
+
+41
+00:02:33,417 --> 00:02:37,200
+while Sonnet hit 60 FPS for 79 cents
+
+42
+00:02:37,200 --> 00:02:40,633
+but overexposed the center
+into a white blob.
+
+43
+00:02:40,667 --> 00:02:47,467
+Opus 5.5 spent 13 minutes and 2 dollars
+and 55 cents to map 28 real Tokyo Bay
+
+44
+00:02:47,467 --> 00:02:50,733
+rail stations from Shinjuku
+to Yokohama, linking them
+
+45
+00:02:50,733 --> 00:02:55,417
+with 60 thousand bioluminescent
+GPU agents at 60 FPS.
+
+46
+00:02:55,450 --> 00:02:58,283
+On scientific WebGL2
+ping-pong float shaders,
+
+47
+00:02:58,283 --> 00:03:02,917
+Opus proves why it's the flagship
+tier and takes a two to zero lead.
+
+48
+00:03:03,300 --> 00:03:06,750
+Challenge 3: a civil engineering
+bridge simulator where all three models
+
+49
+00:03:06,750 --> 00:03:10,167
+had to span a canyon,
+drive heavy vehicles across,
+
+50
+00:03:10,167 --> 00:03:13,617
+and snap steel beams when tension
+exceeds the elastic limit.
+
+51
+00:03:13,650 --> 00:03:18,433
+In this round all three models
+delivered smooth 60 FPS simulators:
+
+52
+00:03:18,433 --> 00:03:22,783
+Haiku built a Warren truss
+with a 20-ton truck for 30 cents,
+
+53
+00:03:22,783 --> 00:03:26,867
+and Sonnet animated a four-car heavy
+freight train for a dollar ninety-eight.
+
+54
+00:03:26,900 --> 00:03:33,083
+However, Opus 5.5 spent 19 minutes
+and 3 dollars and 58 cents to code
+
+55
+00:03:33,083 --> 00:03:39,083
+a 20-substep XPBD solver with live stress
+percentages printed on every single beam,
+
+56
+00:03:39,083 --> 00:03:41,767
+underwater piers,
+and millimeter deflection readouts.
+
+57
+00:03:41,767 --> 00:03:45,350
+For its CAD-grade precision
+with per-beam stress readouts,
+
+58
+00:03:45,350 --> 00:03:48,550
+Opus earns its third straight point;
+
+59
+00:03:48,550 --> 00:03:52,933
+but watch closely,
+because from here on everything flips.
+
+60
+00:03:53,317 --> 00:03:58,550
+Challenge 4: an Acid Techno music
+studio with a TB-303 bassline synth,
+
+61
+00:03:58,550 --> 00:04:04,817
+TR-909 drum machine in Web Audio API,
+cutoff and distortion rotary knobs,
+
+62
+00:04:04,817 --> 00:04:07,083
+and an audio-reactive 3D tunnel.
+
+63
+00:04:07,117 --> 00:04:10,417
+And here came the biggest
+upset of the tournament:
+
+64
+00:04:10,417 --> 00:04:14,167
+in just 8 and a half minutes
+and for only 21 cents,
+
+65
+00:04:14,167 --> 00:04:18,550
+Claude Haiku 5.5 built a 3D spectral
+particle terrain, oscilloscope,
+
+66
+00:04:18,550 --> 00:04:22,583
+7 rotary knobs,
+and the full sequencer at 61 FPS.
+
+67
+00:04:22,617 --> 00:04:27,100
+Sonnet delivered a wireframe holodome
+for a dollar fifty-two and Opus built
+
+68
+00:04:27,100 --> 00:04:32,650
+a slick laser highway, but Opus took
+31 minutes and charged 5 full dollars:
+
+69
+00:04:32,650 --> 00:04:37,833
+twenty-four times more expensive
+than Haiku for the exact same frame rate.
+
+70
+00:04:37,867 --> 00:04:41,583
+Three and a half times faster
+and twenty-four times cheaper
+
+71
+00:04:41,583 --> 00:04:48,100
+without dropping a single frame:
+a historic ROI point for Claude Haiku 5.5.
+
+72
+00:04:48,483 --> 00:04:54,167
+Challenge 5: code a Monte Carlo Path
+Tracer from scratch in WebGL2 with BVH
+
+73
+00:04:54,167 --> 00:04:59,667
+acceleration, glass refraction, caustics,
+and a real-time A-Trous wavelet denoiser.
+
+74
+00:04:59,700 --> 00:05:01,900
+On the left, Haiku built a basic
+noisy tracer for 13 cents;
+
+75
+00:05:01,900 --> 00:05:07,150
+but on the right, Claude Sonnet 5.5 shone
+in just 13.9 minutes for a dollar
+
+76
+00:05:07,150 --> 00:05:10,750
+sixty-seven,
+
+77
+00:05:10,750 --> 00:05:14,850
+rendering rainbow chromatic
+dispersion through glass at 29 FPS.
+
+78
+00:05:14,867 --> 00:05:20,150
+Meanwhile, Opus 5.5 took more than twice
+as long—31 minutes and 5 dollars
+
+79
+00:05:20,150 --> 00:05:24,767
+and 5 cents—and its overly heavy
+shader dragged performance down
+
+80
+00:05:24,767 --> 00:05:26,950
+to just 15 frames per second.
+
+81
+00:05:26,983 --> 00:05:31,267
+Nearly double the frame rate, in less
+than half the time, at one-third the cost:
+
+82
+00:05:31,267 --> 00:05:35,317
+a decisive victory for Claude Sonnet 5.5.
+
+83
+00:05:35,700 --> 00:05:41,767
+Final challenge: build an emulator and IDE
+for the classic CHIP-8 console complete
+
+84
+00:05:41,767 --> 00:05:46,483
+with a 35-opcode CPU, phosphor
+CRT monitor, live disassembler,
+
+85
+00:05:46,483 --> 00:05:48,283
+hex dump, and custom assembler.
+
+86
+00:05:48,317 --> 00:05:49,333
+Look at the split screen:
+
+87
+00:05:49,333 --> 00:05:55,617
+both Haiku for 48 cents and Sonnet
+for 3 dollars and 75 cents booted straight
+
+88
+00:05:55,617 --> 00:06:02,050
+into live Pong at 60 FPS, with Sonnet
+adding a curved CRT bezel, register bars,
+
+89
+00:06:02,050 --> 00:06:05,000
+and a syntax-highlighted ASM editor.
+
+90
+00:06:05,000 --> 00:06:08,633
+And here came Opus 5.5's
+most painful stumble:
+
+91
+00:06:08,633 --> 00:06:11,933
+after 42 minutes and nearly
+7 dollars in tokens,
+
+92
+00:06:11,933 --> 00:06:14,817
+it forgot to invoke
+its ROM assembler on boot,
+
+93
+00:06:14,817 --> 00:06:19,350
+leaving memory at zero bytes
+and the CRT screen dark.
+
+94
+00:06:19,383 --> 00:06:25,233
+Sonnet 5.5 takes the final point
+with a flawless retro workstation,
+
+95
+00:06:25,233 --> 00:06:30,600
+bringing the final Claude ladder
+scoreboard to three points for Opus,
+
+96
+00:06:30,600 --> 00:06:33,917
+two for Sonnet, and one for Haiku.
+
+97
+00:06:34,300 --> 00:06:36,550
+Three for Opus, two for Sonnet,
+and one for Haiku:
+
+98
+00:06:36,550 --> 00:06:41,483
+this benchmark proves that paying
+for the most expensive tier
+
+99
+00:06:41,483 --> 00:06:44,117
+does not guarantee
+winning every challenge.
+
+100
+00:06:46,517 --> 00:06:48,083
+On the total stopwatch,
+
+101
+00:06:48,083 --> 00:06:52,850
+Haiku finished all six challenges
+in 87 minutes and Sonnet in 105,
+
+102
+00:06:52,850 --> 00:06:58,617
+while Opus needed 179 minutes—nearly
+three full hours of compute.
+
+103
+00:06:58,650 --> 00:07:02,317
+In reliability, no tier
+was infallible in a single shot:
+
+104
+00:07:02,317 --> 00:07:07,117
+Haiku missed one GLSL cast, Sonnet
+truncated one script, and Opus forgot
+
+105
+00:07:07,117 --> 00:07:11,583
+to auto-assemble its ROM in Round 6 after
+burning nearly seven dollars.
+
+106
+00:07:11,767 --> 00:07:14,283
+And the API bill changes everything:
+
+107
+00:07:14,283 --> 00:07:18,400
+one dollar and fifty-four cents
+for the entire tournament on Haiku,
+
+108
+00:07:18,400 --> 00:07:20,350
+twelve dollars
+and twenty-two cents on Sonnet,
+
+109
+00:07:20,350 --> 00:07:23,750
+and twenty-nine dollars
+and ninety-four cents on Opus.
+
+110
+00:07:24,133 --> 00:07:31,100
+Here is the golden rule for your wallet:
+use Haiku 5.5 for rapid prototypes,
+
+111
+00:07:31,100 --> 00:07:36,217
+UI dashboards, and audio synths
+where it costs twenty times less.
+
+112
+00:07:36,250 --> 00:07:42,317
+Use Sonnet 5.5 as your daily workhorse
+for emulators, optimized shaders,
+
+113
+00:07:42,317 --> 00:07:47,867
+and full web apps; and reserve Opus
+5.5 strictly for multi-pass physics
+
+114
+00:07:47,867 --> 00:07:49,550
+and heavy architectural math.
+
+115
+00:07:49,550 --> 00:07:53,733
+I uploaded all eighteen interactive
+demos, exact prompts,
+
+116
+00:07:53,733 --> 00:07:58,683
+and token breakdowns to labs dot mixiuh
+dot online so you can test all three tiers
+
+117
+00:07:58,683 --> 00:08:00,583
+side by side in your browser.
+
+118
+00:08:00,617 --> 00:08:04,883
+Subscribe to Mixiuh Labs, share
+this benchmark with your team, and tell me
+
+119
+00:08:04,883 --> 00:08:08,717
+in the comments which model family
+we should put on the ladder in Episode 05.
+
+120
+00:08:09,100 --> 00:08:10,383
+Experiment 04 complete:
+
+121
+00:08:10,383 --> 00:08:13,950
+see you in the next level,
+right here on Mixiuh Labs.

@@ -1,0 +1,85 @@
+{
+ "A": {
+  "hash": "815e16770ec2b4658b843f82dfd529b03cf11c69",
+  "info": {
+   "id": "A",
+   "text": "$1.54 | $29.94",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 552182,
+   "bytes_720": 300051,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 21.0,
+   "contrast": 11.26,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "04_sintetizador_acido_3d_comparativa.mov t=6",
+    "right": "04_sintetizador_acido_3d_comparativa.mov t=24"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "B": {
+  "hash": "99937e74c37f69bc899aa98b2104eff49790d798",
+  "info": {
+   "id": "B",
+   "text": "HAIKU | OPUS",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 486564,
+   "bytes_720": 261649,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 25.0,
+   "contrast": 11.1,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "03_puente_estructural_comparativa.mov t=6.5",
+    "right": "03_puente_estructural_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  }
+ },
+ "C": {
+  "hash": "debff0c29ea1f6bf546d5c9abb8898e58b071769",
+  "info": {
+   "id": "C",
+   "text": "3 | 2 | 1",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 517928,
+   "bytes_720": 273138,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 25.0,
+   "contrast": 11.39,
+   "free_corner": true,
+   "symmetry": [
+    "par text: las líneas base no coinciden"
+   ],
+   "sources": {
+    "left": "06_consola_retro_cpu_comparativa.mov t=6.5",
+    "right": "06_consola_retro_cpu_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  }
+ }
+}

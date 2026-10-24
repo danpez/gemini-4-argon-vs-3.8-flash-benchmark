@@ -1,0 +1,467 @@
+{
+ "version": 1,
+ "episode": {
+  "id": "ep04",
+  "slug": "claude-haiku-vs-sonnet-vs-opus-escalera",
+  "title": "Claude Haiku 5.5 vs Sonnet 5.5 vs Opus 5.5: ¿En Qué Nivel Conviene Gastar Tu Dinero?"
+ },
+ "duration": 504.9,
+ "duration_ts": "08:24",
+ "facts_used": false,
+ "titles": [
+  {
+   "text": "Claude Haiku 5.5 vs Sonnet 5.5 vs Opus 5.5: ¿Vale la Pena Pagar 20",
+   "chars": 66,
+   "visible_ok": true,
+   "models_first": true,
+   "trimmed": true
+  },
+  {
+   "text": "Puse a Competir los 3 Niveles de Claude en 6 Retos Extremos ($1.54 vs",
+   "chars": 69,
+   "visible_ok": true,
+   "models_first": false,
+   "trimmed": true
+  },
+  {
+   "text": "La Escalera Completa de Claude: Cuándo Usar Haiku, Sonnet u Opus para",
+   "chars": 69,
+   "visible_ok": true,
+   "models_first": false,
+   "trimmed": true
+  }
+ ],
+ "description": "Claude Haiku & Sonnet 5.5 vs Claude Opus 5.5: Claude Haiku 5.5 vs Sonnet 5.5 vs Opus 5.5: ¿En Qué Nivel Conviene Gastar Tu Dinero?.\n\nDEMOS Y CÓDIGO\nProbar las 18 demos interactivas reales del Episodio 04: https://labs.mixiuh.online\nPrompts exactos y telemetría de costos en Mixiuh Labs: https://labs.mixiuh.online\n\nCAPÍTULOS\n00:00 ¿Vale la pena pagar 20 veces más por Claude Opus?\n00:34 Protocolo del torneo: Haiku vs Sonnet vs Opus\n01:28 Reto 1: Rover Planetario con Suspensión Verlet\n02:18 Reto 2: Bio-Red Physarum de 100K Agentes GPU\n03:07 Reto 3: Puente Estructural con Fractura en Vivo\n03:57 Reto 4: Estudio Ácido 3D TB-303 + TR-909\n04:51 Reto 5: Path Tracer WebGL2 con BVH y Denoiser\n05:39 Reto 6: Consola Retro CHIP-8 con CPU y Audio\n06:37 Veredicto final: cuándo usar Haiku, Sonnet u Opus\n07:27 Regla de oro para elegir entre Haiku, Sonnet y Opus\n\nHERRAMIENTAS\n- Voz: Voicefy, mi propia voz clonada, corre local en mi Mac.\n- Edición y subtítulos: Reelfy + Mixiuh Labs Studio (mi pipeline propio).\n- Música: chiptune original generada por código (sin samples ni pistas de terceros).\n\nLa narración usa mi propia voz clonada con Voicefy (corre local).\n\n#ClaudeHaikuSonnet55 #ClaudeOpus55 #IA\n",
+ "description_bytes": 1212,
+ "hook": "Claude Haiku & Sonnet 5.5 vs Claude Opus 5.5: Claude Haiku 5.5 vs Sonnet 5.5 vs Opus 5.5: ¿En Qué Nivel Conviene Gastar Tu Dinero?.",
+ "chapters": {
+  "valid": true,
+  "in_description": true,
+  "items": [
+   {
+    "t": 0.0,
+    "ts": "00:00",
+    "title": "¿Vale la pena pagar 20 veces más por Claude Opus?"
+   },
+   {
+    "t": 34.917,
+    "ts": "00:34",
+    "title": "Protocolo del torneo: Haiku vs Sonnet vs Opus"
+   },
+   {
+    "t": 88.15,
+    "ts": "01:28",
+    "title": "Reto 1: Rover Planetario con Suspensión Verlet"
+   },
+   {
+    "t": 138.683,
+    "ts": "02:18",
+    "title": "Reto 2: Bio-Red Physarum de 100K Agentes GPU"
+   },
+   {
+    "t": 187.133,
+    "ts": "03:07",
+    "title": "Reto 3: Puente Estructural con Fractura en Vivo"
+   },
+   {
+    "t": 237.667,
+    "ts": "03:57",
+    "title": "Reto 4: Estudio Ácido 3D TB-303 + TR-909"
+   },
+   {
+    "t": 291.95,
+    "ts": "04:51",
+    "title": "Reto 5: Path Tracer WebGL2 con BVH y Denoiser"
+   },
+   {
+    "t": 339.833,
+    "ts": "05:39",
+    "title": "Reto 6: Consola Retro CHIP-8 con CPU y Audio"
+   },
+   {
+    "t": 397.183,
+    "ts": "06:37",
+    "title": "Veredicto final: cuándo usar Haiku, Sonnet u Opus"
+   },
+   {
+    "t": 447.333,
+    "ts": "07:27",
+    "title": "Regla de oro para elegir entre Haiku, Sonnet y Opus"
+   }
+  ],
+  "issues": [],
+  "fixes": [],
+  "remaining_issues": []
+ },
+ "links": [
+  {
+   "label": "Probar las 18 demos interactivas reales del Episodio 04",
+   "url": "https://labs.mixiuh.online",
+   "status": "verificar que respondan"
+  },
+  {
+   "label": "Prompts exactos y telemetría de costos en Mixiuh Labs",
+   "url": "https://labs.mixiuh.online",
+   "status": "verificar que respondan"
+  }
+ ],
+ "tags": [
+  "Claude Haiku 5.5",
+  "Claude Sonnet 5.5",
+  "Claude Opus 5.5",
+  "Claude Code",
+  "comparativa Claude",
+  "programar con IA",
+  "Mixiuh Labs",
+  "Claude Haiku & Sonnet 5.5"
+ ],
+ "tags_chars": 152,
+ "hashtags": [
+  "#ClaudeHaikuSonnet55",
+  "#ClaudeOpus55",
+  "#IA"
+ ],
+ "pinned_comment": "Aquí no se opina: se prueba. ¿Qué metemos al laboratorio ahora? Los capítulos están en la descripción.",
+ "midrolls": {
+  "eligible": true,
+  "items": [
+   {
+    "t": 138.683,
+    "ts": "02:18.6",
+    "ts_exact": "02:18.6",
+    "studio_second_safe": false,
+    "scene": "reto02",
+    "silence": [
+     138.15,
+     138.683
+    ],
+    "reason": "entre 'Reto 1: Rover Planetario con Suspensión Verlet' y 'Reto 2: Bio-Red Physarum de 100K Agentes GPU': cambio de ronda, sin voz durante 0.5 s"
+   },
+   {
+    "t": 291.95,
+    "ts": "04:51.9",
+    "ts_exact": "04:51.9",
+    "studio_second_safe": false,
+    "scene": "reto05",
+    "silence": [
+     291.417,
+     291.95
+    ],
+    "reason": "entre 'Reto 4: Estudio Ácido 3D TB-303 + TR-909' y 'Reto 5: Path Tracer WebGL2 con BVH y Denoiser': cambio de ronda, sin voz durante 0.5 s"
+   }
+  ],
+  "notes": [],
+  "min_gap": 150.0
+ },
+ "end_screen": {
+  "present": true,
+  "layer": "L0071",
+  "t0": 484.9,
+  "t1": 504.9,
+  "dur": 20.0,
+  "ts0": "08:04",
+  "ts1": "08:24",
+  "elements": [
+   {
+    "slot": "video_left",
+    "type": "video",
+    "label": "Video: el más reciente (o una lista de Mixiuh Labs)",
+    "rect": [
+     218.0,
+     228.0,
+     512.0,
+     288.0
+    ],
+    "rect_pct": [
+     11.35,
+     21.11,
+     26.67,
+     26.67
+    ],
+    "start": 484.9,
+    "start_ts": "08:04"
+   },
+   {
+    "slot": "video_right",
+    "type": "video",
+    "label": "Video: el mejor para el espectador",
+    "rect": [
+     1190.0,
+     228.0,
+     512.0,
+     288.0
+    ],
+    "rect_pct": [
+     61.98,
+     21.11,
+     26.67,
+     26.67
+    ],
+    "start": 485.4,
+    "start_ts": "08:05"
+   },
+   {
+    "slot": "subscribe",
+    "type": "subscribe",
+    "label": "Botón de suscripción (logo del canal)",
+    "rect": [
+     824.0,
+     612.0,
+     272.0,
+     272.0
+    ],
+    "rect_pct": [
+     42.92,
+     56.67,
+     14.17,
+     25.19
+    ],
+    "start": 485.9,
+    "start_ts": "08:05"
+   }
+  ],
+  "issues": []
+ },
+ "video": {
+  "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/claude-haiku-vs-sonnet-vs-opus-escalera_2160p60.mp4",
+  "width": 3840,
+  "height": 2160,
+  "fps": 60.0,
+  "vcodec": "h264",
+  "profile": "High",
+  "acodec": "aac",
+  "sample_rate": 48000,
+  "channels": 2,
+  "abitrate": 320011,
+  "duration": 504.917333,
+  "bitrate": 53849234
+ },
+ "loudness": {
+  "lufs": -14.04,
+  "true_peak_db": -1.75,
+  "source": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/build/mix.wav",
+  "duration": 504.9,
+  "sr": 48000
+ },
+ "upload": [
+  {
+   "item": "Archivo final",
+   "value": "claude-haiku-vs-sonnet-vs-opus-escalera_2160p60.mp4: 3840x2160 @60 fps, h264 High",
+   "status": "ok"
+  },
+  {
+   "item": "Audio del archivo",
+   "value": "aac 48000 Hz, 2 canales, 320 kbps (YouTube recomienda AAC-LC 48 kHz estéreo, 384 kbps)",
+   "status": "ok"
+  },
+  {
+   "item": "Loudness medido",
+   "value": "-14.0 LUFS integrados, true peak -1.8 dBTP (objetivo -14 LUFS, <= -1 dBTP; medido en mix.wav)",
+   "status": "ok"
+  },
+  {
+   "item": "Categoría",
+   "value": "Ciencia y tecnología",
+   "status": "manual"
+  },
+  {
+   "item": "Idioma del video y de título/descripción",
+   "value": "Español (México), es-MX",
+   "status": "manual"
+  },
+  {
+   "item": "Contenido alterado o sintético",
+   "value": "No. Motivo: La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+   "status": "manual"
+  },
+  {
+   "item": "Subtítulos a subir",
+   "value": "captions_es.srt (Español (México))",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: miniaturas",
+   "value": "thumb_A.jpg, thumb_B.jpg, thumb_C.jpg (1920x1080 JPG < 2 MB; sube las 3)",
+   "status": "ok"
+  },
+  {
+   "item": "Probar y comparar: títulos",
+   "value": "hasta 3 títulos (sección 1)",
+   "status": "manual"
+  },
+  {
+   "item": "Capítulos",
+   "value": "en la descripción",
+   "status": "ok"
+  },
+  {
+   "item": "Público",
+   "value": "No, no es contenido para niños",
+   "status": "manual"
+  },
+  {
+   "item": "Pausas publicitarias",
+   "value": "manuales en las marcas de la sección 7; desactiva la colocación automática o revisa que no corten una frase",
+   "status": "manual"
+  },
+  {
+   "item": "Pantalla final",
+   "value": "plantilla con 2 videos + suscribirse sobre los huecos (sección 8)",
+   "status": "manual"
+  },
+  {
+   "item": "Tarjetas",
+   "value": "máximo 5, cuando se mencione el video, nunca en los últimos 20 s",
+   "status": "manual"
+  },
+  {
+   "item": "Funciones avanzadas del canal",
+   "value": "verificadas (capítulos, links clicables, Probar y comparar)",
+   "status": "manual"
+  },
+  {
+   "item": "Revisión final",
+   "value": "sube como Oculto, revisa 'Estadísticas para nerds' (content loudness) y publica",
+   "status": "manual"
+  }
+ ],
+ "settings": {
+  "category": "Ciencia y tecnología",
+  "language": "es-MX",
+  "altered_content": false,
+  "altered_reason": "La única IA en la voz es mi propia voz clonada (YouTube lo lista como uso menor que no requiere divulgación); las demos son grabaciones reales de pantalla y no hay personas reales ni escenas realistas fabricadas.",
+  "made_for_kids": false
+ },
+ "captions": {
+  "es": {
+   "srt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/captions_es.srt",
+   "vtt": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/captions_es.vtt",
+   "n": 121,
+   "written": false
+  },
+  "en": {
+   "status": "omitido",
+   "note": "LLM no habilitado (usa --llm o MLABS_LLM=1)",
+   "n": 121
+  }
+ },
+ "thumbnails": [
+  {
+   "id": "A",
+   "text": "$1.54 | $29.94",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_A.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_A_1280.jpg",
+   "bytes": 552182,
+   "bytes_720": 300051,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 21.0,
+   "contrast": 11.26,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "04_sintetizador_acido_3d_comparativa.mov t=6",
+    "right": "04_sintetizador_acido_3d_comparativa.mov t=24"
+   },
+   "origin": "episode.yaml"
+  },
+  {
+   "id": "B",
+   "text": "HAIKU | OPUS",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_B.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_B_1280.jpg",
+   "bytes": 486564,
+   "bytes_720": 261649,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 25.0,
+   "contrast": 11.1,
+   "free_corner": true,
+   "symmetry": "ok",
+   "sources": {
+    "left": "03_puente_estructural_comparativa.mov t=6.5",
+    "right": "03_puente_estructural_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  },
+  {
+   "id": "C",
+   "text": "3 | 2 | 1",
+   "sub": "",
+   "layout": "split",
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_C.jpg",
+   "path_720": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/thumbnails/thumb_C_1280.jpg",
+   "bytes": 517928,
+   "bytes_720": 273138,
+   "quality": 92,
+   "size": [
+    1920,
+    1080
+   ],
+   "text_px_168": 25.0,
+   "contrast": 11.39,
+   "free_corner": true,
+   "symmetry": [
+    "par text: las líneas base no coinciden"
+   ],
+   "sources": {
+    "left": "06_consola_retro_cpu_comparativa.mov t=6.5",
+    "right": "06_consola_retro_cpu_comparativa.mov t=24.5"
+   },
+   "origin": "episode.yaml"
+  }
+ ],
+ "shorts": [
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/shorts/01_01-rover-suspension.mp4",
+   "scene": "reto01",
+   "title": "ROVER PLANETARIO 2D",
+   "duration": 54.083333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/shorts/02_02-slime-feromonas.mp4",
+   "scene": "reto02",
+   "title": "SLIME MOLD PHYSARUM",
+   "duration": 52.0
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/shorts/03_03-puente-estructural.mp4",
+   "scene": "reto03",
+   "title": "PUENTE ESTRUCTURAL",
+   "duration": 54.083333
+  },
+  {
+   "scene": "reto04"
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/shorts/05_05-pathtracer-bvh.mp4",
+   "scene": "reto05",
+   "title": "PATH TRACER WEBGL2",
+   "duration": 51.433333
+  },
+  {
+   "path": "/Users/kevingonzalezlopez/Work/Mixiuh/laboratorio-ia/claude-mixiuh-labs/episodes/ep04-escalera-claude/out/shorts/06_06-consola-retro-cpu.mp4",
+   "scene": "reto06",
+   "title": "CONSOLA RETRO CHIP-8",
+   "duration": 29.8
+  }
+ ],
+ "translations": {},
+ "warnings": [
+  "un título se recortó a 70 caracteres visibles: 'Claude Haiku 5.5 vs Sonnet 5.5 vs Opus 5.5: ¿Vale la Pena Pagar 20'",
+  "el título 'Puse a Competir los 3 Niveles de Claude en 6 Retos Extremos ($1.54 vs' no empieza con los modelos",
+  "un título se recortó a 70 caracteres visibles: 'Puse a Competir los 3 Niveles de Claude en 6 Retos Extremos ($1.54 vs'",
+  "el título 'La Escalera Completa de Claude: Cuándo Usar Haiku, Sonnet u Opus para' no empieza con los modelos",
+  "un título se recortó a 70 caracteres visibles: 'La Escalera Completa de Claude: Cuándo Usar Haiku, Sonnet u Opus para'"
+ ]
+}
